@@ -1,0 +1,38 @@
+$breakpoints: (
+  'xs': 320px,
+  'sm': 768px,
+  'md': 1024px,
+  'lg': 1400px
+  // 'sm': 576px,
+  // 'md': 768px,
+  // 'lg': 992px,
+  // 'xl': 1200px,
+  // 'xxl': 1400px
+);
+
+@mixin from($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  
+  @media (min-width: $value) {
+    @content;
+  }
+}
+
+@mixin until($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint) - 1px;
+  
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+$cl-black: #1b1b1b;
+$cl-light-dark: #303030;
+$cl-dark-80: #495560;
+$cl-light-grey: #828282;
+$cl-grey: #737373;
+$cl-yellow: #FAD348;
+$cl-blue: #3FA2F7;
+$cl-border: #EBEBEB;
+
+$transition: 0.3s;

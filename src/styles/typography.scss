@@ -1,0 +1,7 @@
+@use './vars.scss';
+
+@mixin h2{
+  font-weight: 700;
+  font-size: 26px;
+  color: vars.$cl-black;
+}

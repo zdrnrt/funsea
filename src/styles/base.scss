@@ -1,0 +1,59 @@
+@use './vars.scss';
+
+body{
+  font-family: 'Roboto', sans-serif;
+  line-height: 150%;
+  // background-color: vars.$accent;
+  // color: vars.$black;
+}
+
+*{
+  box-sizing: border-box;
+  // outline: vars.$red;
+  outline-offset: 2px;
+}
+
+h1, h2, h3, h4, p{
+  margin: 0;
+}
+
+img{
+  width: 100%;
+}
+
+a{
+  text-decoration: none;
+}
+
+button{
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul, ol{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container{
+  padding: 0 20px;
+  @include vars.from('sm') {
+  }
+  @include vars.from('md') {
+  }
+  @include vars.from('lg') {
+    max-width: 1300px;
+  }
+}
+
+.main{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  @include vars.from('lg') {
+    padding: 40px 0;
+  }
+
+}
