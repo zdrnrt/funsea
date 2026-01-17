@@ -1,0 +1,254 @@
+@use '../vars.scss';
+
+.footer {
+  &__top {}
+
+  &__nav {
+    margin-bottom: 30px;
+  }
+
+  &__bottom {}
+
+}
+
+.footer-top {
+  padding-top: 16px;
+  padding-bottom: 30px;
+
+  @include vars.from('md') {
+    padding-bottom: 20px;
+  }
+
+  &__brand {
+    margin-bottom: 20px;
+    width: 75px;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+
+    @include vars.from('md') {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__content {
+    @include vars.from('md') {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+
+    }
+  }
+}
+
+.footer-top-nav {
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+
+    @include vars.from('md') {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    flex-shrink: 0;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    color: vars.$cl-blue;
+    &:hover{
+    color: vars.$cl-light-dark;
+    }
+  }
+}
+
+.footer-top-social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+
+  &__link {
+    width: 30px;
+    text-decoration: none;
+    line-height: 1;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
+.footer-bottom {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: vars.$cl-light-grey-bg;
+
+  @include vars.from('md') {
+    padding-top: 44px;
+    padding-bottom: 14px;
+  }
+
+  &__signin {
+    width: fit-content;
+    border-radius: 4px;
+    padding: 6px 10px;
+    box-shadow: 0 4px 13px 0 rgba(21, 45, 78, 0.15);
+    background: vars.$cl-white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: vars.$cl-light-dark;
+    transition: vars.$transition;
+
+    &:hover {
+      color: vars.$cl-white;
+      background-color: vars.$cl-light-dark;
+    }
+
+    @include vars.from('md') {
+      padding: 7px 15px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    gap: 35px;
+    margin-bottom: 40px;
+
+    @include vars.from('md') {
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      gap: 140px;
+    }
+  }
+
+  &__mistake {
+    margin-bottom: 60px;
+
+    @include vars.from('md') {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__copy {
+    max-width: 250px;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    color: #bdbdbd;
+
+    @include vars.from('md') {
+      max-width: unset;
+    }
+  }
+}
+
+.footer-bottom-nav {
+  @include vars.from('md') {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  &__item {
+    @include vars.from('md') {
+      max-width: 150px;
+    }
+
+    &+& {
+      @include vars.until('md') {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    color: vars.$cl-light-dark;
+    text-align: start;
+  }
+
+  &__list {}
+
+  &__list-item {
+    line-height: 1;
+
+    &+& {
+      margin-top: 10px;
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 12px;
+    color: vars.$cl-light-dark;
+     &:hover{
+      color: vars.$cl-blue;
+    }
+  }
+}
+
+.footer-mistake {
+  text-align: center;
+
+  @include vars.from('md') {
+    width: fit-content;
+    text-align: start;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    color: vars.$cl-light-dark;
+    line-height: 1;
+
+    @include vars.from('md') {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btn {
+    padding: 10px 50px;
+    background: vars.$cl-light-dark;
+    transition: vars.$transition;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: vars.$cl-white;
+    &:hover{
+      color: vars.$cl-light-dark;
+      background: vars.$cl-white;
+
+    }
+  }
+}

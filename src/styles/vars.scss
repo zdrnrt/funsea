@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $breakpoints: (
   'xs': 320px,
   'sm': 768px,
@@ -11,7 +13,7 @@ $breakpoints: (
 );
 
 @mixin from($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
+  $value: map.get($breakpoints, $breakpoint);
   
   @media (min-width: $value) {
     @content;
@@ -19,7 +21,7 @@ $breakpoints: (
 }
 
 @mixin until($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint) - 1px;
+  $value: map.get($breakpoints, $breakpoint) - 1px;
   
   @media (max-width: $value) {
     @content;
@@ -30,9 +32,11 @@ $cl-black: #1b1b1b;
 $cl-light-dark: #303030;
 $cl-dark-80: #495560;
 $cl-light-grey: #828282;
+$cl-light-grey-bg: #f2f2f2;
 $cl-grey: #737373;
 $cl-yellow: #FAD348;
 $cl-blue: #3FA2F7;
 $cl-border: #EBEBEB;
+$cl-white: #fff;
 
 $transition: 0.3s;

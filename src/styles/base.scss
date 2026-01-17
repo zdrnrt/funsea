@@ -23,6 +23,7 @@ img{
 
 a{
   text-decoration: none;
+  transition: vars.$transition;
 }
 
 button{
@@ -30,6 +31,7 @@ button{
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: vars.$transition;
 }
 
 ul, ol{
@@ -39,6 +41,8 @@ ul, ol{
 }
 
 .container{
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 20px;
   @include vars.from('sm') {
   }
@@ -46,6 +50,7 @@ ul, ol{
   }
   @include vars.from('lg') {
     max-width: 1300px;
+    padding: 0;
   }
 }
 
