@@ -1,0 +1,78 @@
+@use "../vars.scss";
+
+.trip-list{
+&__title{
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 26px;
+
+  color: vars.$cl-black;
+  @include vars.from('sm') {
+    font-size: 40px;
+      margin-bottom: 20px;
+    }
+}
+}
+
+.trip-item{
+  position: relative;
+  &:hover{
+    .trip-item__name{
+      color: vars.$cl-blue;
+    }
+  }
+  &__preview{
+    position: relative;
+    margin-bottom: 8px;
+    aspect-ratio: 110/84;
+    border-radius: 20px;
+    overflow: hidden;
+    @include vars.from('sm') {
+      border-radius: 8px;
+      aspect-ratio: 160/120;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      background-color: rgba(21, 45, 78, 0.4);
+    }
+  }
+  &__pic{
+    height: 100%;
+    object-fit: cover;
+  }
+  &__icon{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    @include vars.from('sm') {
+      width: 40px;
+    }
+  }
+  &__btn{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+  }
+  &__name{
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+    color: #303030;
+    @include vars.from('sm') {
+      font-size: 18px;
+    }
+  }
+}

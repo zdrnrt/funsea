@@ -109,7 +109,7 @@
     width: fit-content;
     border-radius: 4px;
     padding: 6px 10px;
-    box-shadow: 0 4px 13px 0 rgba(21, 45, 78, 0.15);
+    box-shadow: vars.$btn-shadow;
     background: vars.$cl-white;
     font-weight: 600;
     font-size: 12px;
@@ -122,6 +122,7 @@
     &:hover {
       color: vars.$cl-white;
       background-color: vars.$cl-light-dark;
+      box-shadow: none;
     }
 
     @include vars.from('md') {
@@ -248,6 +249,7 @@
     &:hover{
       color: vars.$cl-light-dark;
       background: vars.$cl-white;
+      box-shadow: vars.$btn-shadow;
 
     }
   }
