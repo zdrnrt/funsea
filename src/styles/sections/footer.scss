@@ -98,7 +98,7 @@
 .footer-bottom {
   padding-top: 20px;
   padding-bottom: 40px;
-  background-color: vars.$cl-light-grey-bg;
+  background-color: vars.$cl-light-grey;
 
   @include vars.from('md') {
     padding-top: 44px;

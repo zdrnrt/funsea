@@ -1,0 +1,99 @@
+@use "../vars.scss";
+
+.hero-slider {
+  margin-bottom: 40px;
+  &__btn {
+    width: 40px;
+    box-shadow: vars.$btn-shadow;
+
+    @include vars.from('md') {}
+  }
+  &__pagination{
+  }
+}
+
+.hero-item {
+  padding: 30px 0;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 24px;
+  background-color: vars.$cl-light-dark;
+  border-radius: 20px;
+
+  @include vars.from('md') {
+    padding: 60px 40px;
+    flex-flow: row nowrap;
+    gap: 50px;
+    align-items: center;
+  }
+
+  &__descr {
+    @include vars.from('md') {
+      max-width: 245px;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 28px;
+    color: #fad348;
+  }
+
+  &__text {
+    margin: 0;
+    margin-bottom: 50px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #e0e0e0;
+
+    @include vars.from('md') {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 24px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: vars.$cl-black;
+    background-color: vars.$cl-light-grey;
+
+    @include vars.from('md') {
+      margin-top: auto;
+      color: vars.$cl-light-grey;
+      background-color: vars.$cl-black;
+    }
+  }
+
+  &__preview {
+    width: 100%;
+    display: none;
+
+    @include vars.from('md') {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+
+    &--mobile {
+      display: block;
+
+      @include vars.from('md') {
+        display: none;
+      }
+    }
+  }
+}
