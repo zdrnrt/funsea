@@ -28,6 +28,16 @@ $breakpoints: (
   }
 }
 
+
+@mixin scroll-list() {
+   overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+}
+
 $cl-black: #1b1b1b;
 $cl-light-dark: #303030;
 $cl-dark-80: #495560;

@@ -1,0 +1,42 @@
+@use "../vars.scss";
+
+.articles-list{
+  &__header{
+    margin-bottom: 24px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    @include vars.from('md') {
+      flex-flow: row nowrap;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+
+    }
+  }
+  &__all{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    color: vars.$cl-blue;
+    &:hover{
+      color: vars.$cl-black;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+    @include vars.scroll-list();
+    @include vars.from('md') {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 32px;
+      row-gap: 50px;
+    }
+  }
+}
