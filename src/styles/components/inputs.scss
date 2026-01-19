@@ -1,0 +1,135 @@
+@use "../vars.scss";
+
+.select {
+  appearance: none;
+  border-radius: 24px;
+  padding: 14px 16px;
+  padding-left: 42px;
+  background-image: url("/src/assets/images/icons/chevron-down.svg");
+  background-size: 20px;
+  background-position: 50% 16px;
+  background-repeat: no-repeat;
+  box-shadow: vars.$btn-shadow;
+  background-color: vars.$cl-white;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 116%;
+}
+
+.input {
+  display: flex;
+  flex-flow: safe row nowrap;
+  justify-content: safe flex-start;
+  align-items: center;
+  background-color: vars.$cl-input-bg;
+  border: 1px solid vars.$cl-input-bg;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+
+  &:has(input:focus) {
+    border-color: vars.$cl-blue;
+  }
+
+  &--error {
+    border-color: vars.$cl-red;
+
+    .input__icon {
+      fill: vars.$cl-red;
+    }
+
+    .input__error {
+      display: flex;
+    }
+  }
+
+  &--password {
+    gap: 8px;
+  }
+
+  &__input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+      color: vars.$cl-input-placeholder;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 20px;
+    fill: vars.$cl-input-placeholder;
+    transition: vars.$transition;
+  }
+
+  &__btn {
+    flex-shrink: 0;
+    width: 20px;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__error {
+    display: none;
+    margin-top: 8px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    color: vars.$cl-red;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+
+    &__icon {
+      flex-shrink: 0;
+      width: 20px;
+    }
+
+    &__name {}
+  }
+}
+
+.checkbox{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  &__input{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    &:checked + .checkbox__check{
+      border-color: vars.$cl-blue;
+      background-color: vars.$cl-blue;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.09 4.1665L6.09002 11.1665L2.9082 7.98469' stroke='%23FEFEFF' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' /%3E%3C/svg%3E");
+    }
+  }
+  &__check{
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid vars.$cl-border;
+  }
+  &__text{
+    flex-grow: 1;
+    font-weight: 400;
+font-size: 16px;
+line-height: 125%;
+&--link{
+  color: vars.$cl-blue;
+  &:hvoer{
+    text-decoration: underline;
+  }
+
+}
+  }
+}
