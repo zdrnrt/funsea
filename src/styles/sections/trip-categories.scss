@@ -1,0 +1,35 @@
+@use "../vars.scss";
+
+.trip-categories {
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 24px;
+
+    /* line-height: 24px; */
+    line-height: 100%;
+  }
+  &--link{
+    color: vars.$cl-black;
+    &:hover{
+      color: vars.$cl-blue;
+    }
+  }
+  &__title-icon{
+    display: inline-block;
+    width: 27px;
+    margin-right: 12px;
+    vertical-align: middle;
+  }
+  &__title-arrow{
+    display: inline-block;
+    margin-left: 8px;
+    width: 8px;
+    vertical-align: middle;
+    fill: currentColor;
+  }
+  &__list{
+
+  }
+}

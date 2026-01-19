@@ -1,0 +1,155 @@
+@use "../vars.scss";
+
+.card {
+  &__preview {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 30/22;
+  }
+
+  &__tag {
+    padding: 5px 10px;
+    font-weight: 700;
+font-size: 14px;
+line-height: 157%;
+border-radius: 50px;
+background-color: vars.$cl-white;
+&--blue{
+  color: vars.$cl-blue;
+
+}
+&--green{
+      color: vars.$cl-green;
+
+    }
+  }
+
+  &__pic {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__decscr {
+    padding: 12px;
+    background-color: vars.$cl-white;
+    border: 1px solid vars.$cl-border;
+    border-radius: 20px;
+  }
+
+  &__param{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: vars.$cl-grey;
+  }
+
+  &__position {
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 140%;
+    color: vars.$cl-grey;
+  }
+
+  &__info {
+    margin-bottom: 24px;
+  }
+}
+
+.card-position {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+
+  &__icon {
+    width: 8px;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    
+  }
+}
+
+.card-info {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: #495560;
+  }
+
+  &__icon {
+    max-width: 20px;
+    max-height: 16px;
+    flex-shrink: 0;
+  }
+}
+
+.card-price {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  &__actuall {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: #000;
+  }
+
+  &__info {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    color: #737373;
+  }
+
+  &__btn {
+    padding: 7px 10px;
+    border-radius: 32px;
+    background: vars.$cl-yellow;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+
+    &:hover {
+      background-color: vars.$cl-black;
+      color: vars.$cl-yellow;
+    }
+  }
+}
