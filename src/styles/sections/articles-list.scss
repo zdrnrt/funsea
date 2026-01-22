@@ -2,14 +2,15 @@
 
 .articles-list {
   &__header {
-    margin-bottom: 24px;
+    margin-bottom: 12px;
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 8px;
+    gap: 4px;
 
     @include vars.from('md') {
+      margin-bottom: 24px;
       flex-flow: row nowrap;
       align-items: flex-end;
       justify-content: space-between;
@@ -18,11 +19,25 @@
     }
   }
 
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+
+    @include vars.from('md') {
+      font-size: 36px;
+    }
+  }
+
   &__all {
     font-weight: 600;
-    font-size: 16px;
+    font-size: 12px;
     letter-spacing: 0.01em;
     color: vars.$cl-blue;
+
+    @include vars.from('md') {
+      font-size: 16px;
+    }
 
     &:hover {
       color: vars.$cl-black;
@@ -40,27 +55,64 @@
     @include vars.from('md') {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      column-gap: 32px;
-      row-gap: 50px;
+      column-gap: 30px;
+      row-gap: 42px;
+    }
+  }
+
+  &__item {
+    @include vars.until('md') {
+
+      flex-shrink: 0;
+      max-width: 235px;
     }
   }
 }
 
 .article-item {
+  position: relative;
+  cursor: pointer;
+  &:hover{
+    .article-item__title{
+      color: vars.$cl-blue;
+    }
+    .article-item__text {
+      color: vars.$cl-black;
+    }
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
   &__title {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 16px;
+    line-height: 1.4;
+    transition: vars.$transition;
 
+    @include vars.from('md') {
+      max-width: 90%;
+      margin-bottom: 15px;
+      font-size: 24px;
+
+    }
   }
 
   &__text {
     font-weight: 400;
-    font-size: 16px;
-
-    /* line-height: 24px; */
-    line-height: 150%;
+    font-size: 14px;
     color: vars.$cl-grey;
+    transition: vars.$transition;
 
+    @include vars.from('md') {
+      font-size: 16px;
+    }
   }
 }
