@@ -1,37 +1,48 @@
 @use "../vars.scss";
 
-.trip-list{
-&__title{
-  margin-bottom: 16px;
-  font-weight: 700;
-  font-size: 26px;
+.trip-list {
+  &__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 26px;
 
-  color: vars.$cl-black;
-  @include vars.from('sm') {
-    font-size: 40px;
-      margin-bottom: 20px;
-    }
-}
-}
+    color: vars.$cl-black;
 
-.trip-item{
-  position: relative;
-  &:hover{
-    .trip-item__name{
-      color: vars.$cl-blue;
+    @include vars.from('sm') {
+      font-size: 40px;
+      margin-bottom: 30px;
     }
   }
-  &__preview{
+}
+
+.trip-item {
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .trip-item__name {
+      color: vars.$cl-blue;
+    }
+
+    .trip-item__icon {
+      transform: translate(-50%, -50%) scale(1.3);
+    }
+  }
+
+  &__preview {
     position: relative;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     aspect-ratio: 110/84;
     border-radius: 20px;
     overflow: hidden;
+
     @include vars.from('sm') {
+      margin-bottom: 12px;
       border-radius: 8px;
       aspect-ratio: 160/120;
     }
-    &::after{
+
+    &::after {
       content: "";
       position: absolute;
       top: 0;
@@ -42,22 +53,27 @@
       background-color: rgba(21, 45, 78, 0.4);
     }
   }
-  &__pic{
+
+  &__pic {
     height: 100%;
     object-fit: cover;
   }
-  &__icon{
+
+  &__icon {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 28px;
+    transition: vars.$transition;
+
     @include vars.from('sm') {
       width: 40px;
     }
   }
-  &__btn{
+
+  &__btn {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -66,11 +82,13 @@
     z-index: 1;
     opacity: 0;
   }
-  &__name{
+
+  &__name {
     font-weight: 700;
     font-size: 12px;
     text-align: center;
-    color: #303030;
+    color: vars.$cl-black;
+
     @include vars.from('sm') {
       font-size: 18px;
     }
