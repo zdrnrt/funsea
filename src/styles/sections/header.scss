@@ -22,6 +22,7 @@
 
   &__logo {
     width: 115px;
+    line-height: 0;
   }
 
   &__links {
@@ -44,11 +45,15 @@
     display: none;
     @include vars.from('sm') {
       display: block;
+      width: 256px;
     }
   }
 
   &__bottom {
-    padding: 15px 0;
+    padding: 8px 0;
+    @include vars.from('sm') {
+      padding: 16px 0;
+    }
   }
 
   &__bottom-content {
