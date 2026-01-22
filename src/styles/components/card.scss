@@ -6,20 +6,38 @@
     border-radius: 20px;
     overflow: hidden;
     aspect-ratio: 30/22;
+
+    @include vars.from('sm') {
+      aspect-ratio: 43/25;
+      border-radius: 32px;
+    }
   }
 
   &__tag {
-    padding: 5px 10px;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    z-index: 1;
+    padding: 4px 11px;
     font-weight: 700;
-font-size: 14px;
-line-height: 157%;
-border-radius: 50px;
-background-color: vars.$cl-white;
-&--blue{
-  color: vars.$cl-blue;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 50px;
+    background-color: vars.$cl-white;
 
-}
-&--green{
+    @include vars.from('md') {
+      top: 18px;
+      left: 14px;
+      padding: 5px 10px;
+      font-size: 14px;
+    }
+
+    &--blue {
+      color: vars.$cl-blue;
+
+    }
+
+    &--green {
       color: vars.$cl-green;
 
     }
@@ -30,19 +48,18 @@ background-color: vars.$cl-white;
     object-fit: cover;
   }
 
-  &__decscr {
-    padding: 12px;
+  &__descr {
+    position: relative;
+    margin-top: -40px;
+    padding: 8px;
     background-color: vars.$cl-white;
     border: 1px solid vars.$cl-border;
     border-radius: 20px;
-  }
 
-  &__param{
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 100%;
-    letter-spacing: 0.01em;
-    color: vars.$cl-grey;
+    @include vars.from('md') {
+      padding: 16px;
+      border-radius: 32px;
+    }
   }
 
   &__position {
@@ -54,6 +71,10 @@ background-color: vars.$cl-white;
     font-weight: 700;
     font-size: 16px;
     line-height: 130%;
+
+    @include vars.from('md') {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -67,10 +88,73 @@ background-color: vars.$cl-white;
     font-size: 12px;
     line-height: 140%;
     color: vars.$cl-grey;
+
+    @include vars.from('md') {
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
   }
 
   &__info {
     margin-bottom: 24px;
+
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    // column-gap: 30px;
+    row-gap: 5px;
+
+    @include vars.from('md') {
+      margin-bottom: 56px;
+    }
+  }
+
+  &__info-item {
+    position: relative;
+
+    &+& {
+      padding-left: 30px;
+    }
+
+    &+&::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 14px;
+      width: 1px;
+      height: 100%;
+      background-color: vars.$cl-grey;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__btn {
+    padding: 0px 12px;
+    border-radius: 32px;
+    background-color: vars.$cl-yellow;
+    font-weight: 600;
+    font-size: 12px;
+    color: vars.$cl-black;
+    text-align: center;
+
+    @include vars.from('md') {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: vars.$cl-yellow;
+      background-color: vars.$cl-black;
+      box-shadow: vars.$btn-shadow;
+    }
   }
 }
 
@@ -84,30 +168,34 @@ background-color: vars.$cl-white;
   &__icon {
     width: 8px;
     flex-shrink: 0;
+
+    @include vars.from('md') {
+      width: 12px;
+    }
   }
 
   &__name {
-    
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0.01em;
+    color: vars.$cl-grey;
+
+    @include vars.from('md') {
+      font-size: 14px;
+    }
   }
 }
 
 .card-info {
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  justify-content: flex-start;
-
   &__item {
-    position: relative;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    gap: 20px;
+    gap: 7px;
     align-items: center;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 100%;
-    color: #495560;
+
   }
 
   &__icon {
@@ -115,27 +203,43 @@ background-color: vars.$cl-white;
     max-height: 16px;
     flex-shrink: 0;
   }
+
+  &__name {
+    flex-shrink: 0;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 100%;
+    color: vars.$cl-dark-80;
+
+    @include vars.from('md') {
+      font-size: 14px;
+    }
+  }
 }
 
 .card-price {
   display: flex;
   flex-flow: row nowrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2px;
 
   &__actuall {
     font-weight: 700;
     font-size: 16px;
     line-height: 100%;
-    color: #000;
+    color: vars.$cl-black;
+
+    @include vars.from('md') {
+      font-size: 24px;
+    }
   }
 
   &__info {
     font-weight: 400;
     font-size: 12px;
     line-height: 100%;
-    color: #737373;
+    color: vars.$cl-grey;
   }
 
   &__btn {
