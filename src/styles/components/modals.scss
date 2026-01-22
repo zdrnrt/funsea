@@ -1,0 +1,126 @@
+@use "../vars.scss";
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: vars.$cl-black;
+    opacity: 0.5;
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    min-height: 500px;
+    max-height: 100vh;
+    overflow: auto;
+    padding: 32px 16px 0;
+    border-radius: 20px 20px 0 0;
+    box-shadow: vars.$modal-shadow;
+    background-color: vars.$cl-white;
+
+    @include vars.from('sm') {
+      top: 50%;
+      bottom: unset;
+      left: 50%;
+      right: unset;
+      transform: translate(-50%, -50%);
+      max-width: 570px;
+      padding: 32px;
+    }
+
+    @include vars.from('md') {
+      min-height: unset;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: -16px;
+    right: 16px;
+    width: 44px;
+    padding: 12px;
+    background-color: vars.$cl-input-bg;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    @include vars.from('md') {
+      top: 16px;
+    }
+  }
+}
+
+.modal-form {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: flex-start;
+
+  &__forget {
+    margin-top: 8px;
+    margin-left: auto;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: vars.$cl-blue;
+
+    &:hover {
+      color: vars.$cl-black
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid vars.$cl-border;
+    text-align: center;
+
+    @include vars.from('md') {
+      padding: 0;
+      padding-top: 28px;
+      border-top: none;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: vars.$cl-white;
+    background-color: vars.$cl-blue;
+
+    @include vars.from('md') {
+      max-width: 200px;
+    }
+
+    &:hover {
+      color: vars.$cl-blue;
+      background-color: vars.$cl-white;
+      box-shadow: vars.$btn-shadow;
+    }
+
+    &:disabled {
+      color: vars.$cl-grey;
+      background-color: vars.$cl-light-grey;
+    }
+  }
+}
