@@ -23,20 +23,28 @@
   border-radius: 20px;
 
   @include vars.from('md') {
-    padding: 60px 40px;
+    height: 390px;
+    padding: 0px 50px;
     flex-flow: row nowrap;
     gap: 50px;
     align-items: center;
   }
 
   &__descr {
+    padding: 0 16px;
     @include vars.from('md') {
-      max-width: 245px;
+      flex-grow: 1;
+      max-width: 730px;
+      padding: 0;
+      padding-top: 80px;
+      padding-bottom: 40px;
+      height: 100%;
+      align-self: flex-end;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 20px;
+      gap: 8px;
     }
   }
 
@@ -44,23 +52,30 @@
     margin-bottom: 12px;
     font-weight: 700;
     font-size: 28px;
-    color: #fad348;
+    line-height: 1.2;
+    color: vars.$cl-yellow;
+    @include vars.from('md') {
+      margin-bottom: 0;
+      font-size: 40px;
+    }
   }
 
   &__text {
     margin: 0;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    color: #e0e0e0;
+    color: vars.$cl-light-grey;
 
     @include vars.from('md') {
       margin-bottom: 0;
+      font-size: 18px;
     }
   }
 
   &__btn {
+    display: block;
     width: fit-content;
     margin: 0 auto;
     padding: 10px 24px;
@@ -70,22 +85,32 @@
     text-align: center;
     color: vars.$cl-black;
     background-color: vars.$cl-light-grey;
-
-    @include vars.from('md') {
-      margin-top: auto;
+    border-radius: 20px;
+    &:hover{
       color: vars.$cl-light-grey;
       background-color: vars.$cl-black;
+      box-shadow: vars.$btn-shadow;
+    }
+    @include vars.from('md') {
+      margin: 0;
+      margin-top: auto;
+      padding: 10px 50px;
+      font-size: 15px;
     }
   }
 
   &__preview {
     width: 100%;
     display: none;
-
+    line-height: 0;
     @include vars.from('md') {
       display: block;
       width: auto;
       height: 100%;
+      max-width: 340px;
+      img{
+        height: 100%;
+      }
     }
 
     &--mobile {
