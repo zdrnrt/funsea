@@ -1,38 +1,68 @@
 @use "../vars.scss";
 
 .trip-categories {
-  &__title {
-    margin: 0;
+  &__header {
     margin-bottom: 24px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__controls {
+    display: none;
+
+    @include vars.from('md') {
+      flex-shrink: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+    line-height: 0;
+    border-radius: 50%;
+    border: 1px solid vars.$cl-border;
+  }
+
+  &__title {
+    flex-grow: 1;
+    margin: 0;
     font-weight: 700;
     font-size: 24px;
-    
-    /* line-height: 24px; */
     line-height: 100%;
+
     @include vars.from('md') {
       font-size: 36px;
     }
-  }
-  &--link{
-    color: vars.$cl-black;
-    &:hover{
-      color: vars.$cl-blue;
+
+    &--link {
+      color: vars.$cl-black;
+
+      &:hover {
+        color: vars.$cl-blue;
+      }
     }
   }
-  &__title-icon{
+
+  &__title-icon {
     display: inline-block;
     width: 16px;
     margin-right: 4px;
     vertical-align: middle;
   }
-  &__title-arrow{
+
+  &__title-arrow {
     display: inline-block;
     margin-left: 8px;
     width: 8px;
     vertical-align: middle;
     fill: currentColor;
   }
-  &__list{
 
-  }
 }

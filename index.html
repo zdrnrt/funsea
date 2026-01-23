@@ -1,11 +1,13 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/fav.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Главная | Moре развлечений</title>
 </head>
+
 <body>
   <include src="src/html/header.html"></include>
   <main class="main">
@@ -111,14 +113,22 @@
     <div class="index-categories">
       <div class="container">
         <section class="index-categories__item trip-categories">
-          <h2 class="trip-categories__title">
-            <img class="trip-categories__title-icon" src="src/assets/images/icons/fire.svg" alt="">Хиты Продаж
-          </h2>
+          <header class="trip-categories__header">
+            <h2 class="trip-categories__title">
+              <img class="trip-categories__title-icon" src="src/assets/images/icons/fire.svg" alt="">Хиты Продаж
+            </h2>
+            <div class="trip-categories__controls">
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-left.svg" alt=""
+                  srcset=""></button>
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-right.svg" alt=""
+                  srcset=""></button>
+            </div>
+          </header>
           <div class="trip-categories__list">
             <article class="card">
               <div class="card__preview">
                 <span class="card__tag card__tag--blue">Групповая</span>
-                <img src="src/assets/images/trips/1.jpg" alt="" class="card__pic">  
+                <img src="src/assets/images/trips/1.jpg" alt="" class="card__pic">
               </div>
               <div class="card__descr">
                 <div class="card__position card-position">
@@ -153,7 +163,7 @@
             <article class="card">
               <div class="card__preview">
                 <span class="card__tag card__tag--blue">В группе</span>
-                <img src="src/assets/images/trips/2.jpg" alt="" class="card__pic">  
+                <img src="src/assets/images/trips/2.jpg" alt="" class="card__pic">
               </div>
               <div class="card__descr">
                 <div class="card__position card-position">
@@ -179,7 +189,7 @@
             <article class="card">
               <div class="card__preview">
                 <span class="card__tag card__tag--blue">Групповая</span>
-                <img src="src/assets/images/trips/3.jpg" alt="" class="card__pic">  
+                <img src="src/assets/images/trips/3.jpg" alt="" class="card__pic">
               </div>
               <div class="card__descr">
                 <div class="card__position card-position">
@@ -206,17 +216,25 @@
           </div>
         </section>
         <section class="index-categories__item trip-categories">
-          <h2 class="trip-categories__title">
-            <a href="#" class="trip-categories__title--link">
-              😍 Квадро-туры
-              <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z"
-                  fill="black" />
-              </svg>
-            </a>
-          </h2>
+          <header class="trip-categories__header">
+            <h2 class="trip-categories__title">
+              <a href="#" class="trip-categories__title--link">
+                😍 Квадро-туры
+                <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z"
+                    fill="black" />
+                </svg>
+              </a>
+            </h2>
+            <div class="trip-categories__controls">
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-left.svg" alt=""
+                  srcset=""></button>
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-right.svg" alt=""
+                  srcset=""></button>
+            </div>
+          </header>
           <div class="trip-categories__list">
             <article class="card">
               <div class="card__preview">
@@ -248,17 +266,25 @@
           </div>
         </section>
         <section class="index-categories__item trip-categories">
-          <h2 class="trip-categories__title">
-            <a href="#" class="trip-categories__title--link">
+          <header class="trip-categories__header">
+            <h2 class="trip-categories__title">
+              <a href="#" class="trip-categories__title--link">
 
-              🐬 Морские приключения
-              <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
-              </svg>
-            </a>
-          </h2>
+                🐬 Морские приключения
+                <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
+                </svg>
+              </a>
+            </h2>
+            <div class="trip-categories__controls">
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-left.svg" alt=""
+                  srcset=""></button>
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-right.svg" alt=""
+                  srcset=""></button>
+            </div>
+          </header>
           <div class="trip-categories__list">
             <article class="card">
               <div class="card__preview">
@@ -290,16 +316,25 @@
           </div>
         </section>
         <section class="index-categories__item trip-categories">
-          <h2 class="trip-categories__title">
-            <a href="#" class="trip-categories__title--link">
-              Джиппинг-туры
-              <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
-              </svg>
-            </a>
-          </h2>
+          <header class="trip-categories__header">
+            <h2 class="trip-categories__title">
+              <a href="#" class="trip-categories__title--link">
+                Джиппинг-туры
+                <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
+                </svg>
+              </a>
+            </h2>
+            <div class="trip-categories__controls">
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-left.svg" alt=""
+                  srcset=""></button>
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-right.svg" alt=""
+                  srcset=""></button>
+            </div>
+          </header>
+
           <div class="trip-categories__list">
             <article class="card">
               <div class="card__preview">
@@ -331,16 +366,26 @@
           </div>
         </section>
         <section class="index-categories__item trip-categories">
-          <h2 class="trip-categories__title">
-            <a href="#" class="trip-categories__title--link">
-              Блог
-              <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
-              </svg>
-            </a>
-          </h2>
+          <header class="trip-categories__header">
+
+            <h2 class="trip-categories__title">
+              <a href="#" class="trip-categories__title--link">
+                Блог
+                <svg class="trip-categories__title-arrow" viewBox="0 0 9 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.07088 8.07136C8.4614 7.68084 8.4614 7.04768 8.07088 6.65715L1.70692 0.29319C1.31639 -0.0973344 0.683226 -0.0973344 0.292702 0.29319C-0.0978227 0.683714 -0.0978227 1.31688 0.292702 1.7074L5.94956 7.36426L0.292702 13.0211C-0.0978227 13.4116 -0.0978227 14.0448 0.292702 14.4353C0.683226 14.8259 1.31639 14.8259 1.70692 14.4353L8.07088 8.07136ZM6.36377 7.36426V8.36426H7.36377V7.36426V6.36426H6.36377V7.36426Z" />
+                </svg>
+              </a>
+            </h2>
+            <div class="trip-categories__controls">
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-left.svg" alt=""
+                  srcset=""></button>
+              <button class="trip-categories__btn"><img src="src/assets/images/icons/arrow-right.svg" alt=""
+                  srcset=""></button>
+            </div>
+          </header>
+
           <div class="trip-categories__list">
             <article class="card">
               <div class="card__preview">

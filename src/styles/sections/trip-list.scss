@@ -1,7 +1,33 @@
 @use "../vars.scss";
 
 .trip-list {
+  &__header {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__controls {
+    display: none;
+
+    @include vars.from('md') {
+      flex-shrink: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+    }
+  }
+
+  &__btn {
+    width: 40px;
+  }
+
   &__title {
+    flex-grow: 1;
     margin-bottom: 22px;
     font-weight: 700;
     font-size: 26px;
