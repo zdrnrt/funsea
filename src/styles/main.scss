@@ -1,7 +1,8 @@
-@use './base.scss';
 @use './fonts.css';
 @use './vars.scss';
+@use './base.scss';
 @use './pages/index.scss';
+@use './pages/blog.scss';
 @use './components/card.scss';
 @use './sections/header.scss';
 @use './sections/footer.scss';

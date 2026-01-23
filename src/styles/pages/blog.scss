@@ -1,0 +1,25 @@
+@use "../vars.scss";
+
+.blog-page{
+  &__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.1;
+    color: vars.$cl-black;
+
+    @include vars.from('sm') {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+  }
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: vars.$list-gap-m;
+    @include vars.from('md') {
+      grid-template-columns: repeat(3, 1fr);
+      gap: vars.$list-gap;
+    }
+  }
+}
