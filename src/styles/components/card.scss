@@ -3,13 +3,13 @@
 .card {
   &__preview {
     position: relative;
-    border-radius: 20px;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
     aspect-ratio: 30/22;
 
     @include vars.from('sm') {
       aspect-ratio: 43/25;
-      border-radius: 32px;
+      border-radius: 32px 32px 0 0;
     }
   }
 
@@ -92,6 +92,14 @@
     @include vars.from('md') {
       margin-bottom: 18px;
       font-size: 16px;
+    }
+
+    &--blog {
+      margin-bottom: 0;
+
+      @include vars.from('md') {
+        margin-bottom: 0;
+      }
     }
   }
 
