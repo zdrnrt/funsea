@@ -1,6 +1,8 @@
 @use "../vars.scss";
 
 .stories-list {
+  // 
+  display: none;
   &__list{
     position: relative;
     &::after{

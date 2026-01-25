@@ -1,6 +1,8 @@
 @use "../vars.scss";
 
 .blog-list {
+  margin-bottom: 40px;
+
   &__header {
     margin-bottom: 12px;
     display: flex;
@@ -27,6 +29,10 @@
 
     @include vars.from('md') {
       font-size: 36px;
+    }
+
+    &--link {
+      color: vars.$cl-black;
     }
   }
 
@@ -58,11 +64,26 @@
   }
 
   &__list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 12px;
+
     @include vars.from('md') {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       column-gap: 30px;
       row-gap: 42px;
+    }
+
+    .card {
+      flex-shrink: 0;
+      max-width: 90%;
+
+      @include vars.from('md') {
+        max-width: unset;
+      }
     }
   }
 }

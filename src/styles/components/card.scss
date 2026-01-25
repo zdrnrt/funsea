@@ -55,7 +55,7 @@
     background-color: vars.$cl-white;
     border: 1px solid vars.$cl-border;
     border-radius: 20px;
-
+    overflow: hidden;
     @include vars.from('md') {
       padding: 16px;
       border-radius: 32px;
@@ -107,7 +107,7 @@
     margin-bottom: 24px;
 
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
     // column-gap: 30px;

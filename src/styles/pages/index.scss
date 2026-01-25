@@ -1,6 +1,8 @@
 @use "../vars.scss";
 
 .index-categories {
+  overflow: hidden;
+  margin-bottom: 40px;
   &__item {
     &+& {
       margin-top: 30px;

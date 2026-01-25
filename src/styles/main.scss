@@ -4,12 +4,14 @@
 @use './pages/index.scss';
 @use './pages/blog.scss';
 @use './pages/detail.scss';
+@use './pages/catalog.scss';
 @use './components/card.scss';
 @use './sections/header.scss';
 @use './sections/footer.scss';
 @use './sections/hero-slider.scss';
 @use './sections/trip-list.scss';
 @use './sections/trip-categories.scss';
+@use './sections/stories-list.scss';
 @use './sections/articles-list.scss';
 @use './sections/blog-list.scss';
 @use './sections/detail-preview.scss';

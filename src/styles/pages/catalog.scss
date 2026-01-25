@@ -1,0 +1,13 @@
+@use "../vars.scss";
+
+.catalog-page{
+  &__list{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: vars.$list-gap-m;
+    @include vars.from('md') {
+      grid-template-columns: repeat(3, 1fr);
+      gap: vars.$list-gap;
+    }
+  }
+}

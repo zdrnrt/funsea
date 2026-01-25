@@ -124,6 +124,7 @@
 
     @include vars.from('md') {
       width: 88%;
+      max-width: 1254px;
     }
 
     &--m {
