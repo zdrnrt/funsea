@@ -1,0 +1,26 @@
+@use '../vars.scss';
+
+.detail-page {
+  &__preview {
+    margin-bottom: 16px;
+
+    @include vars.from('md') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__container {
+    @include vars.from('md') {
+      display: grid;
+      grid-template-columns: 1fr 375px;
+      align-items: flex-start;
+      gap: 60px;
+    }
+  }
+
+  &__descr-container {
+    @include vars.from('md') {
+      padding-inline: 60px;
+    }
+  }
+}
