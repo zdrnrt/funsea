@@ -8,19 +8,14 @@
       margin-bottom: 24px;
     }
   }
-
-  &__container {
+  
+  &__descr-container {
     @include vars.from('md') {
+      padding-inline: 60px;
       display: grid;
       grid-template-columns: 1fr 375px;
       align-items: flex-start;
       gap: 60px;
-    }
-  }
-
-  &__descr-container {
-    @include vars.from('md') {
-      padding-inline: 60px;
     }
   }
 }

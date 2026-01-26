@@ -36,7 +36,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         catalog: resolve(__dirname, 'catalog.html'),
         blog: resolve(__dirname, 'blog.html'),
-        trip_detail: resolve(__dirname, 'trip-detail.html'),
+        detail: resolve(__dirname, 'detail.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {

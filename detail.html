@@ -11,7 +11,6 @@
 <body>
   <include src="src/html/header.html"></include>
   <main class="main detail-page">
-
     <div class="detail-page__preview detail-preview">
       <div class="container detail-preview__container">
         <div class="detail-preview__grid detail-grid">
@@ -169,44 +168,136 @@
               </article>
           </div>
           <div class="detail-descr__meet detail-meet">
-            <h3 class="detail-info__subtitle detail-info__subtitle--meet">Где встречаемся</h3>
+            <h3 class="detail-meet__title">Где встречаемся</h3>
             <div class="detail-meet__info">Место сбора группы</div>
             <div class="detail-meet__place">пос. Небуг</div>
             <div class="detail-meet__map">
-              <img class="detail-meet__iframe" src="" alt="" />
+              <img class="detail-meet__iframe detail-meet__iframe--m" src="src/assets/images/detail/map-m.jpg" alt="" />
+              <img class="detail-meet__iframe" src="src/assets/images/detail/map.jpg" alt="" />
             </div>
 
           </div>
-          <div class="detail-descr__about detail-about">
-            <h2 class="detail-info__subtitle detail-info__subtitle--about">Важная иформация</h2>
-            <div class="detail-about__item detail-plus">
-              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-plus__icon">
-              <span class="detail-plus__name">Возьмите с собой спортивную одежду и обувь (летом — это шорты или лёгкие
+          <div class="detail-descr__included detail-included">
+            <h2 class="detail-included__title">Важная иформация</h2>
+            <div class="detail-included__item detail-includes">
+              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-includes__icon">
+              <span class="detail-includes__name">Возьмите с собой спортивную одежду и обувь (летом — это шорты или лёгкие
                 штаны с сандалиями; весной и осенью — это резиновые сапоги, спортивный костюм и куртка-ветровка)</span>
             </div>
-            <div class="detail-about__item detail-plus">
-              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-plus__icon">
-              <span class="detail-plus__name">Берите с собой треккинговые палки (пригодятся для удержания равновесия в
+            <div class="detail-included__item detail-includes">
+              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-includes__icon">
+              <span class="detail-includes__name">Берите с собой треккинговые палки (пригодятся для удержания равновесия в
                 некоторых местах перехода мелких бродов), хотя данное условие и не обязательно. Но палки, кроме
                 вышеуказанного, также снизят уровень вашей нагрузки на организм на подъёмах (50 %) и на спусках (70 %)
                 по мере следования по маршруту.</span>
             </div>
-            <div class="detail-about__item detail-plus">
-              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-plus__icon">
-              <span class="detail-plus__name">Стоит также брать купальные принадлежности (при купании в лагунах) и
+            <div class="detail-included__item detail-includes">
+              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-includes__icon">
+              <span class="detail-includes__name">Стоит также брать купальные принадлежности (при купании в лагунах) и
                 полотенце.</span>
             </div>
-            <div class="detail-about__item detail-plus">
-              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-plus__icon">
-              <span class="detail-plus__name">Мыльные принадлежности нельзя.</span>
+            <div class="detail-included__item detail-includes">
+              <img src="src/assets/images/icons/detail/clear.svg" alt="" class="detail-includes__icon">
+              <span class="detail-includes__name">Мыльные принадлежности нельзя.</span>
             </div>
           </div>
           <div class="detail-descr__adventures detail-adventures">
-            <h2 class="detail-info__subtitle detail-info__subtitle--adventures">
+            <h2 class="detail-adventures__title">
               Другие развлечения
             </h2>
             <div class="detail-adventures__list">
+              <article class="card">
+              <div class="card__preview">
+                <span class="card__tag card__tag--blue">Групповая</span>
+                <img src="src/assets/images/trips/1.jpg" alt="" class="card__pic">
+              </div>
+              <div class="card__descr">
+                <div class="card__position card-position">
+                  <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                  <span class="card-position__name">Туапсе · Небуг</span>
+                </div>
+                <h3 class="card__title">Аквапарк дельфин</h3>
+                <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
+                  детский бассейн глуб.....</p>
+                <div class="card__info">
+                  <div class="card-info__item card__info-item">
+                    <img src="src/assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                    <span class="card-info__name">2 часа</span>
+                  </div>
+                  <div class="card-info__item card__info-item">
+                    <img src="src/assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                    <span class="card-info__name">На автобусе</span>
+                  </div>
+                  <div class="card-info__item card__info-item">
+                    <img src="src/assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                    <span class="card-info__name">Семейный план</span>
+                  </div>
+                </div>
+                <footer class="card__footer">
+                  <div class="card__price card-price">
+                    <span class="card-price__actuall">14 000 ₽</span>
+                    <span class="card-price__info">/ за человека</span>
+                  </div>
+                  <a href="#" class="card__btn">Подробнее</a>
+                </footer>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__preview">
+                <span class="card__tag card__tag--blue">В группе</span>
+                <img src="src/assets/images/trips/2.jpg" alt="" class="card__pic">
+              </div>
+              <div class="card__descr">
+                <div class="card__position card-position">
+                  <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                  <span class="card-position__name">Туапсе · Ольгинка</span>
+                </div>
+                <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
+                <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
+                  Подходит для всадников любого уровня</p>
+                <div class="card__info">
+                  <div class="card-info__item card__info-item">
+                    <img src="" alt="" class="card-info__icon" />
+                  </div>
+                </div>
+                <footer class="card__footer">
+                  <div class="card__price card-price">
+                    <span class="card-price__actuall">3 500 ₽</span>
+                    <span class="card-price__info">/ за человека</span>
+                  </div>
+                  <a href="#" class="card__btn">Подробнее</a>
+                </footer>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__preview">
+                <span class="card__tag card__tag--blue">Групповая</span>
+                <img src="src/assets/images/trips/3.jpg" alt="" class="card__pic">
+              </div>
+              <div class="card__descr">
+                <div class="card__position card-position">
+                  <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                  <span class="card-position__name">Туапсе  · Небуг</span>
+                </div>
+                <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
+                <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
+                  подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
+                  квадро прогулкой сполна, а вернее на полный максимум.</p>
+                <div class="card__info">
+                  <div class="card-info__item card__info-item">
+                    <img src="" alt="" class="card-info__icon" />
 
+                  </div>
+                </div>
+                <footer class="card__footer">
+                  <div class="card__price card-price">
+                    <span class="card-price__actuall">16 000 ₽</span>
+                    <span class="card-price__info">/ за человека</span>
+                  </div>
+                  <a href="#" class="card__btn">Подробнее</a>
+                </footer>
+              </div>
+            </article>
             </div>
           </div>
         </section>

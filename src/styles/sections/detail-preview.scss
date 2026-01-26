@@ -7,7 +7,9 @@
 
   &__btn {
     position: absolute;
-    display: none;
+    bottom: 16px;
+    right: 16px;
+    z-index: 1;
   }
 }
 
@@ -249,6 +251,52 @@
     @include vars.from('md') {
       aspect-ratio: 450/480;
       border-radius: 0;
+    }
+  }
+}
+
+.preview-all {
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: vars.$cl-grey;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  &:hover{
+    opacity: 0.7;
+  }
+  @include vars.from('md') {
+    padding: 11px 16px;
+    width: auto;
+    aspect-ratio: unset;
+    border-radius: 12px;
+    background-color: vars.$cl-light-grey;
+  }
+  &__icon {
+    display: none;
+    width: 15px;
+    
+    @include vars.from('md') {
+      display: block;
+      width: 22px;
+    }
+    &--m {
+      display: block;
+
+      @include vars.from('md') {
+        display: none;
+      }
+    }
+  }
+  &__text{
+    display: none;
+    font-weight: 600;
+    font-size: 14px;
+    @include vars.from('md') {
+      display: block;
     }
   }
 }
