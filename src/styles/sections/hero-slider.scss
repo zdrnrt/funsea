@@ -23,7 +23,7 @@
   border-radius: 20px;
 
   @include vars.from('md') {
-    height: 390px;
+    min-height: 390px;
     padding: 0px 50px;
     flex-flow: row nowrap;
     gap: 50px;
@@ -69,7 +69,7 @@
     color: vars.$cl-light-grey;
 
     @include vars.from('md') {
-      margin-bottom: 0;
+      margin-bottom: 20px;
       font-size: 18px;
     }
   }
@@ -108,9 +108,13 @@
       width: auto;
       height: 100%;
       max-width: 340px;
+      flex-shrink: 0;
       img{
         height: 100%;
       }
+    }
+    img{
+      object-fit: cover;
     }
 
     &--mobile {

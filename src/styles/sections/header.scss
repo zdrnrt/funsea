@@ -170,6 +170,12 @@
 
   &__item {
     flex-shrink: 0;
+    &:last-child{
+
+      @include vars.from('md') {
+        padding-right: 20px;
+      }
+    }
   }
 
   &__link {

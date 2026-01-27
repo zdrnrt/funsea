@@ -57,6 +57,7 @@ ul, ol{
 .main{
   padding-top: 30px;
   padding-bottom: 50px;
+  overflow: hidden;
   @include vars.from('lg') {
     padding-bottom: 40px;
   }

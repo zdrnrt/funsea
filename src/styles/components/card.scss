@@ -1,6 +1,27 @@
 @use "../vars.scss";
 
 .card {
+  &--blog{
+    position: relative;
+    &:hover{
+      .card__title{
+        color: vars.$cl-blue;
+      }
+      .card__text{
+        color: vars.$cl-black;
+      }
+    }
+  }
+  &__link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+  }
   &__preview {
     position: relative;
     border-radius: 20px 20px 0 0;
@@ -71,6 +92,7 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 130%;
+      transition: vars.$transition;
 
     @include vars.from('md') {
       font-size: 20px;
@@ -96,7 +118,7 @@
 
     &--blog {
       margin-bottom: 0;
-
+      transition: vars.$transition;
       @include vars.from('md') {
         margin-bottom: 0;
       }
@@ -238,7 +260,7 @@
     line-height: 100%;
     color: vars.$cl-black;
 
-    @include vars.from('md') {
+    @include vars.from('lg') {
       font-size: 24px;
     }
   }

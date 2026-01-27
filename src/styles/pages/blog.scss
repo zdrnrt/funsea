@@ -17,6 +17,9 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: vars.$list-gap-m;
+    @include vars.from('sm') {
+      grid-template-columns: repeat(2, 1fr);
+    }
     @include vars.from('md') {
       grid-template-columns: repeat(3, 1fr);
       gap: vars.$list-gap;
