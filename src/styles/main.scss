@@ -5,6 +5,7 @@
 @use './pages/blog.scss';
 @use './pages/detail.scss';
 @use './pages/catalog.scss';
+@use './pages/article.scss';
 @use './components/card.scss';
 @use './components/inputs.scss';
 @use './sections/header.scss';
@@ -18,3 +19,4 @@
 @use './sections/detail-preview.scss';
 @use './sections/detail-descr.scss';
 @use './sections/detail-aside.scss';
+@use './sections/article-item-content.scss';

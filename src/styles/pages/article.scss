@@ -1,0 +1,18 @@
+@use "../vars.scss";
+
+.article-page {
+  &__container {
+    margin-bottom: 40px;
+
+    @include vars.from('md') {
+      display: grid;
+      grid-template-columns: 1fr 432px;
+      gap: 24px;
+    }
+  }
+
+  &__aside {
+    margin: 0 auto;
+    max-width: 432px;
+  }
+}
