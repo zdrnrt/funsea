@@ -6,6 +6,7 @@
 @use './pages/detail.scss';
 @use './pages/catalog.scss';
 @use './components/card.scss';
+@use './components/inputs.scss';
 @use './sections/header.scss';
 @use './sections/footer.scss';
 @use './sections/hero-slider.scss';
@@ -16,3 +17,4 @@
 @use './sections/blog-list.scss';
 @use './sections/detail-preview.scss';
 @use './sections/detail-descr.scss';
+@use './sections/detail-aside.scss';
