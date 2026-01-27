@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/fav.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет | Moре развлечений</title>
+</head>
+
+<body>
+  <include src="src/html/header.html"></include>
+  <main class="main lk-page">
+    <div class="container lk-page__container">
+      <aside class="lk-page__aside lk-aside">
+        <div class="lk-aside__user lk-user">
+          <div class="lk-user__avatar">
+            <img
+              src="data:image/svg+xml,%3Csvg width='70' height='70' viewBox='0 0 70 70' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35' cy='35' r='35' fill='%232F80ED'/%3E%3Cpath d='M20.2846 43.3687V26.6276H23.5149V38.7943L31.6261 26.6276H34.6442V43.3687H31.4139V31.3434L23.397 43.3687H20.2846ZM47.5325 43.3687V36.8373C47.3596 36.9159 47.1081 37.0181 46.778 37.1438C46.4478 37.2696 46.0313 37.3796 45.5283 37.4739C45.0253 37.5682 44.4358 37.6154 43.7598 37.6154C41.8107 37.6154 40.3488 37.1831 39.3742 36.3185C38.3996 35.454 37.9123 34.0707 37.9123 32.1687V26.6276H41.0718V31.815C41.0718 32.8053 41.3234 33.5362 41.8264 34.0078C42.3451 34.4637 43.2254 34.6916 44.4672 34.6916C45.0174 34.6916 45.5676 34.6366 46.1177 34.5265C46.6679 34.4008 47.1395 34.2436 47.5325 34.055V26.6276H50.6921V43.3687H47.5325Z' fill='white'/%3E%3C/svg%3E%0A"
+              alt="">
+          </div>
+          <div class="lk-user__name">
+            <div>Иван</div>
+            <div>Чапаев</div>
+          </div>
+        </div>
+        <nav class="lk-aside__sections lk-sections">
+          <ul class="lk-sections__list">
+            <li class="lk-sections__item">
+              <a href="#" class="lk-sections__link lk-section-link">
+                <svg class="lk-section-link__icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="lk-section-link__icon--marked" cx="17" cy="17" r="17" />
+                  <path
+                    d="M23.9988 7C22.999 7 21.7875 9.129 21.1193 11.1363C19.7703 10.8136 18.387 10.6558 17 10.6667C15.6129 10.6558 14.2297 10.8136 12.8807 11.1363C12.2125 9.129 11.001 7 10.0012 7C8.14049 7 7.00168 14.9853 7.00168 19.3333C6.9666 20.9237 7.48047 22.4776 8.45677 23.7333L7.18565 24.3687C7.0211 24.4515 6.95485 24.6521 7.03768 24.8167C7.12051 24.9812 7.32105 25.0475 7.4856 24.9647L8.91369 24.249C9.05867 24.398 9.20931 24.5427 9.36995 24.6803L8.39078 26.1487C8.32056 26.2477 8.30975 26.3771 8.36255 26.4865C8.41535 26.5958 8.52342 26.6678 8.64464 26.6743C8.76586 26.6809 8.88106 26.621 8.94536 26.518L9.89586 25.0907C11.6146 26.32 14.0365 27 17 27C19.9635 27 22.3854 26.32 24.1041 25.0907L25.0546 26.518C25.1189 26.621 25.2341 26.6809 25.3554 26.6743C25.4766 26.6678 25.5846 26.5958 25.6374 26.4865C25.6902 26.3771 25.6794 26.2477 25.6092 26.1487L24.632 24.6803C24.7927 24.5427 24.9433 24.398 25.0883 24.249L26.5164 24.9647C26.6809 25.0475 26.8815 24.9812 26.9643 24.8167C27.0471 24.6521 26.9809 24.4515 26.8163 24.3687L25.5432 23.7333C26.5195 22.4776 27.0334 20.9237 26.9983 19.3333C26.9983 14.9853 25.8595 7 23.9988 7ZM17 26.3333C12.4888 26.3333 7.66824 24.4943 7.66824 19.3333C7.66824 13.6637 9.18532 7.66667 10.0012 7.66667C10.6457 7.66667 12.3171 10.571 12.6707 13.0473C12.6969 13.2296 12.8658 13.3561 13.048 13.33C13.2302 13.3039 13.3568 13.1349 13.3306 12.9527C13.2706 12.5549 13.1855 12.1613 13.0757 11.7743C14.3614 11.471 15.679 11.3229 17 11.3333C18.321 11.3229 19.6386 11.471 20.9243 11.7743C20.8145 12.1613 20.7294 12.5549 20.6694 12.9527C20.6525 13.0706 20.6997 13.1885 20.7934 13.2621C20.887 13.3357 21.0128 13.3538 21.1233 13.3095C21.2338 13.2652 21.3124 13.1652 21.3293 13.0473C21.6829 10.571 23.3543 7.66667 23.9988 7.66667C24.8147 7.66667 26.3318 13.6637 26.3318 19.3333C26.3318 24.4943 21.5112 26.3333 17 26.3333Z"
+                    fill="#F2F2F2" />
+                  <path
+                    d="M17 26.3333C12.4888 26.3333 7.66824 24.4943 7.66824 19.3333C7.66824 13.6637 9.18532 7.66667 10.0012 7.66667C10.6457 7.66667 12.3171 10.571 12.6707 13.0473C12.6969 13.2296 12.8658 13.3561 13.048 13.33C13.2302 13.3039 13.3568 13.1349 13.3306 12.9527C13.2706 12.5549 13.1855 12.1613 13.0757 11.7743C14.3614 11.471 15.679 11.3229 17 11.3333C18.321 11.3229 19.6386 11.471 20.9243 11.7743C20.8145 12.1613 20.7294 12.5549 20.6694 12.9527C20.6525 13.0706 20.6997 13.1885 20.7934 13.2621C20.887 13.3357 21.0128 13.3538 21.1233 13.3095C21.2338 13.2652 21.3124 13.1652 21.3293 13.0473C21.6829 10.571 23.3543 7.66667 23.9988 7.66667C24.8147 7.66667 26.3318 13.6637 26.3318 19.3333C26.3318 24.4943 21.5112 26.3333 17 26.3333Z"
+                    fill="#F2F2F2" />
+                </svg>
+                <span class="lk-section-link__name">Мой профиль</span>
+              </a>
+            </li>
+            <li class="lk-sections__item">
+              <a href="#" class="lk-sections__link lk-section-link lk-section-link--active">
+                <svg class="lk-section-link__icon" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="lk-section-link__icon--marked-stroke" x="9.5" y="1.5" width="9" height="14" rx="4.5"
+                    stroke-width="3" />
+                  <path class="lk-section-link__icon--marked"
+                    d="M3.75832 30C1.83316 30 0.406267 28.2124 0.832924 26.3351L4.46929 10.3351C4.77971 8.96927 5.99399 8 7.39469 8H20.6053C22.006 8 23.2203 8.96927 23.5307 10.3351L27.1671 26.3351C27.5937 28.2124 26.1668 30 24.2417 30H3.75832Z" />
+                  <rect x="8" y="16" width="2" height="8" rx="1" fill="#EDF4F8" />
+                  <rect x="13" y="16" width="2" height="8" rx="1" fill="#EDF4F8" />
+                  <rect x="18" y="16" width="2" height="8" rx="1" fill="#EDF4F8" />
+                  <ellipse cx="23" cy="27" rx="7" ry="7" fill="#303030" />
+                  <rect x="22" y="23" width="2" height="8" rx="1" fill="#EDF4F8" />
+                  <rect x="19" y="28" width="2" height="8" rx="1" transform="rotate(-90 19 28)" fill="#EDF4F8" />
+                </svg>
+                <span class="lk-section-link__name">Мои заказы</span>
+                <span class="lk-section-link__count">0</span>
+              </a>
+            </li>
+            <li class="lk-sections__item">
+              <a href="#" class="lk-sections__link lk-section-link">
+                <svg class="lk-section-link__icon" viewBox="0 0 24 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect class="lk-section-link__icon--marked" y="30" width="30" height="24" rx="5"
+                    transform="rotate(-90 0 30)" />
+                  <path
+                    d="M21.7071 15.7071C22.0976 15.3166 22.0976 14.6834 21.7071 14.2929L15.3431 7.92893C14.9526 7.53841 14.3195 7.53841 13.9289 7.92893C13.5384 8.31946 13.5384 8.95262 13.9289 9.34315L19.5858 15L13.9289 20.6569C13.5384 21.0474 13.5384 21.6805 13.9289 22.0711C14.3195 22.4616 14.9526 22.4616 15.3431 22.0711L21.7071 15.7071ZM7 15V16H21V15V14H7V15Z"
+                    fill="#F2F2F2" />
+                  <rect x="5" y="14" width="3" height="2" rx="1" fill="#F2F2F2" />
+                </svg>
+                <span class="lk-section-link__name">Выйти</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="lk-aside__nav lk-nav">
+          <ul class="lk-nav__list">
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Пользовательское соглашение</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Политика конфиденциальности</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Как купить билет</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Организаторам</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">О нас</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Инструкции</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <section class="lk-page__content lk-content">
+        <header class="lk-content__header">
+          <h1 class="lk-content__title">Мои билеты</h1>
+          <div class="lk-content__tabs">
+          <div class="lk-tabs">
+            <button class="lk-tabs__btn lk-tabs__btn--active">Активные</button>
+            <button class="lk-tabs__btn">Архив</button>
+          </div>
+          </div>
+        </header>
+        <div class="lk-empty">
+          <h2 class="lk-empty__title lk-content__title">У вас нет актуальных заказов :(</h2>
+          <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
+          <a href="#" class="lk-empty__btn">Выбрать услугу</a>
+          <div class="lk-empty__bg">
+            <img src="src/assets/images/lk/ticket.svg" alt="">
+          </div>
+        </div>
+      </section>
+      <div class="lk-page__nav-m">
+        <nav class="lk-nav">
+          <ul class="lk-nav__list">
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Пользовательское соглашение</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Политика конфиденциальности</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Как купить билет</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Организаторам</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">О нас</a></li>
+            <li class="lk-nav__item"><a href="#" class="lk-nav__link">Инструкции</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </main>
+  <include src="src/html/footer.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

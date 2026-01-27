@@ -1,0 +1,24 @@
+@use "../vars.scss";
+
+.lk-page {
+  &__container {
+    @include vars.from('md') {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 78px;
+    }
+  }
+  &__aside{
+    max-width: 260px;
+    margin-bottom: 40px;
+    @include vars.from('md') {
+      margin-bottom: 0;
+    }
+  }
+  &__nav-m{
+    display: block;
+    @include vars.from('md') {
+      display: none;
+    }
+  }
+}

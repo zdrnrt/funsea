@@ -38,6 +38,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         detail: resolve(__dirname, 'detail.html'),
         article: resolve(__dirname, 'article.html'),
+        lk: resolve(__dirname, 'lk.html'), 
       },
       output: {
         assetFileNames: (assetInfo) => {

@@ -1,0 +1,179 @@
+@use "../vars.scss";
+
+.lk-aside {
+  &__user {
+    margin-bottom: 40px;
+
+    @include vars.from('md') {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__sections {
+    margin-bottom: 40px;
+
+    @include vars.from('md') {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__nav {
+    display: none;
+
+    @include vars.from('md') {
+      display: block;
+    }
+  }
+}
+
+.lk-user {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+
+  @include vars.from('md') {}
+
+  &__avatar {
+    width: 70px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    @include vars.from('md') {
+      width: 90px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+.lk-sections {
+  &__item {
+    &+& {
+      margin-top: 30px;
+
+      @include vars.from('md') {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.lk-section-link {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+
+  @include vars.from('md') {
+    gap: 20px;
+  }
+
+  &:hover,
+  &--active {
+    .lk-section-link__name {
+      color: vars.$cl-black;
+    }
+
+    .lk-section-link__count {
+      background-color: vars.$cl-blue;
+    }
+
+    .lk-section-link__icon--marked {
+      fill: vars.$cl-blue;
+    }
+
+    .lk-section-link__icon--marked-stroke {
+      stroke: vars.$cl-blue;
+    }
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: auto;
+    max-width: 26px;
+    max-height: 28px;
+    flex-basis: 26px;
+    transition: inherit;
+
+    @include vars.from('md') {
+      flex-basis: 34px;
+      max-width: 34px;
+      height: 34px;
+    }
+
+    &--marked-stroke {
+      transition: inherit;
+      stroke: vars.$cl-secondary-grey;
+    }
+
+    &--marked {
+      transition: inherit;
+      fill: vars.$cl-secondary-grey;
+    }
+  }
+
+  &__name {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 16px;
+    color: vars.$cl-secondary-grey;
+    transition: inherit;
+  }
+
+  &__count {
+    padding: 0 6px;
+    min-width: 34px;
+    background-color: vars.$cl-secondary-grey;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    line-height: 26px;
+    text-align: center;
+    color: vars.$cl-light-grey;
+    transition: inherit;
+
+    @include vars.from('md') {
+      line-height: 30px;
+    }
+  }
+}
+
+.lk-nav {
+  &__item {
+    &+& {
+      margin-top: 20px;
+
+      @include vars.from('md') {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    border-bottom: 1px dashed currentColor;
+    color: vars.$cl-blue;
+
+    &:hover {
+      color: vars.$cl-black;
+    }
+
+    @include vars.from('md') {
+      font-weight: 700;
+    }
+  }
+}

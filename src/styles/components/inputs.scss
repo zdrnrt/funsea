@@ -53,14 +53,14 @@
     background-color: transparent;
 
     &::placeholder {
-      color: vars.$cl-input-placeholder;
+      color: vars.$cl-input-bg;
     }
   }
 
   &__icon {
     flex-shrink: 0;
     width: 20px;
-    fill: vars.$cl-input-placeholder;
+    fill: vars.$cl-input-bg;
     transition: vars.$transition;
   }
 

@@ -279,8 +279,8 @@
     padding-right: 42px;
     border-radius: 12px;
     border: none;
-    box-shadow: 0 0 0 1px vars.$cl-input;
-    background: vars.$cl-input;
+    box-shadow: 0 0 0 1px vars.$cl-input-bg;
+    background: vars.$cl-input-bg;
     color: vars.$cl-dark-80;
     font-size: 16px;
   }
@@ -323,13 +323,13 @@
     border-radius: 50%;
 
     &:disabled {
-      background-color: vars.$cl-input;
+      background-color: vars.$cl-input-bg;
       border: none;
       color: vars.$cl-grey;
     }
 
     &:hover {
-      background-color: vars.$cl-input;
+      background-color: vars.$cl-input-bg;
     }
   }
 

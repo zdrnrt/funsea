@@ -1,0 +1,100 @@
+@use '../vars.scss';
+
+.lk-content {
+  &__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1;
+    @include vars.from('md') {
+      margin-bottom: 15px;
+      font-size: 40px;
+    }
+  }
+
+  &__tabs {
+    margin-bottom: 42px;
+
+    @include vars.from('md') {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.lk-tabs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+
+  &__btn {
+    flex-shrink: 0;
+    padding: 6px 14px;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    border-radius: 4px;
+    background-color: vars.$cl-tab;
+    &--active,
+    &:hover {
+      box-shadow: vars.$btn-shadow;
+    }
+  }
+}
+
+.lk-empty{
+  position: relative;
+  min-height: 360px;
+  @include vars.from('md') {
+      min-height: 550px;
+    }
+  &__title{
+    margin-bottom: 24px;
+  }
+  &__text{
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: vars.$cl-light-dark;
+    @include vars.from('md') {
+      margin-bottom: 70px;
+      font-size: 16px;
+    }
+  }
+  &__btn {
+    padding: 10px 24px;
+    border-radius: 3px;
+    background-color: vars.$cl-yellow;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: vars.$cl-black;
+
+    @include vars.from('md') {
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      color: vars.$cl-yellow;
+      background-color: vars.$cl-black;
+      box-shadow: vars.$btn-shadow;
+    }
+  }
+  &__bg{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 33%;
+    max-width: 170px;
+
+    @include vars.from('md') {
+      max-width: 310px;
+    }
+  }
+}
