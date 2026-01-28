@@ -1,4 +1,6 @@
 import 'normalize.css'
+import 'swiper/css'
 import './styles/main.scss'
 import './js/components/modals'
 import './js/components/tabs'
+import './js/components/sliders'

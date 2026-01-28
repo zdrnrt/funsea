@@ -45,27 +45,25 @@
   }
 
   &__list {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 12px;
-    @include vars.scroll-list();
 
     @include vars.from('md') {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 30px;
-      row-gap: 42px;
+      .swiper-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 42px;
+      }
     }
   }
 
   &__item {
-    @include vars.until('md') {
+    &.article-item{
 
-      flex-shrink: 0;
-      max-width: 235px;
-    }
+      @include vars.until('md') {
+        flex-shrink: 0;
+        max-width: 235px;
+      }
+      }
   }
 }
 

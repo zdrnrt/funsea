@@ -11,22 +11,45 @@
     justify-content: space-between;
     gap: 20px;
   }
+  &__container{
+    position: relative;
+  }
 
   &__controls {
     display: none;
-
     @include vars.from('md') {
-      flex-shrink: 0;
+      display: block;
+    }
+  }
+  
+  &__btn {
+    display: none;
+    width: 40px;
+    box-shadow: vars.$btn-shadow;
+    aspect-ratio: 1;
+    line-height: 0;
+    border-radius: 50%;
+    &.swiper-button-disabled{
+      opacity: 0;
+      pointer-events: none;
+    }
+    @include vars.from('md') {
+      display: block;;
+      position: absolute;
+      top: 40px;
+      z-index: 10;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
       gap: 6px;
+      &--prev{
+        left: -20px;
+      }
+      &--next{
+        right: -20px;
+      }
     }
-  }
-
-  &__btn {
-    width: 40px;
   }
 
   &__title {
@@ -45,39 +68,63 @@
 
   &__list {
     position: relative;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 6px;
-    overflow: hidden;
-
     @include vars.from('md') {
-      gap: 20px;
+      overflow: hidden;
+    }
+
+    &::before {
+      @include vars.from('md') {
+        content: "";
+        transition: opacity vars.$transition;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        z-index: 5;
+        width: 70px;
+        height: 100%;
+        transform: rotate(180deg);
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-image: vars.$gradient-white;
+        pointer-events: none;
+      }
+    }
+
+    &--start {
+      &::before {
+        @include vars.from('md') {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
+    &--end {
+      &::after {
+        opacity: 0;
+        pointer-events: none;
+      }
     }
 
     &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 5;
-      width: 140px;
-      height: 100%;
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-image: vars.$gradient-white;
+      @include vars.from('md') {
+
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: 5;
+        width: 70px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-image: vars.$gradient-white;
+        transition: vars.$transition;
+      }
     }
   }
 
-  &__item {
-    max-width: 110px;
-    flex-shrink: 0;
-
-    @include vars.from('md') {
-      max-width: 160px;
-    }
-  }
 }
 
 .trip-item {

@@ -2,13 +2,20 @@
 
 .hero-slider {
   margin-bottom: 40px;
+  &__container{
+    position: relative;
+  }
+  &__list{
+    margin-bottom: 20px;
+    overflow: hidden;
+    @include vars.from('md') {
+      margin-bottom: 15px;
+    }
+  }
   &__btn {
     width: 40px;
     box-shadow: vars.$btn-shadow;
 
-    @include vars.from('md') {}
-  }
-  &__pagination{
   }
 }
 
@@ -122,6 +129,61 @@
 
       @include vars.from('md') {
         display: none;
+      }
+    }
+  }
+}
+
+.hero-slider-controls{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  @include vars.from('md') {
+    justify-content: center;
+  }
+  &__pagination{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  &__bullet{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: vars.$cl-light-grey;
+    @include vars.from('md') {
+      width: 12px;
+      height: 12px;
+    }
+    &--active{
+      background-color: vars.$cl-black;
+    }
+  }
+  &__btn{
+    flex-shrink: 0;
+    width: 40px;
+    line-height: 0;
+    border-radius: 50%;
+    box-shadow: vars.$btn-shadow;
+    @include vars.from('md') {
+      position: absolute;
+      top: 180px;
+      z-index: 5;
+      &--prev{
+        left: -20px;
+      }
+      &--next{
+        right: -20px;
+      }
+    }
+    &.swiper-button-disabled{
+      img{
+
+        opacity: 0.9;
       }
     }
   }

@@ -28,6 +28,15 @@
     line-height: 0;
     border-radius: 50%;
     border: 1px solid vars.$cl-border;
+
+    &:hover {
+      box-shadow: vars.$btn-shadow;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 
   &__title {
@@ -66,26 +75,11 @@
   }
 
   &__list {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-    justify-content: flex-start;
-    gap: 12px;
 
     @include vars.from('md') {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      column-gap: 32px;
+      overflow: hidden;
     }
 
-    .card {
-      flex-shrink: 0;
-      max-width: 90%;
-
-      @include vars.from('md') {
-        max-width: unset;
-      }
-    }
   }
 
 }
