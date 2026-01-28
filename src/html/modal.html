@@ -1,7 +1,7 @@
-<div class="modal">
+<div class="modal" id="auth-user">
   <div class="modal__bg"></div>
   <div class="modal__content">
-    <button class="modal__close">
+    <button class="modal__close js-modal-close">
       <img src="/src/assets/images/icons/close.svg" alt="">
     </button>
     <div class="modal__header">
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="modal-form__item modal-form__text">
-            На него будет отправлен код с подтверждением
+          На него будет отправлен код с подтверждением
         </div>
         <div class="modal-form__item">
           <label class="checkbox">
@@ -81,13 +81,13 @@
           Код отправлен на e-mail <span>aoskok@gmail.com</span>. <button class="modal-form__btn" type="button">Изменить</button>
         </div>
         <div class="modal-form__item">
-        <label for="code" class="modal-form__label">Введите код</label>
+          <label for="code" class="modal-form__label">Введите код</label>
           <div class="input">
             <input id="code" name="code" type="text" class="input__input" placeholder="Введите код">
           </div>
-          </div>
-          <button type="button" class="modal-form__btn">Отправить повторно</button>
-          <div class="modal-form__footer">
+        </div>
+        <button type="button" class="modal-form__btn">Отправить повторно</button>
+        <div class="modal-form__footer">
           <button class="modal-form__submit" disabled type="submit">Продолжить</button>
         </div>
       </form>

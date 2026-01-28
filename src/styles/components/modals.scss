@@ -1,5 +1,9 @@
 @use "../vars.scss";
 
+.body--modal-open{
+  overflow: hidden;
+}
+
 .modal {
   position: fixed;
   top: 0;
@@ -11,7 +15,7 @@
   height: 100vh;
   display: none;
   &--open{
-    display: none;
+    display: block;
   }
   &__bg {
     position: absolute;
@@ -29,8 +33,6 @@
     left: 0;
     right: 0;
     width: 100%;
-    // min-height: 500px;
-    max-height: 100vh;
     padding: 32px 16px 0;
     border-radius: 20px 20px 0 0;
     box-shadow: vars.$modal-shadow;

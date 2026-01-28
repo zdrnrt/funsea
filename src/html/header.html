@@ -11,7 +11,7 @@
       <div class="header__search">
         <form action="#" class="header-search js-header-search">
           <img src="/src/assets/images/icons/search.svg" alt="" class="header-search__icon">
-          <input class="header-search__input" type="text" placeholder="Поиск">
+          <input class="header-search__input" type="text" name="search" placeholder="Поиск">
         </form>
       </div>
       <div class="header__position">
@@ -21,10 +21,10 @@
         </a>
       </div>
       <div class="header__user">
-        <a href="#" class="header-user">
+        <button class="header-user js-modal-trigger" data-target-modal="auth-user">
           <span class="header-user__login">Войти</span>
           <img src="/src/assets/images/icons/user.svg" alt="#" class="header-user__icon">
-        </a>
+        </button>
       </div>
       <button class="header__mobile-menu header-mobile-menu js-header-mobile-menu">
         <img class="header-mobile-menu__icon" src="/src/assets/images/icons/toggle-mobile.svg" alt="">
@@ -35,9 +35,9 @@
     <div class="container header__bottom-content">
       <a href="#" class="header__catalog header-catalog">
         <svg class="header-catalog__icon" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="19.3452" height="1.5062"/>
-    <rect y="9.0376" width="19.3452" height="1.5062"/>
-  </svg>
+          <rect width="19.3452" height="1.5062" />
+          <rect y="9.0376" width="19.3452" height="1.5062" />
+        </svg>
         Каталог
       </a>
       <nav class="header__nav header-nav">
@@ -71,10 +71,3 @@
     </div>
   </div>
 </header>
-
-
-
-
-
-
-
