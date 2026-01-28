@@ -1,0 +1,9 @@
+.tabs {
+  &__item {
+    display: none;
+
+    &--open {
+      display: block;
+    }
+  }
+}

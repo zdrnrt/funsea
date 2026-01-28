@@ -200,24 +200,18 @@
   background-color: vars.$cl-light-grey;
   background-color: vars.$cl-tab;
   border-radius: 12px;
+  .tabs__btn--active{
+    color: vars.$cl-blue;
+    background-color: vars.$cl-white;
+  }
   &__btn{
     flex: 1 0 50%;
     padding: 8px;
     text-align: center;
     font-size: 18px;
     border-radius: 10px;
-    &--active{
-      color: vars.$cl-blue;
-      background-color: vars.$cl-white;
-    }
     &:hover{
       color: vars.$cl-blue;
-    }
-  }
-  &__item{
-    display: none;
-    &--open{
-      display: block;
     }
   }
 }

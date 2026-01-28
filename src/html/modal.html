@@ -1,6 +1,6 @@
 <div class="modal" id="auth-user">
   <div class="modal__bg"></div>
-  <div class="modal__content">
+  <div class="modal__content js-tabs tabs">
     <button class="modal__close js-modal-close">
       <img src="/src/assets/images/icons/close.svg" alt="">
     </button>
@@ -8,12 +8,12 @@
       <div class="modal__logo">
         <img src="/src/assets/images/icons/logo.png" alt="">
       </div>
-      <div class="modal__tabs modal-tabs">
-        <button class="modal-tabs__btn modal-tabs__btn--active" data-target-tab="signin">Вход</button>
-        <button class="modal-tabs__btn" data-target-tab="signup">Регистрация</button>
+      <div class="modal__tabs modal-tabs ">
+        <button class="modal-tabs__btn js-tab-trigger tabs__btn--active" data-target-tab="signin">Вход</button>
+        <button class="modal-tabs__btn js-tab-trigger" data-target-tab="signup">Регистрация</button>
       </div>
     </div>
-    <div data-tab="signin" class="modal-tabs__item modal-tabs__item--open">
+    <div data-tab="signin" class="modal-tabs__item tabs__item tabs__item--open">
       <form action="" class="modal-form js-form-signin">
         <div class="modal-form__item">
           <label for="email" class="modal-form__label">Email</label>
@@ -50,8 +50,7 @@
         </div>
       </form>
     </div>
-    <div data-tab="signup" class="modal-tabs__item">
-
+    <div data-tab="signup" class="modal-tabs__item tabs__item">
       <form class="modal-form js-form-signup">
         <div class="modal-form__item">
           <label for="email" class="modal-form__label">Email</label>
