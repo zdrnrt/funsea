@@ -4,50 +4,93 @@
     <button class="modal__close">
       <img src="/src/assets/images/icons/close.svg" alt="">
     </button>
-    <form action="" class="modal-form js-form-signin">                                                                                                                                                                              
-      <div class="modal-form__item">
-        <label for="email" class="modal-form__label">Email</label>
-        <div class="input">
-          <input id="email" name="email" type="text" class="input__input">
-        </div>
+    <div class="modal__header">
+      <div class="modal__logo">
+        <img src="/src/assets/images/icons/logo.png" alt="">
       </div>
-      <div class="modal-form__item">
-        <label for="password" class="modal-form__label">Пароль</label>
-        <div class="input">
-          <svg class="input__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M15.8333 9.1665H4.16667C3.24619 9.1665 2.5 9.9127 2.5 10.8332V16.6665C2.5 17.587 3.24619 18.3332 4.16667 18.3332H15.8333C16.7538 18.3332 17.5 17.587 17.5 16.6665V10.8332C17.5 9.9127 16.7538 9.1665 15.8333 9.1665Z"
-              stroke="#F54545" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path
-              d="M5.83398 9.1665V5.83317C5.83398 4.7281 6.27297 3.66829 7.05437 2.88689C7.83577 2.10549 8.89558 1.6665 10.0007 1.6665C11.1057 1.6665 12.1655 2.10549 12.9469 2.88689C13.7283 3.66829 14.1673 4.7281 14.1673 5.83317V9.1665"
-              stroke="#F54545" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          </svg>
+      <div class="modal__tabs modal-tabs">
+        <button class="modal-tabs__btn modal-tabs__btn--active" data-target-tab="signin">Вход</button>
+        <button class="modal-tabs__btn" data-target-tab="signup">Регистрация</button>
+      </div>
+    </div>
+    <div data-tab="signin" class="modal-tabs__item modal-tabs__item--open">
+      <form action="" class="modal-form js-form-signin">
+        <div class="modal-form__item">
+          <label for="email" class="modal-form__label">Email</label>
+          <div class="input">
+            <input id="email" name="email" type="text" class="input__input" placeholder="Введите ваш Email">
+          </div>
+        </div>
+        <div class="modal-form__item">
+          <label for="password" class="modal-form__label">Пароль</label>
+          <div class="input js-password">
+            <svg class="input__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.8333 9.1665H4.16667C3.24619 9.1665 2.5 9.9127 2.5 10.8332V16.6665C2.5 17.587 3.24619 18.3332 4.16667 18.3332H15.8333C16.7538 18.3332 17.5 17.587 17.5 16.6665V10.8332C17.5 9.9127 16.7538 9.1665 15.8333 9.1665Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M5.83398 9.1665V5.83317C5.83398 4.7281 6.27297 3.66829 7.05437 2.88689C7.83577 2.10549 8.89558 1.6665 10.0007 1.6665C11.1057 1.6665 12.1655 2.10549 12.9469 2.88689C13.7283 3.66829 14.1673 4.7281 14.1673 5.83317V9.1665"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
 
-          <input id="password" name="password" type="text" class="input__input">
-          <button class="input__btn">
-            <img src="/src/assets/images/icons/eye-hide.svg" alt="">
-          </button>
+            <input id="password" name="password" type="text" class="input__input js-password-input"
+              placeholder="Введите пароль">
+            <button class="input__btn" type="button">
+              <img src="/src/assets/images/icons/eye-hide.svg" alt="">
+            </button>
+          </div>
+          <div class="input__error input-error">
+            <img src="/src/assets/images/icons/alert.svg" alt="" class="input-error__icon">
+            <span class="input-error__text">Неверный пароль</span>
+          </div>
         </div>
-        <div class="input__error input-error">
-          <img src="/src/assets/images/icons/alert.svg" alt="">
-          <span class="input-error__text"></span>
+        <a href="#" class="modal-form__btn">Забыли пароль?</a>
+        <div class="modal-form__footer">
+          <button class="modal-form__submit" type="submit">Продолжить</button>
         </div>
-      </div>
-      <a href="#" class="modal-form__forget">Забыли пароль?</a>
-      <div class="modal-form__footer">
-        <button class="modal-form__btn" type="submit">Продолжить</button>
-      </div>
-    </form>
-    <form class="js-registration-submit">
-      <div class="modal-form__item">
-        <label for="email" class="modal-form__label">Email</label>
-        <div class="input">
-          <input id="email" name="email" type="text" class="input__input">
+      </form>
+    </div>
+    <div data-tab="signup" class="modal-tabs__item">
+
+      <form class="modal-form js-form-signup">
+        <div class="modal-form__item">
+          <label for="email" class="modal-form__label">Email</label>
+          <div class="input">
+            <input id="email" name="email" type="text" class="input__input">
+          </div>
         </div>
-      </div>
-      <div class="modal-form__footer">
-        <button class="modal-form__btn" type="submit">Продолжить</button>
-      </div>
-    </form>
+        <div class="modal-form__item modal-form__text">
+            На него будет отправлен код с подтверждением
+        </div>
+        <div class="modal-form__item">
+          <label class="checkbox">
+            <input type="checkbox" name="agree" id="" class="checkbox__input">
+            <span class="checkbox__check"></span>
+            <div class="checkbox__text">Даю согласие на <a href="#" class="checkbox__text--link">обработку персональных данных</a> в соответствии с <a href="#" class="checkbox__text--link">политикой конфиденциальности</a> и принимаю условия <a href="#" class="checkbox__text--link">пользовательского соглашения</a></div>
+          </label>
+        </div>
+        <div class="modal-form__item">
+          <img src="/src/assets/images/icons/captcha.jpg" alt="">
+        </div>
+        <div class="modal-form__footer">
+          <button class="modal-form__submit" type="submit">Продолжить</button>
+        </div>
+      </form>
+      <form class="modal-form modal-form--hidden js-form-signup-code">
+        <div class="modal-form__item modal-form__text">
+          Код отправлен на e-mail <span>aoskok@gmail.com</span>. <button class="modal-form__btn" type="button">Изменить</button>
+        </div>
+        <div class="modal-form__item">
+        <label for="code" class="modal-form__label">Введите код</label>
+          <div class="input">
+            <input id="code" name="code" type="text" class="input__input" placeholder="Введите код">
+          </div>
+          </div>
+          <button type="button" class="modal-form__btn">Отправить повторно</button>
+          <div class="modal-form__footer">
+          <button class="modal-form__submit" disabled type="submit">Продолжить</button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>

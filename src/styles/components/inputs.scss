@@ -17,15 +17,17 @@
 }
 
 .input {
+  padding: 12px;
   display: flex;
-  flex-flow: safe row nowrap;
+  flex-flow: row nowrap;
   justify-content: safe flex-start;
   align-items: center;
+  gap: 8px;
   background-color: vars.$cl-input-bg;
   border: 1px solid vars.$cl-input-bg;
-  font-weight: 400;
   font-size: 16px;
   line-height: 125%;
+  border-radius: 12px;
 
   &:has(input:focus) {
     border-color: vars.$cl-blue;
@@ -35,7 +37,7 @@
     border-color: vars.$cl-red;
 
     .input__icon {
-      fill: vars.$cl-red;
+      color: vars.$cl-red;
     }
 
     &+.input__error {
@@ -52,15 +54,19 @@
     border: none;
     background-color: transparent;
 
+    &:focus {
+      outline: none;
+    }
+
     &::placeholder {
-      color: vars.$cl-input-bg;
+      color: vars.$cl-grey;
     }
   }
 
   &__icon {
     flex-shrink: 0;
     width: 20px;
-    fill: vars.$cl-input-bg;
+    color: vars.$cl-grey;
     transition: vars.$transition;
   }
 
@@ -89,7 +95,7 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
-  
+
   &__icon {
     flex-shrink: 0;
     width: 20px;
@@ -124,6 +130,8 @@
     border-radius: 4px;
     flex-shrink: 0;
     border: 1px solid vars.$cl-border;
+    background-position: center;
+
   }
 
   &__text {
@@ -135,8 +143,8 @@
     &--link {
       color: vars.$cl-blue;
 
-      &:hvoer {
-        text-decoration: underline;
+      &:hover {
+        filter: brightness(0.8);
       }
 
     }

@@ -4,7 +4,15 @@
   position: fixed;
   top: 0;
   bottom: 0;
-
+  left: 0;
+  right: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  &--open{
+    display: none;
+  }
   &__bg {
     position: absolute;
     top: 0;
@@ -21,9 +29,8 @@
     left: 0;
     right: 0;
     width: 100%;
-    min-height: 500px;
+    // min-height: 500px;
     max-height: 100vh;
-    overflow: auto;
     padding: 32px 16px 0;
     border-radius: 20px 20px 0 0;
     box-shadow: vars.$modal-shadow;
@@ -37,6 +44,7 @@
       transform: translate(-50%, -50%);
       max-width: 570px;
       padding: 32px;
+      border-radius: 20px;
     }
 
     @include vars.from('md') {
@@ -48,27 +56,64 @@
     position: absolute;
     top: -16px;
     right: 16px;
-    width: 44px;
     padding: 12px;
     background-color: vars.$cl-input-bg;
+    border-radius: 8px;
+    line-height: 0;
 
     &:hover {
-      transform: scale(1.1);
+      background-color: vars.$cl-grey;
+      img{
+        filter: invert(1);
+      }
     }
 
     @include vars.from('md') {
       top: 16px;
     }
   }
+
+  &__logo{
+    display: none;
+    @include vars.from('md') {
+      display: block;
+      margin: 0 auto 20px;
+      width: 200px;
+      line-height: 0;
+    }
+  }
+
+  &__tabs{
+    margin-bottom: 18px;
+  }
 }
 
 .modal-form {
-  height: 100%;
+  min-height: 420px;
   display: flex;
   flex-flow: column;
   justify-content: flex-start;
   gap: 20px;
   align-items: flex-start;
+  @include vars.from('md') {
+    min-height: unset;
+  }
+  &--hidden{
+    display: none;
+  }
+  &__item {
+    width: 100%;
+    &--repeat{
+      text-align: end;
+    }
+  }
+
+  &__label {
+    margin-bottom: 8px;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+  }
 
   &__forget {
     margin-top: 8px;
@@ -87,17 +132,28 @@
   &__footer {
     margin-top: auto;
     padding: 16px;
+    width: 100%;
     border-top: 1px solid vars.$cl-border;
     text-align: center;
 
     @include vars.from('md') {
       padding: 0;
-      padding-top: 28px;
       border-top: none;
     }
+    
   }
 
   &__btn {
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    color: vars.$cl-blue;
+    &:hover{
+      filter: brightness(0.8);
+    }
+  }
+  &__submit {
     width: 100%;
     display: inline-block;
     margin: 0 auto;
@@ -107,12 +163,13 @@
     line-height: 125%;
     color: vars.$cl-white;
     background-color: vars.$cl-blue;
-
+    border: 1px solid vars.$cl-blue;
+    border-radius: 12px;
     @include vars.from('md') {
       max-width: 200px;
     }
 
-    &:hover {
+    &:hover:not([disabled]) {
       color: vars.$cl-blue;
       background-color: vars.$cl-white;
       box-shadow: vars.$btn-shadow;
@@ -120,7 +177,45 @@
 
     &:disabled {
       color: vars.$cl-grey;
+      border-color: vars.$cl-light-grey;
       background-color: vars.$cl-light-grey;
+      cursor: auto;
+    }
+  }
+
+  &__text{
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+
+.modal-tabs{
+  padding: 2px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$cl-light-grey;
+  background-color: vars.$cl-tab;
+  border-radius: 12px;
+  &__btn{
+    flex: 1 0 50%;
+    padding: 8px;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 10px;
+    &--active{
+      color: vars.$cl-blue;
+      background-color: vars.$cl-white;
+    }
+    &:hover{
+      color: vars.$cl-blue;
+    }
+  }
+  &__item{
+    display: none;
+    &--open{
+      display: block;
     }
   }
 }
