@@ -1,13 +1,42 @@
 @use "../vars.scss";
 
-.catalog-page{
-  &__list{
+.catalog-page {
+  &__items {
+    margin-bottom: vars.$page-section-gap;
+  }
+
+  &__blog {
+    margin-bottom: vars.$page-section-gap;
+  }
+
+  &__list {
+    margin-bottom: vars.$page-section-gap;
     display: grid;
     grid-template-columns: 1fr;
     gap: vars.$list-gap-m;
+
     @include vars.from('md') {
       grid-template-columns: repeat(3, 1fr);
       gap: vars.$list-gap;
+    }
+  }
+
+  &__btn {
+    display: block;
+    width: 100%;
+    padding: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: vars.$cl-black;
+    text-align: center;
+    border-radius: 30px;
+    background-color: vars.$cl-tab;
+
+    &:hover {
+      color: vars.$cl-white;
+      background-color: vars.$cl-blue;
     }
   }
 }

@@ -207,8 +207,9 @@
             <h2 class="detail-adventures__title">
               Другие развлечения
             </h2>
-            <div class="detail-adventures__list">
-              <article class="card">
+            <div class="detail-adventures__list js-adventures-slider">
+              <div class="swiper-wrapper">
+              <div class="swiper-slide"><article class="card">
                 <div class="card__preview">
                   <span class="card__tag card__tag--blue">Групповая</span>
                   <img src="src/assets/images/trips/1.jpg" alt="" class="card__pic">
@@ -243,8 +244,8 @@
                     <a href="#" class="card__btn">Подробнее</a>
                   </footer>
                 </div>
-              </article>
-              <article class="card">
+              </article></div>
+              <div class="swiper-slide"><article class="card">
                 <div class="card__preview">
                   <span class="card__tag card__tag--blue">В группе</span>
                   <img src="src/assets/images/trips/2.jpg" alt="" class="card__pic">
@@ -270,8 +271,8 @@
                     <a href="#" class="card__btn">Подробнее</a>
                   </footer>
                 </div>
-              </article>
-              <article class="card">
+              </article></div>
+              <div class="swiper-slide"><article class="card">
                 <div class="card__preview">
                   <span class="card__tag card__tag--blue">Групповая</span>
                   <img src="src/assets/images/trips/3.jpg" alt="" class="card__pic">
@@ -299,7 +300,8 @@
                     <a href="#" class="card__btn">Подробнее</a>
                   </footer>
                 </div>
-              </article>
+              </article></div>
+              </div>
             </div>
           </div>
         </section>
@@ -342,7 +344,7 @@
                   <div class="aside-param__value">Да</div>
                 </div>
               </div>
-              <form action="" class="aside-form form-reserv">
+              <form action="" class="aside-form form-reserv js-form-reserv">
                 <div class="form-reserv__date form-reserv-input">
                   <label for="date" class="form-reserv-input__label">Даты путешествия</label>
                   <select class="form-reserv-input__select" name="date" id="date">
@@ -369,7 +371,7 @@
                 <div class="form-reserv__count form-reserv-count">
                   <div class="form-reserv-input__label">Кол-во туристов</div>
                   <div class="form-reserv-count__controls">
-                    <button type="button" class="form-reserv-count__btn">
+                    <button type="button" data-operation="minus" class="form-reserv-count__btn js-count-change" disabled>
                       <svg class="form-reserv-count__icon" viewBox="0 0 18 18" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -377,8 +379,9 @@
                       </svg>
 
                     </button>
-                    <input class="form-reserv-count__input" name="count" type="number" value="1" disabled>
-                    <button type="button" class="form-reserv-count__btn">
+                    <div class="form-reserv-count__input js-count">1</div>
+                    <input class="form-reserv-count__input js-input-count" name="count" type="number" value="1" hidden>
+                    <button type="button" data-operation="plus" class="form-reserv-count__btn js-count-change">
                       <svg class="reserv-deposit__icon" viewBox="0 0 18 18" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -408,9 +411,76 @@
         </aside>
       </div>
     </div>
-    <include src="src/html/articles-list.html"></include>
+    <section class="detail-page__articles articles-list">
+      <div class="container">
+
+        <header class="articles-list__header">
+          <h2 class="articles-list__title">Полезные статьи</h2>
+          <a href="#" class="articles-list__all">Все статьи 21</a>
+        </header>
+        <div class="articles-list__list js-articles-section-slider">
+          <div class="swiper-wrapper">
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <include src="src/html/footer.html"></include>
+  <include src="src/html/modal.html"></include>
   <script type="module" src="/src/main.js"></script>
 </body>
 

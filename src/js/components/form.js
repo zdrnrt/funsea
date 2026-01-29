@@ -104,3 +104,41 @@ if (document.querySelector('.js-form-signup')){
 
   formSignup.addEventListener('submit', formSignupSubmit)
 }
+
+if (document.querySelector('.js-form-reserv')){
+
+  function inputCountUpdate(e) {
+    const operation = e.currentTarget.dataset.operation;
+    const input = document.querySelector('.js-input-count');
+    const countValue = document.querySelector('.js-count');
+    const minusBtn = document.querySelector('.js-count-change[data-operation="minus"]');
+    minusBtn.disabled = false;
+    let value = Number(input.value);
+    if (value == 1 && operation == 'minus'){
+      return
+    }
+    if (operation == 'plus'){
+      value = value + 1;
+    }
+    if (operation == 'minus'){
+      value = value - 1;
+    }
+    if (value == 1){
+      minusBtn.disabled = true;
+    }
+    
+    countValue.textContent = value;
+    input.value = value;
+  }
+
+  for (const btn of document.querySelectorAll('.js-count-change')){
+    btn.addEventListener('click', inputCountUpdate)
+  }
+
+  function formReservSubmit(e){
+    e.preventDefault();
+    // submit формы
+  }
+  
+  document.querySelector('.js-form-reserv').addEventListener('submit', formReservSubmit)
+}

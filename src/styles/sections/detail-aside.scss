@@ -324,8 +324,9 @@
 
     &:disabled {
       background-color: vars.$cl-input-bg;
-      border: none;
+      border-color: vars.$cl-input-bg;
       color: vars.$cl-grey;
+      cursor: auto;
     }
 
     &:hover {

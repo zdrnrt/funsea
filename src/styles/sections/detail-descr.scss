@@ -121,8 +121,13 @@ $detail-gap: 28px;
   }
 
   p {
+    margin-bottom: 20px;
     font-size: 16px;
     color: vars.$cl-grey;
+    &:has(.detail-text__more),
+    &:last-child{
+      margin-bottom: 0px;
+    }
   }
 }
 
@@ -363,9 +368,31 @@ $detail-gap: 28px;
 }
 
 .detail-adventures {
+  position: relative;
   &__title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 24px;
+  }
+  &__list{
+    @include vars.from('md') {
+      overflow: hidden;
+    }
+
+    &::after {
+      @include vars.from('md') {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0px;
+        z-index: 5;
+        width: 70px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-image: vars.$gradient-white;
+        transition: vars.$transition;
+      }
+    }
   }
 }
