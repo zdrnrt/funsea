@@ -130,7 +130,7 @@
 .trip-item {
   position: relative;
   cursor: pointer;
-
+  &:has(.trip-item__btn:focus-visible),
   &:hover {
     .trip-item__name {
       color: vars.$cl-blue;

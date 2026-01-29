@@ -11,6 +11,8 @@ body{
   box-sizing: border-box;
   // outline: vars.$red;
   outline-offset: 2px;
+  outline-width: 2px;
+  outline-color: vars.$cl-blue;
 }
 
 h1, h2, h3, h4, p{
@@ -32,6 +34,9 @@ button{
   background-color: transparent;
   cursor: pointer;
   transition: vars.$transition;
+  &:focus-visible{
+    outline-style: solid;
+  }
 }
 
 ul, ol{

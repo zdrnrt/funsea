@@ -57,18 +57,14 @@
   }
 
   &__bottom-content {
-    overflow: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    @include vars.scroll-list();
     @include vars.from('sm') {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      overflow: unset;
     }
   }
 
@@ -203,7 +199,7 @@
   border: 1px solid vars.$cl-border;
   transition: vars.$transition;
   overflow: hidden;
-  &:has(.header-search__input:focus){
+  &:has(.header-search__input:focus-visible){
     border-color: vars.$cl-blue;
   }
   &__input{
@@ -213,7 +209,7 @@
     padding: 12px;
     border: none;
     font-size: 16px;
-    &:focus{
+    &:focus-visible{
       outline: none;
     }
     &::placeholder{

@@ -29,7 +29,7 @@
   line-height: 125%;
   border-radius: 12px;
 
-  &:has(input:focus) {
+  &:has(input:focus-visible) {
     border-color: vars.$cl-blue;
   }
 
@@ -54,7 +54,7 @@
     border: none;
     background-color: transparent;
 
-    &:focus {
+    &:focus-visible {
       outline: none;
     }
 
@@ -105,7 +105,6 @@
 
 .checkbox {
   position: relative;
-  overflow: hidden;
   display: flex;
   flex-flow: row nowrap;
   align-items: flex-start;
@@ -115,8 +114,13 @@
   &__input {
     position: absolute;
     opacity: 0;
-    visibility: hidden;
-
+    // visibility: hidden;
+    &:focus-visible+.checkbox__check {
+      border-color: vars.$cl-blue;
+    }
+    &:focus-visible:checked+.checkbox__check {
+      outline: 1px solid vars.$cl-blue;
+    }
     &:checked+.checkbox__check {
       border-color: vars.$cl-blue;
       background-color: vars.$cl-blue;
