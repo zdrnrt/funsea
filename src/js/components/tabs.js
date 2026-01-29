@@ -6,7 +6,6 @@ if (document.querySelector('.tabs')) {
 			return;
 		}
 		const tabContainer = e.currentTarget.closest('.js-tabs');
-		console.log(tabContainer);
 		tabContainer
 			.querySelector('.tabs__btn--active')
 			.classList.remove('tabs__btn--active');
