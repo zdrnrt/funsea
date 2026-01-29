@@ -34,27 +34,6 @@ if (document.querySelector('.js-trip-list-slider')) {
 	});
 }
 
-if (document.querySelector('.js-index-hits-slider')) {
-	const indexHitsSlider = new Swiper('.js-index-hits-slider', {
-		modules: [Navigation],
-		slidesPerView: 1,
-		spaceBetween: 12,
-		navigation: {
-			nextEl: '.js-index-hits-slider-next',
-			prevEl: '.js-index-hits-slider-prev',
-		},
-		breakpoints: {
-			560: {
-				slidesPerView: 2.2,
-			},
-			1024: {
-				slidesPerView: 3,
-				spaceBetween: 32,
-			},
-		},
-	});
-}
-
 if (document.querySelector('.js-hero-slider')) {
 	const heroSlider = new Swiper('.js-hero-slider', {
 		modules: [Navigation, Pagination],
@@ -120,13 +99,13 @@ if (document.querySelector('.js-index-blog-slider')) {
 }
 
 if (
-	document.querySelector('.js-index-articles-slider') &&
-	window.outerWidth < 1024
+	document.querySelector('.js-articles-section-slider') &&
+	window.innerWidth < 1024
 ) {
 	const indexArticlesSliderEl = document.querySelector(
-		'.js-index-articles-slider',
+		'.js-articles-section-slider',
 	);
-	const indexArticlesSlider = new Swiper('.js-index-articles-slider', {
+	const indexArticlesSlider = new Swiper('.js-articles-section-slider', {
 		slidesPerView: 1.4,
 		spaceBetween: 12,
 		breakpoints: {
@@ -143,4 +122,32 @@ if (
 			},
 		},
 	});
+}
+if (document.querySelector('.js-adventures-slider')){
+	const adventuresSlider = new Swiper('.js-adventures-slider', {
+		slidesPerView: 1,
+		spaceBetween: 12,
+		breakpoints: {
+			560: {
+				slidesPerView: 1.2,
+			},
+			1024: {
+				slidesPerView: 1.6,
+				spaceBetween: 32,
+			},
+		},
+	});
+
+	// adventuresSlider.on('slideChange', (swiper) => {
+	// 	if (swiper.isBeginning) {
+	// 		swiper.el.classList.remove('detail-adventures__list--start');
+	// 	} else {
+	// 		swiper.el.classList.add('detail-adventures__list--start');
+	// 	}
+	// 	if (swiper.isEnd) {
+	// 		swiper.el.classList.add('detail-adventures__list--end');
+	// 	} else {
+	// 		swiper.el.classList.remove('detail-adventures__list--end');
+	// 	}
+	// });
 }

@@ -1,16 +1,14 @@
 @use "../vars.scss";
 
-$index-gap: 40px;
-
 .index-page{
   &__categories{
-    margin-bottom: $index-gap;
+    margin-bottom: vars.$page-section-gap;
   }
   &__blog{
-    margin-bottom: $index-gap;
+    margin-bottom: vars.$page-section-gap;
   }
   &__articles{
-    margin-bottom: $index-gap;
+    margin-bottom: vars.$page-section-gap;
   }
 }
 
