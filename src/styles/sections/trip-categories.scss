@@ -79,7 +79,12 @@
     @include vars.from('md') {
       overflow: hidden;
     }
-
+    .swiper-wrapper{
+      align-items: stretch;
+    }
+    .card__descr{
+      min-height: 286px;
+    }
   }
 
 }

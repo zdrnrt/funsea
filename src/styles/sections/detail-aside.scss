@@ -94,7 +94,7 @@
     font-size: 19px;
     line-height: 1.2;
     color: vars.$cl-black;
-
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
     @include vars.from('md') {
       font-size: 32px;
     }

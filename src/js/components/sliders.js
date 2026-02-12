@@ -56,6 +56,7 @@ if (document.querySelector('.js-index-category-slider')) {
 		modules: [Navigation],
 		slidesPerView: 1,
 		spaceBetween: 12,
+		autoHeight: true,
 		navigation: {
 			nextEl: slider
 				.closest('.index-categories__item')
