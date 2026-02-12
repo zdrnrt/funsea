@@ -152,3 +152,32 @@ if (document.querySelector('.js-adventures-slider')){
 	// 	}
 	// });
 }
+
+
+if (document.querySelector('.js-index-stories-slider')) {
+	const indexStoriesSlider = new Swiper('.js-index-stories-slider', {
+		slidesPerView: 1,
+		spaceBetween: 24,
+		breakpoints: {
+			560: {
+				slidesPerView: 2.2,
+			},
+			1024: {
+				slidesPerView: 3.3,
+			},
+		},
+	});
+
+	indexStoriesSlider.on('slideChange', (swiper) => {
+		if (swiper.isBeginning) {
+			swiper.el.classList.remove('stories-list__list--start');
+		} else {
+			swiper.el.classList.add('stories-list__list--start');
+		}
+		if (swiper.isEnd) {
+			swiper.el.classList.add('stories-list__list--end');
+		} else {
+			swiper.el.classList.remove('stories-list__list--end');
+		}
+	});
+}

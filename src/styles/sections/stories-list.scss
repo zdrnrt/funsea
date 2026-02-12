@@ -1,26 +1,61 @@
 @use "../vars.scss";
 
 .stories-list {
+
   // 
-  display: none;
-  &__list{
+  &__list {
     position: relative;
-    &::after{
+    overflow: hidden;
+
+    &::after {
       content: "";
       position: absolute;
       z-index: 1;
       top: 0;
-      right: -71px;
+      right: 0;
       bottom: 0;
-      width: 140px;
+      width: 70px;
       height: 100%;
       background: vars.$gradient-white;
+      transform: translate(180deg);
+    }
+
+    &--start {
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 70px;
+        height: 100%;
+        background: vars.$gradient-white;
+        transform: rotate(180deg);
+      }
+    }
+
+    &--end {
+      &::after {
+        content: none;
+      }
+    }
+
+  }
+
+  &__item {
+    &--start {
+      @include vars.until('md') {
+        display: none !important;
+      }
     }
   }
 }
 
 .stories-item {
   position: relative;
+  max-height: 510px;
+  padding: 16px;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -30,8 +65,13 @@
   border-radius: 20px;
   overflow: hidden;
 
+  @include vars.from('md') {
+    aspect-ratio: 380/510;
+  }
+
   &--start {
     justify-content: flex-start;
+    gap: 16px;
   }
 
   &__preview {
@@ -55,6 +95,7 @@
       height: 100%;
       z-index: 1;
       background: rgba(21, 45, 78, 1);
+      opacity: 0.4;
     }
 
     &--start {
@@ -66,6 +107,11 @@
     }
   }
 
+  &__pic {
+    height: 100%;
+    object-fit: cover;
+  }
+
   &__play {
     position: absolute;
     top: 50%;
@@ -73,9 +119,21 @@
     z-index: 2;
     transform: translate(-50%, -50%);
     width: 44px;
+
+    &:hover {
+      width: 60px;
+    }
+  }
+
+  &__descr {
+
+    position: relative;
+    z-index: 1;
   }
 
   &__tag {
+    position: relative;
+    z-index: 1;
     font-weight: 600;
     font-size: 16px;
     line-height: 140%;
@@ -87,6 +145,7 @@
   }
 
   &__title {
+    margin: 0;
     margin-bottom: 12px;
     font-weight: 600;
     font-size: 16px;
@@ -94,6 +153,9 @@
     color: vars.$cl-white;
 
     &--start {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.3;
       color: vars.$cl-black;
     }
   }
