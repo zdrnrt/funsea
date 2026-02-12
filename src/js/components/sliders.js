@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 if (document.querySelector('.js-trip-list-slider')) {
 	const tripListSlider = new Swiper('.js-trip-list-slider', {
 		modules: [Navigation],
@@ -126,6 +126,14 @@ if (
 }
 if (document.querySelector('.js-adventures-slider')){
 	const adventuresSlider = new Swiper('.js-adventures-slider', {
+	// new Swiper('.js-adventures-slider', {
+		modules: [Mousewheel],
+		mousewheel: {
+			enabled: true,
+			forceToAxis: true,
+			// sensitivity: 1
+			// invert: true
+		},
 		slidesPerView: 1,
 		spaceBetween: 12,
 		breakpoints: {
@@ -139,18 +147,19 @@ if (document.querySelector('.js-adventures-slider')){
 		},
 	});
 
-	// adventuresSlider.on('slideChange', (swiper) => {
-	// 	if (swiper.isBeginning) {
-	// 		swiper.el.classList.remove('detail-adventures__list--start');
-	// 	} else {
-	// 		swiper.el.classList.add('detail-adventures__list--start');
-	// 	}
-	// 	if (swiper.isEnd) {
-	// 		swiper.el.classList.add('detail-adventures__list--end');
-	// 	} else {
-	// 		swiper.el.classList.remove('detail-adventures__list--end');
-	// 	}
-	// });
+	adventuresSlider.on('slideChange', (swiper) => {
+		console.log(swiper.realIndex)
+		if (swiper.isBeginning) {
+			swiper.el.classList.remove('detail-adventures__list--start');
+		} else {
+			swiper.el.classList.add('detail-adventures__list--start');
+		}
+		if (swiper.isEnd) {
+			swiper.el.classList.add('detail-adventures__list--end');
+		} else {
+			swiper.el.classList.remove('detail-adventures__list--end');
+		}
+	});
 }
 
 

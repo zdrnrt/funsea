@@ -1,6 +1,7 @@
 @use '../vars.scss';
 
 .detail-page {
+  overflow: visible;
   &__preview {
     margin-bottom: 16px;
 
@@ -8,14 +9,23 @@
       margin-bottom: 24px;
     }
   }
-  
+
   &__descr-container {
     @include vars.from('md') {
+      position: relative;
       padding-inline: 60px;
       display: grid;
       grid-template-columns: 1fr 375px;
-      align-items: flex-start;
+      align-items: start;
       gap: 60px;
+    }
+  }
+
+  &__descr-aside {
+    @include vars.from('md') {
+      position: sticky;
+      top: 20px;
+      align-self: start;
     }
   }
 }

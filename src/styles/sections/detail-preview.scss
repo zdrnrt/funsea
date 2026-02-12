@@ -247,10 +247,14 @@
     line-height: 0;
     overflow: hidden;
     object-fit: cover;
-
+    cursor: pointer;
+    transition: vars.$transition;
     @include vars.from('md') {
       aspect-ratio: 450/480;
       border-radius: 0;
+    }
+    &:hover{
+      opacity: 0.8;
     }
   }
 }

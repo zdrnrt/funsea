@@ -377,8 +377,8 @@ $detail-gap: 28px;
   &__list{
     @include vars.from('md') {
       overflow: hidden;
+      padding-right: 70px;
     }
-
     &::after {
       @include vars.from('md') {
         content: "";
