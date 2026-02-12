@@ -1,6 +1,7 @@
 @use "../vars.scss";
 
 .article-page {
+  overflow: visible;
   &__container {
     margin-bottom: 40px;
 
@@ -14,5 +15,8 @@
   &__aside {
     margin: 0 auto;
     max-width: 432px;
+    position: sticky;
+    top: 20px;
+    align-self: start;
   }
 }
