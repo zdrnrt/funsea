@@ -20,6 +20,12 @@
       gap: vars.$list-gap;
     }
   }
+  
+  &__stories{
+    @include vars.from('md') {
+      grid-column-start: span 3;
+    }
+  }
 
   &__btn {
     display: block;

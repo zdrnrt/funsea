@@ -64,7 +64,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      overflow: unset;
     }
   }
 
@@ -168,7 +167,7 @@
     flex-shrink: 0;
     &:last-child{
 
-      @include vars.from('md') {
+      @include vars.until('md') {
         padding-right: 20px;
       }
     }

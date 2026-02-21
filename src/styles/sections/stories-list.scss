@@ -6,21 +6,24 @@
   &__list {
     position: relative;
     overflow: hidden;
+    margin-bottom: 20px;
+    overflow: hidden;
+    @include vars.from('md') {
+      margin-bottom: 15px;
 
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 70px;
-      height: 100%;
-      background: vars.$gradient-white;
-      transform: translate(180deg);
-    }
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 70px;
+        height: 100%;
+        background: vars.$gradient-white;
+        transition: vars.$transition;
+      }
 
-    &--start {
       &::before {
         content: "";
         position: absolute;
@@ -32,15 +35,21 @@
         height: 100%;
         background: vars.$gradient-white;
         transform: rotate(180deg);
+        transition: vars.$transition;
+        opacity: 0;
+      }
+      &--start {
+        &::before{
+          opacity: 1;
+        }
+      }
+
+      &--end {
+        &::after {
+          opacity: 0;
+        }
       }
     }
-
-    &--end {
-      &::after {
-        content: none;
-      }
-    }
-
   }
 
   &__item {
@@ -190,5 +199,59 @@
     font-size: 16px;
     line-height: 140%;
     color: vars.$cl-white;
+  }
+}
+
+.stories-list-controls{
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  @include vars.from('md') {
+    justify-content: center;
+  }
+  &__pagination{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  &__bullet{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: vars.$cl-light-grey;
+    @include vars.from('md') {
+      width: 12px;
+      height: 12px;
+    }
+    &--active{
+      background-color: vars.$cl-black;
+    }
+  }
+  &__btn{
+    flex-shrink: 0;
+    width: 40px;
+    line-height: 0;
+    border-radius: 50%;
+    box-shadow: vars.$btn-shadow;
+    @include vars.from('md') {
+      position: absolute;
+      top: -295px;
+      z-index: 5;
+      &--prev{
+        left: -20px;
+      }
+      &--next{
+        right: -20px;
+      }
+    }
+    &.swiper-button-disabled{
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 }

@@ -103,10 +103,7 @@ if (
 	document.querySelector('.js-articles-section-slider') &&
 	window.innerWidth < 1024
 ) {
-	const indexArticlesSliderEl = document.querySelector(
-		'.js-articles-section-slider',
-	);
-	const indexArticlesSlider = new Swiper('.js-articles-section-slider', {
+	new Swiper('.js-articles-section-slider', {
 		slidesPerView: 1.4,
 		spaceBetween: 12,
 		breakpoints: {
@@ -163,8 +160,10 @@ if (document.querySelector('.js-adventures-slider')){
 }
 
 
-if (document.querySelector('.js-index-stories-slider')) {
-	const indexStoriesSlider = new Swiper('.js-index-stories-slider', {
+if (document.querySelector('.js-stories-slider')) {
+	
+	const indexStoriesSlider = new Swiper('.js-stories-slider', {
+		modules: [Navigation, Pagination],
 		slidesPerView: 1,
 		spaceBetween: 24,
 		breakpoints: {
@@ -173,20 +172,33 @@ if (document.querySelector('.js-index-stories-slider')) {
 			},
 			1024: {
 				slidesPerView: 3.3,
+				pagination: false
 			},
 		},
+		pagination: {
+			el: '.js-stories-slider-pagination',
+			bulletElement: 'button',
+			bulletClass: 'stories-list-controls__bullet',
+			bulletActiveClass: 'stories-list-controls__bullet--active',
+		},
+		navigation: {
+			nextEl: '.js-stories-slider-next',
+			prevEl: '.js-stories-slider-prev',
+		},
 	});
+	if (window.innerWidth >= 1024){
+		indexStoriesSlider.on('slideChange', (swiper) => {
+			if (swiper.isBeginning) {
+				swiper.el.classList.remove('stories-list__list--start');
+			} else {
+				swiper.el.classList.add('stories-list__list--start');
+			}
+			if (swiper.isEnd) {
+				swiper.el.classList.add('stories-list__list--end');
+			} else {
+				swiper.el.classList.remove('stories-list__list--end');
+			}
+		});
+	}
 
-	indexStoriesSlider.on('slideChange', (swiper) => {
-		if (swiper.isBeginning) {
-			swiper.el.classList.remove('stories-list__list--start');
-		} else {
-			swiper.el.classList.add('stories-list__list--start');
-		}
-		if (swiper.isEnd) {
-			swiper.el.classList.add('stories-list__list--end');
-		} else {
-			swiper.el.classList.remove('stories-list__list--end');
-		}
-	});
 }
