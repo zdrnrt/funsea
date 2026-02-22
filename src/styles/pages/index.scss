@@ -19,7 +19,7 @@
   overflow: hidden;
   &__item {
     &+& {
-      margin-top: 30px;
+      margin-top: 24px;
 
       @include vars.from('sm') {
         margin-top: 50px;

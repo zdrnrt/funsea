@@ -1,22 +1,37 @@
 @use "../vars.scss";
 
 .card {
-  &--blog{
+  &--blog {
     position: relative;
-    &:hover{
-      .card__title{
+
+    &:hover {
+      .card__title {
         color: vars.$cl-blue;
       }
-      .card__text{
+
+      .card__text {
         color: vars.$cl-black;
       }
     }
-    .card__descr{
+
+    .card__title {
+      @include vars.from('md') {
+        margin-bottom: 6px;
+      }
+    }
+
+    .card__descr {
       padding-top: 18px;
       padding-bottom: 18px;
+      height: 154px;
+
+      @include vars.from('md') {
+        height: 180px;
+      }
     }
   }
-  &__link{
+
+  &__link {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -27,6 +42,7 @@
     height: 100%;
     outline-offset: -2px;
   }
+
   &__preview {
     position: relative;
     border-radius: 20px 20px 0 0;
@@ -41,11 +57,11 @@
 
   &__tag {
     position: absolute;
-    top: 6px;
+    top: 10px;
     left: 8px;
     z-index: 1;
     padding: 4px 11px;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 12px;
     line-height: 1;
     border-radius: 50px;
@@ -77,7 +93,7 @@
   &__descr {
     position: relative;
     margin-top: -40px;
-    padding: 8px;
+    padding: 10px 8px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -86,7 +102,10 @@
     border: 1px solid vars.$cl-border;
     border-radius: 20px;
     overflow: hidden;
+    height: 220px;
+
     @include vars.from('md') {
+      height: 282px;
       padding: 16px;
       padding-left: 20px;
       border-radius: 32px;
@@ -104,10 +123,10 @@
     line-height: 1.3;
     transition: vars.$transition;
     display: -webkit-box;
-    // -webkit-box-orient: vertical;
-    // -webkit-line-clamp: 2;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
     // min-height: 52px;
 
     @include vars.from('md') {
@@ -135,6 +154,7 @@
     &--blog {
       margin-bottom: 0;
       transition: vars.$transition;
+
       @include vars.from('md') {
         margin-bottom: 0;
       }
@@ -143,17 +163,6 @@
 
   &__info {
     margin-bottom: 24px;
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    // column-gap: 30px;
-    row-gap: 5px;
-
-    @include vars.from('md') {
-      // margin-bottom: 56px;
-    }
   }
 
   &__info-item {
@@ -187,7 +196,7 @@
     padding: 0px 12px;
     border-radius: 32px;
     background-color: vars.$cl-yellow;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     color: vars.$cl-black;
     text-align: center;
@@ -223,7 +232,7 @@
 
   &__name {
     flex-shrink: 0;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0.01em;
@@ -236,13 +245,27 @@
 }
 
 .card-info {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  // column-gap: 30px;
+  row-gap: 5px;
+  @include vars.scroll-list();
+
   &__item {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    gap: 7px;
+    gap: 4px;
     align-items: center;
+    flex-shrink: 0;
 
+    &:last-child {
+      // padding-left: 20px;
+      // background-color: red;
+    }
   }
 
   &__icon {
@@ -253,7 +276,7 @@
 
   &__name {
     flex-shrink: 0;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     line-height: 100%;
     color: vars.$cl-dark-80;
@@ -277,6 +300,7 @@
     line-height: 100%;
     color: vars.$cl-black;
     font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+
     @include vars.from('lg') {
       font-size: 24px;
     }

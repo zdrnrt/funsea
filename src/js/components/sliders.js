@@ -54,7 +54,7 @@ if (document.querySelector('.js-hero-slider')) {
 if (document.querySelector('.js-index-category-slider')) {
 	const indexCategorySliderParams = (slider) => ({
 		modules: [Navigation],
-		slidesPerView: 1,
+		slidesPerView: 1.1,
 		spaceBetween: 12,
 		autoHeight: true,
 		navigation: {
