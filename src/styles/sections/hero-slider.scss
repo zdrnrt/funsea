@@ -12,11 +12,6 @@
       margin-bottom: 15px;
     }
   }
-  &__btn {
-    width: 40px;
-    box-shadow: vars.$btn-shadow;
-
-  }
 }
 
 .hero-item {
@@ -166,6 +161,9 @@
     line-height: 0;
     border-radius: 50%;
     box-shadow: vars.$btn-shadow;
+    &:hover{
+      transform: scale(1.1);
+    }
     @include vars.from('md') {
       position: absolute;
       top: 180px;
@@ -178,10 +176,8 @@
       }
     }
     &.swiper-button-disabled{
-      img{
-
-        opacity: 0.9;
-      }
+      opacity: 0;
+      pointer-events: none;
     }
   }
 }

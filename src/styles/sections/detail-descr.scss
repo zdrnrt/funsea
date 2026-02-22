@@ -374,13 +374,16 @@ $detail-gap: 28px;
     font-weight: 700;
     font-size: 24px;
   }
+  &__slider{
+    position: relative;
+  }
   &__list{
     @include vars.from('md') {
       overflow: hidden;
       padding-right: 70px;
     }
+    @include vars.from('md') {
     &::after {
-      @include vars.from('md') {
         content: "";
         position: absolute;
         top: 0;
@@ -393,6 +396,33 @@ $detail-gap: 28px;
         background-image: vars.$gradient-white;
         transition: vars.$transition;
       }
+    }
+  }
+  &__btn{
+    display: none;
+    @include vars.from('md') {
+      display: block;
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 40px;
+      line-height: 0;
+      border-radius: 50%;
+      border: 1px solid vars.$cl-border;
+    }
+    &:hover{
+      box-shadow: vars.$btn-shadow;
+    }
+    &--prev{
+      left: -20px;
+    }
+    &--next{
+      right: -20px;
+    }
+    &.swiper-button-disabled{
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }

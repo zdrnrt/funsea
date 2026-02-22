@@ -124,7 +124,7 @@ if (
 if (document.querySelector('.js-adventures-slider')){
 	const adventuresSlider = new Swiper('.js-adventures-slider', {
 	// new Swiper('.js-adventures-slider', {
-		modules: [Mousewheel],
+		modules: [Mousewheel, Navigation],
 		mousewheel: {
 			enabled: true,
 			forceToAxis: true,
@@ -140,12 +140,15 @@ if (document.querySelector('.js-adventures-slider')){
 			1024: {
 				slidesPerView: 1.6,
 				spaceBetween: 32,
+				navigation: {
+					nextEl: '.js-adventures-slider-next',
+					prevEl: '.js-adventures-slider-prev',
+				},
 			},
 		},
 	});
 
 	adventuresSlider.on('slideChange', (swiper) => {
-		console.log(swiper.realIndex)
 		if (swiper.isBeginning) {
 			swiper.el.classList.remove('detail-adventures__list--start');
 		} else {
