@@ -22,8 +22,11 @@
 
   &__logo {
     display: block;
-    width: 115px;
+    width: 80px;
     line-height: 0;
+    @include vars.from('sm') {
+      width: 100px;
+    }
   }
 
   &__links {
@@ -148,7 +151,11 @@
 
   &__icon {
     width: 20px;
+    &--close{
+      display: none;
+    }
   }
+
 }
 
 .header-nav {
@@ -245,13 +252,13 @@
 
 .header-menu{
   position: fixed;
-  top: 0;
+  top: 51px;
   z-index: 10;
-  left: -100%;
+  right: -100%;
   width: 100%;
-  max-width: 420px;
+  max-width: 320px;
   min-height: 100vh;
-  padding: 8px 20px;
+  padding: 20px 10px;
   visibility: hidden;
   pointer-events: none;
   transition: vars.$transition;
@@ -259,16 +266,23 @@
   overflow: auto;
   box-shadow: vars.$btn-shadow;
   @include vars.from('sm') {
-    // display: none;
+    display: none;
   }
   &--body-open{
     overflow: hidden;
-    .header{
-      overflow: visible;
+    .header__bottom,
+    main {
+      filter: blur(5px);
+    }
+    .header-mobile-menu__icon--close{
+      display: block;
+    }
+    .header-mobile-menu__icon--open{
+      display: none;
     }
   }
   &--open{
-    left: 0;
+    right: 0;
     visibility: visible;
     pointer-events: all;
   }
@@ -298,6 +312,82 @@
 
     @include vars.from('md') {
       top: 16px;
+    }
+  }
+}
+
+.menu-nav{
+  &__item{
+    border-bottom: 1px solid vars.$cl-border;
+  }
+  &__link{
+    display: block;
+    padding: 20px 10px;
+    font-size: 18px;
+    line-height: 120%;
+    color: vars.$cl-black;
+    &:hover{
+      color: vars.$cl-blue;
+    }
+  }
+}
+
+.menu-signin{
+  padding: 20px 10px 30px;
+  border-bottom: 1px solid vars.$cl-border;
+  &__text{
+    font-size: 16px;
+    line-height: 130%;
+    margin-bottom: 20px;
+  }
+  &__btn{
+    width: fit-content;
+    border-radius: 4px;
+    padding: 10px 20px;
+    box-shadow: vars.$btn-shadow;
+    background: vars.$cl-white;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: vars.$cl-light-dark;
+    transition: vars.$transition;
+
+    &:hover {
+      color: vars.$cl-white;
+      background-color: vars.$cl-light-dark;
+      box-shadow: none;
+    }
+
+    @include vars.from('md') {
+      padding: 7px 15px;
+    }
+  }
+}
+.menu-social{
+  padding: 20px 10px;
+  &__text{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__list{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    @include vars.from('md') {
+      justify-content: flex-start;
+    }
+  }
+  &__link {
+    width: 32px;
+    text-decoration: none;
+    line-height: 1;
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }

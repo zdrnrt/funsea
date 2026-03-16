@@ -5,12 +5,23 @@ function modalOpen(target){
   document.body.classList.add('body--modal-open');
   document.getElementById(target).classList.add('modal--open');
   window.addEventListener('keydown', modalListener)
+  setTimeout(() => {
+    document.body.addEventListener('click', clickOutsideModel)
+  }, 0);
+
+}
+
+function clickOutsideModel(e){
+  if (e.target.closest('.modal__bg')){
+    modalClose()
+  }
 }
 
 function modalClose(){
   document.body.classList.remove('body--modal-open');
   document.querySelector('.modal--open').classList.remove('modal--open');
   window.removeEventListener('keydown', modalListener)
+  document.body.removeEventListener('click', modalListener)
 }
 
 function modalListener(e){
