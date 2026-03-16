@@ -26,20 +26,20 @@
           <img src="/src/assets/images/icons/user.svg" alt="#" class="header-user__icon">
         </button>
       </div>
-      <button class="header__mobile-menu header-mobile-menu js-header-mobile-menu">
+      <button class="header__mobile-menu header-mobile-menu js-header-menu-open">
         <img class="header-mobile-menu__icon" src="/src/assets/images/icons/toggle-mobile.svg" alt="">
       </button>
     </div>
   </div>
   <div class="header__bottom">
     <div class="container header__bottom-content">
-      <a href="#" class="header__catalog header-catalog">
+      <button class="header__catalog header-catalog js-catalog-menu-open">
         <svg class="header-catalog__icon" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="19.3452" height="1.5062" />
           <rect y="9.0376" width="19.3452" height="1.5062" />
         </svg>
         Каталог
-      </a>
+      </button>
       <nav class="header__nav header-nav">
         <ul class="header-nav__list">
           <li class="header-nav__item">
@@ -68,6 +68,16 @@
           </li>
         </ul>
       </nav>
+    </div>
+  </div>
+  <div class="header-menu js-header-menu">
+    <div class="header-menu__header">
+      <a href="/" class="header-menu__logo">
+        <img class="header-logo__pic" src="/src/assets/images/header/logo.svg" alt="">
+      </a>
+      <button class="header-menu__close js-header-menu-close">
+        <img src="/src/assets/images/icons/close.svg" alt="">
+      </button>
     </div>
   </div>
 </header>

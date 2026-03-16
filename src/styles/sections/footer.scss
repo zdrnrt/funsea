@@ -112,14 +112,10 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: 14px;
-    @include vars.from('md') {
+    @include vars.from('xl') {
       flex-wrap: wrap;
       max-height: 130px;
       column-gap: 36px;
-    }
-  }
-  &__item{
-    & + &{
     }
   }
   &__link{
@@ -146,9 +142,6 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 26px;
-  }
-  &__payments{
-
   }
   &__copy {
     max-width: 260px;

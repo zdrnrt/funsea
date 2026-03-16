@@ -105,7 +105,8 @@ if (
 ) {
 	new Swiper('.js-articles-section-slider', {
 		slidesPerView: 1.4,
-		spaceBetween: 12,
+		// spaceBetween: 12,
+		spaceBetween: 20,
 		breakpoints: {
 			560: {
 				slidesPerView: 2.2,
