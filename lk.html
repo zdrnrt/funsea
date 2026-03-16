@@ -84,23 +84,34 @@
           </ul>
         </nav>
       </aside>
-      <section class="lk-page__content lk-content">
+      <section class="lk-page__content lk-content js-tabs">
         <header class="lk-content__header">
           <h1 class="lk-content__title">Мои билеты</h1>
           <div class="lk-content__tabs">
           <div class="lk-tabs">
-            <button class="lk-tabs__btn lk-tabs__btn--active">Активные</button>
-            <button class="lk-tabs__btn">Архив</button>
+            <button data-target-tab="active-ticket" class="lk-tabs__btn js-tab-trigger tabs__btn--active">Активные</button>
+            <button data-target-tab="archive-ticket" class="lk-tabs__btn js-tab-trigger">Архив</button>
           </div>
           </div>
         </header>
-        <div class="lk-empty">
-          <h2 class="lk-empty__title lk-content__title">У вас нет актуальных заказов :(</h2>
-          <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
-          <a href="#" class="lk-empty__btn">Выбрать услугу</a>
-          <div class="lk-empty__bg">
-            <img src="src/assets/images/lk/ticket.svg" alt="">
+        <div class="lk-content__container">
+          <div data-tab="active-ticket" class="tabs__item tabs__item--open">
+            <h2 class="lk-empty__title lk-content__title">У вас нет актуальных заказов :(</h2>
+            <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
+            <a href="#" class="lk-empty__btn">Выбрать услугу</a>
+            <div class="lk-empty__bg">
+              <img src="src/assets/images/lk/ticket.svg" alt="">
+            </div>
           </div>
+          <div data-tab="archive-ticket" class="tabs__item">
+            <h2 class="lk-empty__title lk-content__title">У вас нет архивных заказов :(</h2>
+            <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
+            <a href="#" class="lk-empty__btn">Выбрать услугу</a>
+            <div class="lk-empty__bg">
+              <img src="src/assets/images/lk/ticket.svg" alt="">
+            </div>
+          </div>
+
         </div>
       </section>
       <div class="lk-page__nav-m">

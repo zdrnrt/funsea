@@ -255,7 +255,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: vars.$transition;
-  background-color: vars.$cl-light-grey;
+  background-color: vars.$cl-white;
   overflow: auto;
   box-shadow: vars.$btn-shadow;
   @include vars.from('sm') {

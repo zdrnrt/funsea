@@ -2,7 +2,7 @@
 
 .lk-content {
   &__title {
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     font-weight: 700;
     font-size: 26px;
     line-height: 1;
@@ -14,7 +14,7 @@
 
   &__tabs {
     margin-bottom: 42px;
-
+    
     @include vars.from('md') {
       margin-bottom: 100px;
     }
@@ -37,7 +37,7 @@
     text-align: center;
     border-radius: 4px;
     background-color: vars.$cl-tab;
-    &--active,
+    &.tabs__btn--active,
     &:hover {
       box-shadow: vars.$btn-shadow;
     }
@@ -45,14 +45,6 @@
 }
 
 .lk-empty{
-  position: relative;
-  min-height: 360px;
-  @include vars.from('md') {
-      min-height: 550px;
-    }
-  &__title{
-    margin-bottom: 24px;
-  }
   &__text{
     margin-bottom: 40px;
     font-weight: 400;
