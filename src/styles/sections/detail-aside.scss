@@ -121,7 +121,7 @@
     font-size: 19px;
     line-height: 1.2;
     color: vars.$cl-black;
-    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+    font-family: vars.$rubleSymbolFont;
     @include vars.from('md') {
       font-size: 32px;
     }
@@ -192,6 +192,7 @@
   }
 
   &__value {
+    font-family: vars.$rubleSymbolFont;
     letter-spacing: 0.01em;
     color: vars.$cl-grey;
   }
