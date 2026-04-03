@@ -1,5 +1,3 @@
-if (document.querySelector('.js-modal-trigger')){
-  const modalTriggers = document.querySelectorAll('.js-modal-trigger');
 
 function modalOpen(target){
   document.body.classList.add('body--modal-open');
@@ -8,7 +6,6 @@ function modalOpen(target){
   setTimeout(() => {
     document.body.addEventListener('click', clickOutsideModel)
   }, 0);
-
 }
 
 function clickOutsideModel(e){
@@ -32,16 +29,17 @@ function modalListener(e){
 
 function modalHandler(e){
   const modalTarget = e.currentTarget.dataset.targetModal;
-  console.log(modalTarget)
   modalOpen(modalTarget)
 }
 
-for (const triggerBtn of document.querySelectorAll('.js-modal-trigger')){
-  triggerBtn.addEventListener('click', modalHandler)
+if (document.querySelector('.js-modal-trigger')){
+  for (const triggerBtn of document.querySelectorAll('.js-modal-trigger')){
+    triggerBtn.addEventListener('click', modalHandler)
+  }
 }
 
-for (const closeBtn of document.querySelectorAll('.js-modal-close')){
-  closeBtn.addEventListener('click', modalClose)
-}
-
+if (document.querySelector('.js-modal-close')){
+  for (const closeBtn of document.querySelectorAll('.js-modal-close')){
+    closeBtn.addEventListener('click', modalClose)
+  }
 }
