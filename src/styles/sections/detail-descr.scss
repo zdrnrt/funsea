@@ -97,18 +97,16 @@ $detail-gap: 28px;
 }
 
 .detail-text {
-  p:nth-child(n+2) {
-    display: none;
-  }
-
-  &--more {
-    p:nth-child(1) {
+  &--expand{
+    .detail-text__preview{
       display: none;
     }
-
-    p:nth-child(n + 2) {
+    .detail-text__full{
       display: block;
     }
+  }
+  &__full{
+    display: none;
   }
 
   &__more {
@@ -121,12 +119,10 @@ $detail-gap: 28px;
   }
 
   p {
-    margin-bottom: 20px;
     font-size: 16px;
     color: vars.$cl-grey;
-    &:has(.detail-text__more),
-    &:last-child{
-      margin-bottom: 0px;
+    & + p{
+      margin-top: 20px;
     }
   }
 }
