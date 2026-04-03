@@ -1,5 +1,6 @@
 import 'normalize.css'
 import 'swiper/css'
+import "@fancyapps/ui/dist/fancybox/fancybox.css"
 import './styles/main.scss'
 import './js/pages/detail'
 import './js/components/modals'

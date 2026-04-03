@@ -1,45 +1,13 @@
+import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
-function modalOpen(target){
-  document.body.classList.add('body--modal-open');
-  document.getElementById(target).classList.add('modal--open');
-  window.addEventListener('keydown', modalListener)
-  setTimeout(() => {
-    document.body.addEventListener('click', clickOutsideModel)
-  }, 0);
-}
-
-function clickOutsideModel(e){
-  if (e.target.closest('.modal__bg')){
-    modalClose()
+Fancybox.bind(".js-auth-trigger", {
+  closeButton: false,
+  dragToClose: false,
+  closeExisting: false,
+  mainStyle: {
+    "--f-toolbar-padding": "0",
+    "--f-html-padding": "0",
+    "--f-html-bg": "transparent",
+    "--fancybox-backdrop-bg": "rgb(27 27 27 / 50%)"
   }
-}
-
-function modalClose(){
-  document.body.classList.remove('body--modal-open');
-  document.querySelector('.modal--open').classList.remove('modal--open');
-  window.removeEventListener('keydown', modalListener)
-  document.body.removeEventListener('click', modalListener)
-}
-
-function modalListener(e){
-  if (e.keyCode === 27){
-    modalClose();
-  }
-}
-
-function modalHandler(e){
-  const modalTarget = e.currentTarget.dataset.targetModal;
-  modalOpen(modalTarget)
-}
-
-if (document.querySelector('.js-modal-trigger')){
-  for (const triggerBtn of document.querySelectorAll('.js-modal-trigger')){
-    triggerBtn.addEventListener('click', modalHandler)
-  }
-}
-
-if (document.querySelector('.js-modal-close')){
-  for (const closeBtn of document.querySelectorAll('.js-modal-close')){
-    closeBtn.addEventListener('click', modalClose)
-  }
-}
+});
