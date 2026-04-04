@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 import { resolve } from 'node:path'
 import includeHtml from 'vite-plugin-include-html'
+import path from 'path';
 
 const preparedStaticHtml = () => {
   return {
@@ -30,6 +31,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    minify: false,
     assetsInlineLimit: 0,
     rollupOptions: {
       input: {
@@ -42,17 +44,19 @@ export default defineConfig({
       },
       output: {
         assetFileNames: (assetInfo) => {
-          let extType = assetInfo.name.split('.').at(1);
-          if (/png|jpe?g|svg|gif|webp|avif/i.test(extType)) {
-            return `assets/img/[name]-[hash][extname]`;
+          let fullPath = assetInfo.originalFileNames[0] || assetInfo.names[0];
+          
+          const assetsPath = fullPath.split('src' + path.sep + 'assets' + path.sep).pop();
+          const filePath = assetsPath.split(path.sep);
+          const fileName = filePath.pop();
+
+          if (assetsPath.includes('images')) {
+            return `assets/${filePath.join('/')}/${fileName}`;
           }
-          if (/woff2?|ttf|otf|eot/i.test(extType)) {
-            return `assets/fonts/[name]-[hash][extname]`;
+          if (assetsPath.includes('fonts')) {
+            return `assets/fonts/${fileName}`;
           }
-          if (/css/i.test(extType)) {
-            return `assets/css/[name]-[hash][extname]`;
-          }
-          return `assets/[ext]/[name]-[hash][extname]`;
+          return `assets/[name]-[hash][extname]`;
         },
       }
     },
