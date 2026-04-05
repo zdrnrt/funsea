@@ -31,6 +31,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    cssMinify: true,
     minify: false,
     assetsInlineLimit: 0,
     rollupOptions: {
