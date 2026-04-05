@@ -1,13 +1,17 @@
 import { Fancybox } from "@fancyapps/ui/dist/fancybox/";
 
 const fancyBoxStyle = {
-  "--fancybox-backdrop-bg": "rgb(27 27 27 / 50%)"
+  "--fancybox-backdrop-bg": "rgb(27 27 27 / 70%)"
+}
+
+const fancyBoxSettings = {
+  dragToClose: false
 }
 
 // кастомная модалка для авторизации
 Fancybox.bind(".js-auth-trigger", {
+  ...fancyBoxSettings,
   closeButton: false,
-  dragToClose: false,
   closeExisting: false,
   mainStyle: {
     "--f-toolbar-padding": "0",
@@ -19,6 +23,7 @@ Fancybox.bind(".js-auth-trigger", {
 
 // кастомная галерея для превью
 Fancybox.bind('.js-detail-gallery', {
+  ...fancyBoxSettings,
   mainStyle: {
     ...fancyBoxStyle
   },
@@ -33,6 +38,7 @@ Fancybox.bind('.js-detail-gallery', {
 
 // настройка для всех модалок
 Fancybox.bind('[data-fancybox]', {
+  ...fancyBoxSettings,
   mainStyle: {
     ...fancyBoxStyle
   },
