@@ -81,7 +81,7 @@
   }
 
   &:hover,
-  &--active {
+  &.tabs__btn--active {
     .lk-section-link__name {
       color: vars.$cl-black;
     }

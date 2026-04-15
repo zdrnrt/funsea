@@ -4,15 +4,20 @@ function tabToggle(e) {
 	if (tabTarget.classList.contains('tabs__item--open')) {
 		return;
 	}
-	const tabContainer = e.currentTarget.closest('.js-tabs');
-	tabContainer
-		.querySelector('.tabs__btn--active')
-		.classList.remove('tabs__btn--active');
-	e.currentTarget.classList.add('tabs__btn--active');
+	
+	const tabsNav = e.currentTarget.closest('.js-tabs-nav') || e.currentTarget.closest('.js-tabs');
 
-	tabContainer
-		.querySelector('.tabs__item--open')
-		.classList.remove('tabs__item--open');
+	tabsNav.querySelector('.tabs__btn--active').classList.remove('tabs__btn--active');
+
+	for (const btn of tabsNav.querySelectorAll('[data-target-tab]')){
+		const target = btn.dataset.targetTab;
+		const tab = document.querySelector(`[data-tab="${target}"].tabs__item--open`)
+		if (tab){
+			tab.classList.remove('tabs__item--open')
+			break
+		}
+	}
+	e.currentTarget.classList.add('tabs__btn--active');
 	tabTarget.classList.add('tabs__item--open');
 }
 
