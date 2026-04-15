@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./fav.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Личный кабинет | Moре развлечений</title>
-  <script defer src="./assets/main-D8Z_DkMz.js"></script>
-  <link rel="stylesheet" href="./assets/main-BhTtS5Db.css?2">
+  <script defer src="./assets/main-D8Z_DkMz.js?2"></script>
+  <link rel="stylesheet" href="./assets/main-BhTtS5Db.css?3">
 </head>
 
 <body>
@@ -134,9 +134,9 @@
           </div>
         </div>
         <nav class="lk-aside__sections lk-sections">
-          <ul class="lk-sections__list">
+          <ul class="lk-sections__list js-tabs-nav">
             <li class="lk-sections__item">
-              <a href="./lk-profile.html" class="lk-sections__link lk-section-link">
+              <button data-target-tab="profile" class="lk-sections__link lk-section-link js-tab-trigger">
                 <svg class="lk-section-link__icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle class="lk-section-link__icon--marked" cx="17" cy="17" r="17" />
                   <path
@@ -147,10 +147,11 @@
                     fill="#F2F2F2" />
                 </svg>
                 <span class="lk-section-link__name">Мой профиль</span>
-              </a>
+              </button>
             </li>
             <li class="lk-sections__item">
-              <a href="#" class="lk-sections__link lk-section-link lk-section-link--active">
+              <button data-target-tab="tickets"
+                class="lk-sections__link lk-section-link lk-section-link--active js-tab-trigger tabs__btn--active">
                 <svg class="lk-section-link__icon" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect class="lk-section-link__icon--marked-stroke" x="9.5" y="1.5" width="9" height="14" rx="4.5"
                     stroke-width="3" />
@@ -165,7 +166,7 @@
                 </svg>
                 <span class="lk-section-link__name">Мои заказы</span>
                 <span class="lk-section-link__count">0</span>
-              </a>
+              </button>
             </li>
             <li class="lk-sections__item">
               <a href="#" class="lk-sections__link lk-section-link">
@@ -193,34 +194,54 @@
           </ul>
         </nav>
       </aside>
-      <section class="lk-page__content lk-content js-tabs">
-        <header class="lk-content__header">
-          <h1 class="lk-content__title">Мои билеты</h1>
-          <div class="lk-content__tabs">
-          <div class="lk-tabs">
-            <button data-target-tab="active-ticket" class="lk-tabs__btn js-tab-trigger tabs__btn--active">Активные</button>
-            <button data-target-tab="archive-ticket" class="lk-tabs__btn js-tab-trigger">Архив</button>
-          </div>
-          </div>
-        </header>
-        <div class="lk-content__container">
-          <div data-tab="active-ticket" class="tabs__item tabs__item--open">
-            <h2 class="lk-empty__title lk-content__title">У вас нет актуальных заказов :(</h2>
-            <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
-            <a href="#" class="lk-empty__btn">Выбрать услугу</a>
-            <div class="lk-empty__bg">
-              <img src="./assets/images/lk/ticket.svg" alt="">
+      <section class="lk-page__content lk-content">
+        <div data-tab="tickets" class="tabs__item tabs__item--open">
+          <header class="lk-content__header">
+            <h1 class="lk-content__title">Мои билеты</h1>
+            <div class="lk-content__tabs">
+              <div class="lk-tabs js-tabs-nav">
+                <button data-target-tab="active-ticket"
+                  class="lk-tabs__btn js-tab-trigger tabs__btn--active">Активные</button>
+                <button data-target-tab="archive-ticket" class="lk-tabs__btn js-tab-trigger">Архив</button>
+              </div>
             </div>
-          </div>
-          <div data-tab="archive-ticket" class="tabs__item">
-            <h2 class="lk-empty__title lk-content__title">У вас нет архивных заказов :(</h2>
-            <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
-            <a href="#" class="lk-empty__btn">Выбрать услугу</a>
-            <div class="lk-empty__bg">
-              <img src="./assets/images/lk/ticket.svg" alt="">
+          </header>
+          <div class="lk-content__container">
+            <div data-tab="active-ticket" class="tabs__item tabs__item--open">
+              <h2 class="lk-empty__title lk-content__title">У вас нет актуальных заказов :(</h2>
+              <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
+              <a href="#" class="lk-empty__btn">Выбрать услугу</a>
+              <div class="lk-empty__bg">
+                <img src="./assets/images/lk/ticket.svg" alt="">
+              </div>
             </div>
-          </div>
+            <div data-tab="archive-ticket" class="tabs__item">
+              <h2 class="lk-empty__title lk-content__title">У вас нет архивных заказов :(</h2>
+              <div class="lk-empty__text">Но вы всегда можете выбрать развлечение на любой вкус.</div>
+              <a href="#" class="lk-empty__btn">Выбрать услугу</a>
+              <div class="lk-empty__bg">
+                <img src="./assets/images/lk/ticket.svg" alt="">
+              </div>
+            </div>
 
+          </div>
+        </div>
+        <div data-tab="profile" class="tabs__item">
+          <header class="lk-content__header">
+            <h1 class="lk-content__title">Мой профиль</h1>
+          </header>
+          <div class="lk-content__container">
+            <div class="lk-empty__text">
+              <strong>Имя:</strong> Иван <br><br>
+              <strong>Фамилия</strong> Чапаев <br><br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Minus, aperiam aut eius atque nostrum ad
+              molestias, <br>libero similique enim tempore eos harum repudiandae <br>explicabo et quis ratione,
+              doloribus dolorem fuga!
+            </div>
+            <div class="lk-empty__bg">
+              <img src="./assets/images/lk/ticket.svg" alt="">
+            </div>
+          </div>
         </div>
       </section>
       <div class="lk-page__nav-m">

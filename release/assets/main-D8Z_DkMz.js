@@ -22027,10 +22027,17 @@ function tabToggle(e2) {
   if (tabTarget.classList.contains("tabs__item--open")) {
     return;
   }
-  const tabContainer = e2.currentTarget.closest(".js-tabs");
-  tabContainer.querySelector(".tabs__btn--active").classList.remove("tabs__btn--active");
+  const tabsNav = e2.currentTarget.closest(".js-tabs-nav") || e2.currentTarget.closest(".js-tabs");
+  tabsNav.querySelector(".tabs__btn--active").classList.remove("tabs__btn--active");
+  for (const btn of tabsNav.querySelectorAll("[data-target-tab]")) {
+    const target2 = btn.dataset.targetTab;
+    const tab = document.querySelector(`[data-tab="${target2}"].tabs__item--open`);
+    if (tab) {
+      tab.classList.remove("tabs__item--open");
+      break;
+    }
+  }
   e2.currentTarget.classList.add("tabs__btn--active");
-  tabContainer.querySelector(".tabs__item--open").classList.remove("tabs__item--open");
   tabTarget.classList.add("tabs__item--open");
 }
 if (document.querySelector(".js-tab-trigger")) {
