@@ -42,6 +42,7 @@ export default defineConfig({
         detail: resolve(__dirname, 'detail.html'),
         article: resolve(__dirname, 'article.html'),
         lk: resolve(__dirname, 'lk.html'), 
+        lkProfile: resolve(__dirname, 'lk-profile.html'), 
       },
       output: {
         assetFileNames: (assetInfo) => {
