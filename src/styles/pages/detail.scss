@@ -1,6 +1,9 @@
 @use '../vars.scss';
 
 .detail-page {
+  @include vars.from('md') {
+    overflow: clip;
+  }
   &__preview {
     margin-bottom: 16px;
 
