@@ -17,6 +17,22 @@
         <include src="src/html/trip-list.html"></include>
       </div>
     </section>
+    <div class="catalog-page__filter">
+      <div class="catalog-filter container">
+        <select name="type" id="type" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Виды отдыха</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+        <select name="price" id="price" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Цена</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+        <select name="duration" id="duration" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Продолжительность</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+      </div>
+    </div>
     <div class="catalog-page__items">
       <div class="container">
         <div class="catalog-page__list">
@@ -525,11 +541,9 @@
           </div>
         </article>
 
-
-        <section class="catalog-page__stories stories-list">
+        <div class="catalog-page__stories stories-list">
           <include src="src/html/stories-list.html"></include>
-        </section>
-
+        </div>
 
         <article class="card">
           <div class="card__preview">
