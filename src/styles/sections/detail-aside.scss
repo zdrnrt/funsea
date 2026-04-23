@@ -13,10 +13,12 @@
     background-color: vars.$cl-white;
     box-shadow: 0 0 0 1px #ecedf0, 0 8px 24px 0 rgba(89, 102, 132, 0.06);
   }
-  &--body-expand{
+
+  &--body-expand {
     overflow: hidden;
   }
-  &--expand{
+
+  &--expand {
     @include vars.until('md') {
       top: 0;
       bottom: 0;
@@ -26,18 +28,21 @@
       overflow: auto;
       background-color: rgba(vars.$cl-black, 0.7);
       border-radius: 0;
-      .detail-aside__container{
+
+      .detail-aside__container {
         display: block;
         min-height: 90vh;
         padding-bottom: 20px;
         box-shadow: none;
         background-color: vars.$cl-white;
         border-radius: 20px 20px 0 0;
-        &--m{
+
+        &--m {
           display: none;
         }
       }
-      .detail-aside__content{
+
+      .detail-aside__content {
         box-shadow: none;
       }
     }
@@ -60,7 +65,7 @@
   }
 
   &__content {
-    padding: 24px 24px 20px;
+    padding: 20px 20px 20px;
     border-radius: 20px;
     background-color: vars.$cl-white;
     box-shadow: 0 0 0 1px #ecedf0, 0 8px 24px 0 rgba(89, 102, 132, 0.06);
@@ -72,6 +77,10 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
+
+    @include vars.until('md') {
+      margin-bottom: 15px;
+    }
   }
 
   &__price {
@@ -122,6 +131,7 @@
     line-height: 1.2;
     color: vars.$cl-black;
     font-family: vars.$rubleSymbolFont;
+
     @include vars.from('md') {
       font-size: 32px;
     }
@@ -223,11 +233,11 @@
 
 .form-reserv {
   &__date {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 
   &__time {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
   }
 
   &__temp {

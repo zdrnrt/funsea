@@ -2,8 +2,10 @@
 
 .detail-page {
   @include vars.from('md') {
+    padding-top: 40px;
     overflow: clip;
   }
+
   &__preview {
     margin-bottom: 16px;
 
@@ -19,7 +21,7 @@
       display: grid;
       grid-template-columns: 1fr 375px;
       align-items: start;
-      gap: 60px;
+      gap: 48px;
     }
   }
 
