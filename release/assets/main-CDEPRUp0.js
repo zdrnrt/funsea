@@ -27,7 +27,11 @@
     fetch(link.href, fetchOpts);
   }
 })();
-
+if (document.querySelector(".js-detail-text-more")) {
+  document.querySelector(".js-detail-text-more").addEventListener("click", () => {
+    document.querySelector(".js-detail-text").classList.add("detail-text--expand");
+  }, { once: true });
+}
 const t$7 = (t2) => "object" == typeof t2 && null !== t2 && t2.constructor === Object && "[object Object]" === Object.prototype.toString.call(t2);
 const t$6 = (t2) => "string" == typeof t2;
 const n$8 = (n2) => n2 && null !== n2 && n2 instanceof Element && "nodeType" in n2;
@@ -3209,6 +3213,86 @@ const F = { Plugins: { Hash: m }, version: "6.1.13", openers: /* @__PURE__ */ ne
     i3 && n3 && i3.delete(n3), i3.size && n3 || o3.delete(t2), o3.size || (F.openers.delete(e3), e3.removeEventListener("click", F.fromEvent));
   })(i2, s2, l2);
 } };
+const fancyBoxStyle = {
+  "--fancybox-backdrop-bg": "rgb(27 27 27 / 70%)"
+};
+const fancyBoxSettings = {
+  dragToClose: false
+};
+F.bind(".js-auth-trigger", {
+  ...fancyBoxSettings,
+  closeButton: false,
+  closeExisting: false,
+  mainStyle: {
+    "--f-toolbar-padding": "0",
+    "--f-html-padding": "0",
+    "--f-html-bg": "transparent",
+    ...fancyBoxStyle
+  }
+});
+F.bind(".js-detail-gallery", {
+  ...fancyBoxSettings,
+  mainStyle: {
+    ...fancyBoxStyle
+  },
+  Carousel: {
+    Toolbar: {
+      display: {
+        right: ["close"]
+      }
+    }
+  }
+});
+F.bind("[data-fancybox]", {
+  ...fancyBoxSettings,
+  mainStyle: {
+    ...fancyBoxStyle
+  }
+});
+if (document.querySelector(".js-header-menu-open")) {
+  let clickOutsideHeader = function(e2) {
+    if (!e2.target.closest(".js-header-menu")) {
+      toggleHeaderMenu();
+    }
+  }, toggleHeaderMenu = function() {
+    document.querySelector(".js-header-menu").classList.toggle("header-menu--open");
+    document.body.classList.toggle("header-menu--body-open");
+    if (document.body.classList.contains("header-menu--body-open")) {
+      setTimeout(() => {
+        document.body.addEventListener("click", clickOutsideHeader);
+      }, 0);
+    } else {
+      document.body.removeEventListener("click", clickOutsideHeader);
+    }
+  };
+  var clickOutsideHeader2 = clickOutsideHeader, toggleHeaderMenu2 = toggleHeaderMenu;
+  document.querySelector(".js-header-menu-open").addEventListener("click", toggleHeaderMenu);
+  document.querySelector(".js-header-menu-close").addEventListener("click", toggleHeaderMenu);
+}
+function tabToggle(e2) {
+  const target = e2.currentTarget.dataset.targetTab;
+  const tabTarget = document.querySelector(`[data-tab="${target}"]`);
+  if (tabTarget.classList.contains("tabs__item--open")) {
+    return;
+  }
+  const tabsNav = e2.currentTarget.closest(".js-tabs-nav") || e2.currentTarget.closest(".js-tabs");
+  tabsNav.querySelector(".tabs__btn--active").classList.remove("tabs__btn--active");
+  for (const btn of tabsNav.querySelectorAll("[data-target-tab]")) {
+    const target2 = btn.dataset.targetTab;
+    const tab = document.querySelector(`[data-tab="${target2}"].tabs__item--open`);
+    if (tab) {
+      tab.classList.remove("tabs__item--open");
+      break;
+    }
+  }
+  e2.currentTarget.classList.add("tabs__btn--active");
+  tabTarget.classList.add("tabs__item--open");
+}
+if (document.querySelector(".js-tab-trigger")) {
+  for (const tabTrigger of document.querySelectorAll(".js-tab-trigger")) {
+    tabTrigger.addEventListener("click", tabToggle);
+  }
+}
 function isObject$2(obj) {
   return obj !== null && typeof obj === "object" && "constructor" in obj && obj.constructor === Object;
 }
@@ -8215,6 +8299,195 @@ function Pagination({
     init,
     destroy
   });
+}
+if (document.querySelector(".js-trip-list-slider")) {
+  const tripListSlider = new Swiper(".js-trip-list-slider", {
+    modules: [Navigation],
+    slidesPerView: 3,
+    spaceBetween: 6,
+    navigation: {
+      nextEl: ".js-trip-list-slider-next",
+      prevEl: ".js-trip-list-slider-prev"
+    },
+    breakpoints: {
+      560: {
+        slidesPerView: 4.3,
+        spaceBetween: 12
+      },
+      1024: {
+        slidesPerView: 7.5,
+        spaceBetween: 24
+      }
+    }
+  });
+  tripListSlider.on("slideChange", (swiper) => {
+    if (swiper.isBeginning) {
+      swiper.el.classList.remove("trip-list__list--start");
+    } else {
+      swiper.el.classList.add("trip-list__list--start");
+    }
+    if (swiper.isEnd) {
+      swiper.el.classList.add("trip-list__list--end");
+    } else {
+      swiper.el.classList.remove("trip-list__list--end");
+    }
+  });
+}
+if (document.querySelector(".js-hero-slider")) {
+  new Swiper(".js-hero-slider", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    pagination: {
+      el: ".js-hero-slider-pagination",
+      bulletElement: "button",
+      bulletClass: "hero-slider-controls__bullet",
+      bulletActiveClass: "hero-slider-controls__bullet--active"
+    },
+    navigation: {
+      nextEl: ".js-hero-slider-next",
+      prevEl: ".js-hero-slider-prev"
+    }
+  });
+}
+if (document.querySelector(".js-index-category-slider")) {
+  const indexCategorySliderParams = (slider) => ({
+    modules: [Navigation],
+    slidesPerView: 1.1,
+    spaceBetween: 12,
+    autoHeight: true,
+    navigation: {
+      nextEl: slider.closest(".index-categories__item").querySelector(".js-index-category-slider-next"),
+      prevEl: slider.closest(".index-categories__item").querySelector(".js-index-category-slider-prev")
+    },
+    breakpoints: {
+      560: {
+        slidesPerView: 2.2
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
+    }
+  });
+  for (const categorySlider of document.querySelectorAll(
+    ".js-index-category-slider"
+  )) {
+    new Swiper(categorySlider, indexCategorySliderParams(categorySlider));
+  }
+}
+if (document.querySelector(".js-index-blog-slider")) {
+  new Swiper(".js-index-blog-slider", {
+    slidesPerView: 1,
+    spaceBetween: 12,
+    breakpoints: {
+      560: {
+        slidesPerView: 2.2
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 32
+      }
+    }
+  });
+}
+if (document.querySelector(".js-articles-section-slider") && window.innerWidth < 1024) {
+  new Swiper(".js-articles-section-slider", {
+    slidesPerView: 1.4,
+    // spaceBetween: 12,
+    spaceBetween: 20,
+    breakpoints: {
+      560: {
+        slidesPerView: 2.2
+      },
+      1024: {
+        enabled: false,
+        spaceBetween: 0,
+        slidesPerView: 3,
+        grid: {
+          rows: 2
+        }
+      }
+    }
+  });
+}
+if (document.querySelector(".js-adventures-slider")) {
+  const adventuresSlider = new Swiper(".js-adventures-slider", {
+    // new Swiper('.js-adventures-slider', {
+    modules: [Mousewheel, Navigation],
+    mousewheel: {
+      enabled: true,
+      forceToAxis: true
+      // sensitivity: 1
+      // invert: true
+    },
+    slidesPerView: 1,
+    spaceBetween: 12,
+    breakpoints: {
+      560: {
+        slidesPerView: 1.2
+      },
+      1024: {
+        slidesPerView: 1.6,
+        spaceBetween: 32,
+        navigation: {
+          nextEl: ".js-adventures-slider-next",
+          prevEl: ".js-adventures-slider-prev"
+        }
+      }
+    }
+  });
+  adventuresSlider.on("slideChange", (swiper) => {
+    if (swiper.isBeginning) {
+      swiper.el.classList.remove("detail-adventures__list--start");
+    } else {
+      swiper.el.classList.add("detail-adventures__list--start");
+    }
+    if (swiper.isEnd) {
+      swiper.el.classList.add("detail-adventures__list--end");
+    } else {
+      swiper.el.classList.remove("detail-adventures__list--end");
+    }
+  });
+}
+if (document.querySelector(".js-stories-slider")) {
+  const indexStoriesSlider = new Swiper(".js-stories-slider", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 1,
+    spaceBetween: 24,
+    breakpoints: {
+      560: {
+        slidesPerView: 2.2
+      },
+      1024: {
+        slidesPerView: 3.3,
+        pagination: false
+      }
+    },
+    pagination: {
+      el: ".js-stories-slider-pagination",
+      bulletElement: "button",
+      bulletClass: "stories-list-controls__bullet",
+      bulletActiveClass: "stories-list-controls__bullet--active"
+    },
+    navigation: {
+      nextEl: ".js-stories-slider-next",
+      prevEl: ".js-stories-slider-prev"
+    }
+  });
+  if (window.innerWidth >= 1024) {
+    indexStoriesSlider.on("slideChange", (swiper) => {
+      if (swiper.isBeginning) {
+        swiper.el.classList.remove("stories-list__list--start");
+      } else {
+        swiper.el.classList.add("stories-list__list--start");
+      }
+      if (swiper.isEnd) {
+        swiper.el.classList.add("stories-list__list--end");
+      } else {
+        swiper.el.classList.remove("stories-list__list--end");
+      }
+    });
+  }
 }
 const NEVER = Object.freeze({
   status: "aborted"
@@ -21829,7 +22102,6 @@ const z = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   xid,
   xor
 }, Symbol.toStringTag, { value: "Module" }));
-// custom
 const validateSchemaSignin = z.object({
   email: z.string().email("Введите корректный email"),
   password: z.string().min(8, "Минимум 8 символов").regex(/[a-z]/, "Как минимум 1 буква").regex(/[0-9]/, "Как минимум 1 цифра")
@@ -21959,278 +22231,4 @@ function toggleExpandDetailAside() {
 }
 if (document.querySelector(".js-detail-aside-trigger")) {
   document.querySelector(".js-detail-aside-trigger").addEventListener("click", toggleExpandDetailAside);
-}
-if (document.querySelector(".js-detail-text-more")) {
-  document.querySelector(".js-detail-text-more").addEventListener("click", () => {
-    document.querySelector(".js-detail-text").classList.add("detail-text--expand");
-  }, { once: true });
-}
-const fancyBoxStyle = {
-  "--fancybox-backdrop-bg": "rgb(27 27 27 / 70%)"
-};
-const fancyBoxSettings = {
-  dragToClose: false
-};
-F.bind(".js-auth-trigger", {
-  ...fancyBoxSettings,
-  closeButton: false,
-  closeExisting: false,
-  mainStyle: {
-    "--f-toolbar-padding": "0",
-    "--f-html-padding": "0",
-    "--f-html-bg": "transparent",
-    ...fancyBoxStyle
-  }
-});
-F.bind(".js-detail-gallery", {
-  ...fancyBoxSettings,
-  mainStyle: {
-    ...fancyBoxStyle
-  },
-  Carousel: {
-    Toolbar: {
-      display: {
-        right: ["close"]
-      }
-    }
-  }
-});
-F.bind("[data-fancybox]", {
-  ...fancyBoxSettings,
-  mainStyle: {
-    ...fancyBoxStyle
-  }
-});
-if (document.querySelector(".js-header-menu-open")) {
-  let clickOutsideHeader = function(e2) {
-    if (!e2.target.closest(".js-header-menu")) {
-      toggleHeaderMenu();
-    }
-  }, toggleHeaderMenu = function() {
-    document.querySelector(".js-header-menu").classList.toggle("header-menu--open");
-    document.body.classList.toggle("header-menu--body-open");
-    if (document.body.classList.contains("header-menu--body-open")) {
-      setTimeout(() => {
-        document.body.addEventListener("click", clickOutsideHeader);
-      }, 0);
-    } else {
-      document.body.removeEventListener("click", clickOutsideHeader);
-    }
-  };
-  var clickOutsideHeader2 = clickOutsideHeader, toggleHeaderMenu2 = toggleHeaderMenu;
-  document.querySelector(".js-header-menu-open").addEventListener("click", toggleHeaderMenu);
-  document.querySelector(".js-header-menu-close").addEventListener("click", toggleHeaderMenu);
-}
-function tabToggle(e2) {
-  const target = e2.currentTarget.dataset.targetTab;
-  const tabTarget = document.querySelector(`[data-tab="${target}"]`);
-  if (tabTarget.classList.contains("tabs__item--open")) {
-    return;
-  }
-  const tabsNav = e2.currentTarget.closest(".js-tabs-nav") || e2.currentTarget.closest(".js-tabs");
-  tabsNav.querySelector(".tabs__btn--active").classList.remove("tabs__btn--active");
-  for (const btn of tabsNav.querySelectorAll("[data-target-tab]")) {
-    const target2 = btn.dataset.targetTab;
-    const tab = document.querySelector(`[data-tab="${target2}"].tabs__item--open`);
-    if (tab) {
-      tab.classList.remove("tabs__item--open");
-      break;
-    }
-  }
-  e2.currentTarget.classList.add("tabs__btn--active");
-  tabTarget.classList.add("tabs__item--open");
-}
-if (document.querySelector(".js-tab-trigger")) {
-  for (const tabTrigger of document.querySelectorAll(".js-tab-trigger")) {
-    tabTrigger.addEventListener("click", tabToggle);
-  }
-}
-if (document.querySelector(".js-trip-list-slider")) {
-  const tripListSlider = new Swiper(".js-trip-list-slider", {
-    modules: [Navigation],
-    slidesPerView: 3,
-    spaceBetween: 6,
-    navigation: {
-      nextEl: ".js-trip-list-slider-next",
-      prevEl: ".js-trip-list-slider-prev"
-    },
-    breakpoints: {
-      560: {
-        slidesPerView: 4.3,
-        spaceBetween: 12
-      },
-      1024: {
-        slidesPerView: 7.5,
-        spaceBetween: 24
-      }
-    }
-  });
-  tripListSlider.on("slideChange", (swiper) => {
-    if (swiper.isBeginning) {
-      swiper.el.classList.remove("trip-list__list--start");
-    } else {
-      swiper.el.classList.add("trip-list__list--start");
-    }
-    if (swiper.isEnd) {
-      swiper.el.classList.add("trip-list__list--end");
-    } else {
-      swiper.el.classList.remove("trip-list__list--end");
-    }
-  });
-}
-if (document.querySelector(".js-hero-slider")) {
-  new Swiper(".js-hero-slider", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    pagination: {
-      el: ".js-hero-slider-pagination",
-      bulletElement: "button",
-      bulletClass: "hero-slider-controls__bullet",
-      bulletActiveClass: "hero-slider-controls__bullet--active"
-    },
-    navigation: {
-      nextEl: ".js-hero-slider-next",
-      prevEl: ".js-hero-slider-prev"
-    }
-  });
-}
-if (document.querySelector(".js-index-category-slider")) {
-  const indexCategorySliderParams = (slider) => ({
-    modules: [Navigation],
-    slidesPerView: 1.1,
-    spaceBetween: 12,
-    autoHeight: true,
-    navigation: {
-      nextEl: slider.closest(".index-categories__item").querySelector(".js-index-category-slider-next"),
-      prevEl: slider.closest(".index-categories__item").querySelector(".js-index-category-slider-prev")
-    },
-    breakpoints: {
-      560: {
-        slidesPerView: 2.2
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 32
-      }
-    }
-  });
-  for (const categorySlider of document.querySelectorAll(
-    ".js-index-category-slider"
-  )) {
-    new Swiper(categorySlider, indexCategorySliderParams(categorySlider));
-  }
-}
-if (document.querySelector(".js-index-blog-slider")) {
-  new Swiper(".js-index-blog-slider", {
-    slidesPerView: 1,
-    spaceBetween: 12,
-    breakpoints: {
-      560: {
-        slidesPerView: 2.2
-      },
-      1024: {
-        slidesPerView: 3,
-        spaceBetween: 32
-      }
-    }
-  });
-}
-if (document.querySelector(".js-articles-section-slider") && window.innerWidth < 1024) {
-  new Swiper(".js-articles-section-slider", {
-    slidesPerView: 1.4,
-    // spaceBetween: 12,
-    spaceBetween: 20,
-    breakpoints: {
-      560: {
-        slidesPerView: 2.2
-      },
-      1024: {
-        enabled: false,
-        spaceBetween: 0,
-        slidesPerView: 3,
-        grid: {
-          rows: 2
-        }
-      }
-    }
-  });
-}
-if (document.querySelector(".js-adventures-slider")) {
-  const adventuresSlider = new Swiper(".js-adventures-slider", {
-    // new Swiper('.js-adventures-slider', {
-    modules: [Mousewheel, Navigation],
-    mousewheel: {
-      enabled: true,
-      forceToAxis: true
-      // sensitivity: 1
-      // invert: true
-    },
-    slidesPerView: 1,
-    spaceBetween: 12,
-    breakpoints: {
-      560: {
-        slidesPerView: 1.2
-      },
-      1024: {
-        slidesPerView: 1.6,
-        spaceBetween: 32,
-        navigation: {
-          nextEl: ".js-adventures-slider-next",
-          prevEl: ".js-adventures-slider-prev"
-        }
-      }
-    }
-  });
-  adventuresSlider.on("slideChange", (swiper) => {
-    if (swiper.isBeginning) {
-      swiper.el.classList.remove("detail-adventures__list--start");
-    } else {
-      swiper.el.classList.add("detail-adventures__list--start");
-    }
-    if (swiper.isEnd) {
-      swiper.el.classList.add("detail-adventures__list--end");
-    } else {
-      swiper.el.classList.remove("detail-adventures__list--end");
-    }
-  });
-}
-if (document.querySelector(".js-stories-slider")) {
-  const indexStoriesSlider = new Swiper(".js-stories-slider", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 1,
-    spaceBetween: 24,
-    breakpoints: {
-      560: {
-        slidesPerView: 2.2
-      },
-      1024: {
-        slidesPerView: 3.3,
-        pagination: false
-      }
-    },
-    pagination: {
-      el: ".js-stories-slider-pagination",
-      bulletElement: "button",
-      bulletClass: "stories-list-controls__bullet",
-      bulletActiveClass: "stories-list-controls__bullet--active"
-    },
-    navigation: {
-      nextEl: ".js-stories-slider-next",
-      prevEl: ".js-stories-slider-prev"
-    }
-  });
-  if (window.innerWidth >= 1024) {
-    indexStoriesSlider.on("slideChange", (swiper) => {
-      if (swiper.isBeginning) {
-        swiper.el.classList.remove("stories-list__list--start");
-      } else {
-        swiper.el.classList.add("stories-list__list--start");
-      }
-      if (swiper.isEnd) {
-        swiper.el.classList.add("stories-list__list--end");
-      } else {
-        swiper.el.classList.remove("stories-list__list--end");
-      }
-    });
-  }
 }

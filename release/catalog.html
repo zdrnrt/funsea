@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./fav.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Каталог | Moре развлечений</title>
-  <script defer src="./assets/main-D8Z_DkMz.js"></script>
-  <link rel="stylesheet" href="./assets/main-BhTtS5Db.css?2">
+  <script defer src="./assets/main-CDEPRUp0.js"></script>
+  <link rel="stylesheet" href="./assets/main-sXNuHm8P.css">
 </head>
 
 <body>
@@ -258,6 +258,22 @@
 </div>
       </div>
     </section>
+    <div class="catalog-page__filter">
+      <div class="catalog-filter container">
+        <select name="type" id="type" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Виды отдыха</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+        <select name="price" id="price" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Цена</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+        <select name="duration" id="duration" class="catalog-filter__select">
+          <option value="" disabled="" selected="" hidden="">Продолжительность</option>
+          <option value="" disabled>Нет данных</option>
+        </select>
+      </div>
+    </div>
     <div class="catalog-page__items">
       <div class="container">
         <div class="catalog-page__list">
@@ -766,10 +782,8 @@
           </div>
         </article>
 
-
-        <section class="catalog-page__stories stories-list">
-          <div class="container">
-  <div class="stories-list__list js-stories-slider">
+        <div class="catalog-page__stories stories-list">
+            <div class="stories-list__list js-stories-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide stories-list__item stories-list__item--start">
         <article class="stories-item stories-item--start">
@@ -872,9 +886,7 @@
       <img src="./assets/images/icons/arrow-right.svg" alt="">
     </button>
   </div>
-</div>
-        </section>
-
+        </div>
 
         <article class="card">
           <div class="card__preview">
