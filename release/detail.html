@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./fav.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Экскурсия | Moре развлечений</title>
-  <script defer src="./assets/main-CDEPRUp0.js"></script>
-  <link rel="stylesheet" href="./assets/main-sXNuHm8P.css">
+  <script defer src="./assets/main-D3IG-jjA.js"></script>
+  <link rel="stylesheet" href="./assets/main-CAbGEhgx.css">
 </head>
 
 <body>
@@ -783,6 +783,61 @@
         </div>
       </form>
     </div>
+  </div>
+</div>
+
+<div class="modal" id="catalog-filter">
+  <div class="modal__content">
+    <button class="modal__close js-modal-close" data-fancybox-close>
+      <img src="./assets/images/icons/close.svg" alt="">
+    </button>
+    <div class="modal__header">
+      <div class="modal__logo">
+        <img src="./assets/images/icons/logo.png" alt="">
+      </div>
+    </div>
+      <form action="" class="modal-form js-form-filter">
+        <h3 class="modal-form__title">Фильтры</h3>
+        <div class="modal-form__item">
+          <label for="type" class="modal-form__label">Вид отдыха</label>
+            <select class="form-reserv-input__select" name="type" id="type">
+              <option value="" disabled="" selected="" hidden="">Вид отдыха</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="price" class="modal-form__label">Цена</label>
+            <select class="form-reserv-input__select" name="price" id="price">
+              <option value="" disabled="" selected="" hidden="">Цена</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="duration" class="modal-form__label">Продолжительность</label>
+            <select class="form-reserv-input__select" name="duration" id="duration">
+              <option value="" disabled="" selected="" hidden="">Продолжительность</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="kids" class="modal-form__label">Можно с детьми</label>
+            <select class="form-reserv-input__select" name="kids" id="kids">
+              <option value="" disabled="" selected="" hidden="">Можно с детьми</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="size" class="modal-form__label">Размер группы</label>
+            <select class="form-reserv-input__select" name="size" id="size">
+              <option value="" disabled="" selected="" hidden="">Размер группы</option>
+              <option value="3" >3</option>
+            </select>
+        </div>
+        <div class="modal-form__footer modal-form__footer--filter">
+          <button class="modal-form__reset" type="reset">Сбросить все</button>
+          <button class="modal-form__submit" type="submit">Применить</button>
+        </div>
+      </form>
   </div>
 </div>
 </body>

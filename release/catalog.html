@@ -6,8 +6,8 @@
   <link rel="icon" type="image/svg+xml" href="./fav.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Каталог | Moре развлечений</title>
-  <script defer src="./assets/main-CDEPRUp0.js"></script>
-  <link rel="stylesheet" href="./assets/main-sXNuHm8P.css">
+  <script defer src="./assets/main-D3IG-jjA.js"></script>
+  <link rel="stylesheet" href="./assets/main-CAbGEhgx.css">
 </head>
 
 <body>
@@ -258,532 +258,548 @@
 </div>
       </div>
     </section>
-    <div class="catalog-page__filter">
-      <div class="catalog-filter container">
-        <select name="type" id="type" class="catalog-filter__select">
-          <option value="" disabled="" selected="" hidden="">Виды отдыха</option>
-          <option value="" disabled>Нет данных</option>
-        </select>
-        <select name="price" id="price" class="catalog-filter__select">
-          <option value="" disabled="" selected="" hidden="">Цена</option>
-          <option value="" disabled>Нет данных</option>
-        </select>
-        <select name="duration" id="duration" class="catalog-filter__select">
-          <option value="" disabled="" selected="" hidden="">Продолжительность</option>
-          <option value="" disabled>Нет данных</option>
-        </select>
+    <div class="catalog-page__filter catalog-page__filter--d">
+      <div class="container">
+        <form action="" class="catalog-filter">
+          <select name="type" id="type" class="catalog-filter__select">
+            <option value="" disabled="" selected="" hidden="">Вид отдыха</option>
+            <option value="" disabled>Нет данных</option>
+          </select>
+          <select name="price" id="price" class="catalog-filter__select">
+            <option value="" disabled="" selected="" hidden="">Цена</option>
+            <option value="" disabled>Нет данных</option>
+          </select>
+          <select name="duration" id="duration" class="catalog-filter__select">
+            <option value="" disabled="" selected="" hidden="">Продолжительность</option>
+            <option value="" disabled>Нет данных</option>
+          </select>
+          <select class="catalog-filter__select" name="kids" id="kids">
+            <option value="" disabled="" selected="" hidden="">Можно с детьми</option>
+            <option value="" disabled="">Нет данных</option>
+          </select>
+          <select class="catalog-filter__select" name="size" id="size">
+            <option value="" disabled="" selected="" hidden="">Размер группы</option>
+            <option value="3">3</option>
+          </select>
+        </form>
       </div>
     </div>
+    <button class="catalog-mobile-filter-open catalog-mobile-filter-open--filled js-filter-trigger"
+      data-src="#catalog-filter">
+      <span class="catalog-mobile-filter-open__status"></span>
+      <img class="catalog-mobile-filter-open__icon" src="./assets/images/icons/filter-icon.svg" alt="">
+      Поиск
+    </button>
     <div class="catalog-page__items">
       <div class="container">
         <div class="catalog-page__list">
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">Групповая</span>
-            <img src="./assets/images/trips/1.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Небуг</span>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="./assets/images/trips/1.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">Аквапарк дельфин</h3>
-            <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
-              детский бассейн глуб.....</p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">Аквапарк дельфин</h3>
+              <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
+                детский бассейн глуб.....</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">14 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">14 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">В группе</span>
-            <img src="./assets/images/trips/2.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Ольгинка</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">В группе</span>
+              <img src="./assets/images/trips/2.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
-            <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
-              Подходит для всадников любого уровня</p>
-           <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Ольгинка</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
+              <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
+                Подходит для всадников любого уровня</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">3 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">3 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">Групповая</span>
-            <img src="./assets/images/trips/3.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе  · Небуг</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="./assets/images/trips/3.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
-            <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
-              подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
-              квадро прогулкой сполна, а вернее на полный максимум.</p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе  · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
+              <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
+                подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
+                квадро прогулкой сполна, а вернее на полный максимум.</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">16 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">16 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Группа от 2 человек
-            </span>
-            <img src="./assets/images/trips/4.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе · Джубга
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Группа от 2 человек
               </span>
+              <img src="./assets/images/trips/4.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Развлечение на квадроцкле «Сафари по лесам Джубги»
-            </h3>
-            <p class="card__text">
-              Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски, подъемы стены и
-              непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться квадро прогулкой
-              сполна, а вернее на полный максимум.
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">1 час</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На квадроцикле</span>
-              </div>
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">4 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/5.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Ольгинка</span>
-            </div>
-            <h3 class="card__title">
-              На квадроцике тур к Крокодиловому озеру
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе · Джубга
                 </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
+              <h3 class="card__title">
+                Развлечение на квадроцкле «Сафари по лесам Джубги»
+              </h3>
+              <p class="card__text">
+                Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски, подъемы стены и
+                непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться квадро прогулкой
+                сполна, а вернее на полный максимум.
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">1 час</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На квадроцикле</span>
+                </div>
               </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">4 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
+              </span>
+              <img src="./assets/images/trips/5.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Ольгинка</span>
               </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
+              <h3 class="card__title">
+                На квадроцике тур к Крокодиловому озеру
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер
+                  </span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
 
-            </span>
-            <img src="./assets/images/trips/6.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Небуг</span>
+              </span>
+              <img src="./assets/images/trips/6.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Голубые водопады
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
+              <h3 class="card__title">
+                Голубые водопады
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Индивидуальная
-            </span>
-            <img src="./assets/images/trips/7.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе · Небуг
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Индивидуальная
               </span>
+              <img src="./assets/images/trips/7.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Дайвинг для новичков в Небуге
-            </h3>
-            <p class="card__text">
-              Погружение проходит у Волконского скального рифа. Вы увидите характерные гряды скальных рифов,
-              покрытых водорослями. Рельеф разнообразный, с выраженным объемом с каньоном.
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">30 минут</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе · Небуг
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Дайвинг</span>
-              </div>
+              <h3 class="card__title">
+                Дайвинг для новичков в Небуге
+              </h3>
+              <p class="card__text">
+                Погружение проходит у Волконского скального рифа. Вы увидите характерные гряды скальных рифов,
+                покрытых водорослями. Рельеф разнообразный, с выраженным объемом с каньоном.
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">30 минут</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Дайвинг</span>
+                </div>
 
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">4 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
               </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/8.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Ольгинка
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">4 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
               </span>
+              <img src="./assets/images/trips/8.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Морская Рыбалка на яхте в Ольгинке в группе
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Ольгинка
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
+              <h3 class="card__title">
+                Морская Рыбалка на яхте в Ольгинке в группе
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
-            </span>
-            <img src="./assets/images/trips/9.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Небуг
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
               </span>
+              <img src="./assets/images/trips/9.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Полет на парашюте в Небуге
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Небуг
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
+              <h3 class="card__title">
+                Полет на парашюте в Небуге
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/blog/1.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Джубга
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
               </span>
+              <img src="./assets/images/blog/1.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джиппинг Маршрут «Изумрудная долина реки Аше»
-            </h3>
-            <p class="card__text">
-              Красивые ВОДОПАДЫ. Самое незабываемое впечатление оставляет джакузи в горной реке, с бурлящей водой в
-              котором можно освежиться в жару и получить заряд энергии от массажа водой. Заключающей частью маршрута
-              будет концерт адыгейского ансамбля с национальными танцами и песнями, с конкурсами и дискотекой, также
-              разнообразным меню
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Джубга
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Джиппинг Маршрут «Изумрудная долина реки Аше»
+              </h3>
+              <p class="card__text">
+                Красивые ВОДОПАДЫ. Самое незабываемое впечатление оставляет джакузи в горной реке, с бурлящей водой в
+                котором можно освежиться в жару и получить заряд энергии от массажа водой. Заключающей частью маршрута
+                будет концерт адыгейского ансамбля с национальными танцами и песнями, с конкурсами и дискотекой, также
+                разнообразным меню
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
               </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">2 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">2 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/11.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Ольгинка
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
               </span>
+              <img src="./assets/images/trips/11.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джип-экскурсия к водопадам «Наджиго»
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3,5 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Ольгинка
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Джип-экскурсия к водопадам «Наджиго»
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3,5 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
-            </span>
-            <img src="./assets/images/trips/12.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Небуг
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
               </span>
+              <img src="./assets/images/trips/12.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джип-тур Малый Круг 
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Небуг
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Джип-тур Малый Круг 
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <div class="catalog-page__stories stories-list">
-            <div class="stories-list__list js-stories-slider">
+          <div class="catalog-page__stories stories-list">
+              <div class="stories-list__list js-stories-slider">
     <div class="swiper-wrapper">
       <div class="swiper-slide stories-list__item stories-list__item--start">
         <article class="stories-item stories-item--start">
@@ -886,520 +902,520 @@
       <img src="./assets/images/icons/arrow-right.svg" alt="">
     </button>
   </div>
-        </div>
+          </div>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">Групповая</span>
-            <img src="./assets/images/trips/1.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Небуг</span>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="./assets/images/trips/1.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">Аквапарк дельфин</h3>
-            <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
-              детский бассейн глуб.....</p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">Аквапарк дельфин</h3>
+              <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
+                детский бассейн глуб.....</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">14 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">14 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">В группе</span>
-            <img src="./assets/images/trips/2.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Ольгинка</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">В группе</span>
+              <img src="./assets/images/trips/2.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
-            <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
-              Подходит для всадников любого уровня</p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Ольгинка</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
+              <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
+                Подходит для всадников любого уровня</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">3 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">3 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">Групповая</span>
-            <img src="./assets/images/trips/3.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе  · Небуг</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="./assets/images/trips/3.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
-            <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
-              подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
-              квадро прогулкой сполна, а вернее на полный максимум.</p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">2 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе  · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На автобусе</span>
+              <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
+              <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
+                подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
+                квадро прогулкой сполна, а вернее на полный максимум.</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">16 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">16 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Группа от 2 человек
-            </span>
-            <img src="./assets/images/trips/4.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Джубга
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Группа от 2 человек
               </span>
+              <img src="./assets/images/trips/4.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Развлечение на квадроцкле «Сафари по лесам Джубги»
-            </h3>
-            <p class="card__text">
-              Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски, подъемы стены и
-              непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться квадро прогулкой
-              сполна, а вернее на полный максимум.
-
-
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">1 час</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">На квадроцикле</span>
-              </div>
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">4 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/5.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Ольгинка</span>
-            </div>
-            <h3 class="card__title">
-              На квадроцике тур к Крокодиловому озеру
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Джубга
                 </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
+              <h3 class="card__title">
+                Развлечение на квадроцкле «Сафари по лесам Джубги»
+              </h3>
+              <p class="card__text">
+                Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски, подъемы стены и
+                непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться квадро прогулкой
+                сполна, а вернее на полный максимум.
 
-            </span>
-            <img src="./assets/images/trips/6.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">Туапсе · Небуг</span>
-            </div>
-            <h3 class="card__title">
-              Голубые водопады
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Индивидуальная
-            </span>
-            <img src="./assets/images/trips/7.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе · Небуг
-              </span>
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">1 час</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На квадроцикле</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">4 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <h3 class="card__title">
-              Дайвинг для новичков в Небуге
-            </h3>
-            <p class="card__text">
-              Погружение проходит у Волконского скального рифа. Вы увидите характерные гряды скальных рифов,
-              покрытых водорослями. Рельеф разнообразный, с выраженным объемом с каньоном.
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">30 минут</span>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
+              </span>
+              <img src="./assets/images/trips/5.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Ольгинка</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Дайвинг</span>
+              <h3 class="card__title">
+                На квадроцике тур к Крокодиловому озеру
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер
+                  </span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
 
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">4 000 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/8.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Ольгинка
               </span>
+              <img src="./assets/images/trips/6.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Морская Рыбалка на яхте в Ольгинке в группе
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Небуг</span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
+              <h3 class="card__title">
+                Голубые водопады
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
-            </span>
-            <img src="./assets/images/trips/9.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Небуг
-              </span>
-            </div>
-            <h3 class="card__title">
-              Полет на парашюте в Небуге
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Трансфер</span>
-              </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
-            </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+          </article>
 
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/blog/1.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Джубга
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Индивидуальная
               </span>
+              <img src="./assets/images/trips/7.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джиппинг Маршрут «Изумрудная долина реки Аше»
-            </h3>
-            <p class="card__text">
-              Красивые ВОДОПАДЫ. Самое незабываемое впечатление оставляет джакузи в горной реке, с бурлящей водой в
-              котором можно освежиться в жару и получить заряд энергии от массажа водой. Заключающей частью маршрута
-              будет концерт адыгейского ансамбля с национальными танцами и песнями, с конкурсами и дискотекой, также
-              разнообразным меню
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">4 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе · Небуг
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Дайвинг для новичков в Небуге
+              </h3>
+              <p class="card__text">
+                Погружение проходит у Волконского скального рифа. Вы увидите характерные гряды скальных рифов,
+                покрытых водорослями. Рельеф разнообразный, с выраженным объемом с каньоном.
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">30 минут</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Дайвинг</span>
+                </div>
+
               </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">4 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">2 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--blue">
-              В группе
-            </span>
-            <img src="./assets/images/trips/11.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Ольгинка
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
               </span>
+              <img src="./assets/images/trips/8.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джип-экскурсия к водопадам «Наджиго»
-            </h3>
-            <p class="card__text">
-              Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
-              дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
-              спускаемся на склоне под 70 градусов
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3,5 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Ольгинка
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Морская Рыбалка на яхте в Ольгинке в группе
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">5 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
-              </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card__preview">
-            <span class="card__tag card__tag--green">
-              Групповая
-            </span>
-            <img src="./assets/images/trips/12.jpg" alt="" class="card__pic">
-          </div>
-          <div class="card__descr">
-            <div class="card__position card-position">
-              <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
-              <span class="card-position__name">
-                Туапсе  · Небуг
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
               </span>
+              <img src="./assets/images/trips/9.jpg" alt="" class="card__pic">
             </div>
-            <h3 class="card__title">
-              Джип-тур Малый Круг 
-            </h3>
-            <p class="card__text">
-              Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
-              природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
-              погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
-            </p>
-            <div class="card__info card-info">
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">3 часа</span>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Небуг
+                </span>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Джиппинг</span>
+              <h3 class="card__title">
+                Полет на парашюте в Небуге
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Трансфер</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
               </div>
-              <div class="card-info__item card__info-item">
-                <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
-                <span class="card-info__name">Семейный план</span>
-              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
             </div>
-            <footer class="card__footer">
-              <div class="card__price card-price">
-                <span class="card-price__actuall">7 500 ₽</span>
-                <span class="card-price__info">/ за человека</span>
+          </article>
+
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
+              </span>
+              <img src="./assets/images/blog/1.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Джубга
+                </span>
               </div>
-              <a href="#" class="card__btn">Подробнее</a>
-            </footer>
-          </div>
-        </article>
+              <h3 class="card__title">
+                Джиппинг Маршрут «Изумрудная долина реки Аше»
+              </h3>
+              <p class="card__text">
+                Красивые ВОДОПАДЫ. Самое незабываемое впечатление оставляет джакузи в горной реке, с бурлящей водой в
+                котором можно освежиться в жару и получить заряд энергии от массажа водой. Заключающей частью маршрута
+                будет концерт адыгейского ансамбля с национальными танцами и песнями, с конкурсами и дискотекой, также
+                разнообразным меню
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">4 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">2 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">
+                В группе
+              </span>
+              <img src="./assets/images/trips/11.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Ольгинка
+                </span>
+              </div>
+              <h3 class="card__title">
+                Джип-экскурсия к водопадам «Наджиго»
+              </h3>
+              <p class="card__text">
+                Много экстрима, красивая природа и, конечно, море положительных эмоций. Конечная, остановка у трех
+                дольменов, где Вы сможете почувствовать необыкновенную атмосферу и сделать великолепные фотографии,
+                спускаемся на склоне под 70 градусов
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3,5 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">5 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Групповая
+              </span>
+              <img src="./assets/images/trips/12.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="./assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе  · Небуг
+                </span>
+              </div>
+              <h3 class="card__title">
+                Джип-тур Малый Круг 
+              </h3>
+              <p class="card__text">
+                Предлагаем вам замечательные и увлекательные прогулки на квадроцикле, лицезреть красивые и живописные
+                природные места и явления, получить эмоции от управления четырёх колёсным монстром. В жаркую летнюю
+                погодку, слегка охладиться брызгами речной воды и одновременно обдувающим свежим горным воздухом!
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">3 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Джиппинг</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="./assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">7 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+        </div>
+
+        <div class="catalog-page__more">
+          <button class="catalog-page__btn">Показать весь каталог</button>
+        </div>
       </div>
-
-      <div class="catalog-page__more">
-        <button class="catalog-page__btn">Показать весь каталог</button>
-      </div>
-    </div>
     </div>
 
     <div class="catalog-page__blog blog-list">
@@ -1725,6 +1741,61 @@
         </div>
       </form>
     </div>
+  </div>
+</div>
+
+<div class="modal" id="catalog-filter">
+  <div class="modal__content">
+    <button class="modal__close js-modal-close" data-fancybox-close>
+      <img src="./assets/images/icons/close.svg" alt="">
+    </button>
+    <div class="modal__header">
+      <div class="modal__logo">
+        <img src="./assets/images/icons/logo.png" alt="">
+      </div>
+    </div>
+      <form action="" class="modal-form js-form-filter">
+        <h3 class="modal-form__title">Фильтры</h3>
+        <div class="modal-form__item">
+          <label for="type" class="modal-form__label">Вид отдыха</label>
+            <select class="form-reserv-input__select" name="type" id="type">
+              <option value="" disabled="" selected="" hidden="">Вид отдыха</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="price" class="modal-form__label">Цена</label>
+            <select class="form-reserv-input__select" name="price" id="price">
+              <option value="" disabled="" selected="" hidden="">Цена</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="duration" class="modal-form__label">Продолжительность</label>
+            <select class="form-reserv-input__select" name="duration" id="duration">
+              <option value="" disabled="" selected="" hidden="">Продолжительность</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="kids" class="modal-form__label">Можно с детьми</label>
+            <select class="form-reserv-input__select" name="kids" id="kids">
+              <option value="" disabled="" selected="" hidden="">Можно с детьми</option>
+              <option value="" disabled="">Нет данных</option>
+            </select>
+        </div>
+        <div class="modal-form__item">
+          <label for="size" class="modal-form__label">Размер группы</label>
+            <select class="form-reserv-input__select" name="size" id="size">
+              <option value="" disabled="" selected="" hidden="">Размер группы</option>
+              <option value="3" >3</option>
+            </select>
+        </div>
+        <div class="modal-form__footer modal-form__footer--filter">
+          <button class="modal-form__reset" type="reset">Сбросить все</button>
+          <button class="modal-form__submit" type="submit">Применить</button>
+        </div>
+      </form>
   </div>
 </div>
 </body>

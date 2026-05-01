@@ -3230,6 +3230,18 @@ F.bind(".js-auth-trigger", {
     ...fancyBoxStyle
   }
 });
+F.bind(".js-filter-trigger", {
+  ...fancyBoxSettings,
+  closeButton: false,
+  closeExisting: true,
+  dragToClose: false,
+  mainStyle: {
+    "--f-toolbar-padding": "0",
+    "--f-html-padding": "0",
+    "--f-html-bg": "transparent",
+    ...fancyBoxStyle
+  }
+});
 F.bind(".js-detail-gallery", {
   ...fancyBoxSettings,
   mainStyle: {
