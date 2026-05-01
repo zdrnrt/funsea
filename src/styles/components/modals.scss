@@ -1,7 +1,10 @@
 @use "../vars.scss";
 
 @include vars.until('sm') {
-  .fancybox__slide.has-html:has(#auth-user){
+  .fancybox__viewport.is-draggable:has(#auth-user),
+  .fancybox__viewport.is-draggable:has(#catalog-filter),
+  .fancybox__slide.has-html:has(#auth-user),
+  .fancybox__slide.has-html:has(#catalog-filter){
     padding: 0;
     &:before{
       margin-top: 20px;
@@ -80,6 +83,10 @@
   &--hidden{
     display: none;
   }
+  &__title{
+    font-size: 18px;
+    font-weight: bold;
+  }
   &__item {
     width: 100%;
     &--repeat{
@@ -119,7 +126,15 @@
       padding: 0;
       border-top: none;
     }
-    
+    &--filter{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      padding-inline: 0;
+      border-top: none;
+    }
   }
 
   &__btn {
@@ -130,6 +145,35 @@
     color: vars.$cl-blue;
     &:hover{
       filter: brightness(0.8);
+    }
+  }
+  &__reset {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 125%;
+    color: vars.$cl-black;
+    background-color: vars.$cl-input-bg;
+    border: 1px solid vars.$cl-input-bg;
+    border-radius: 12px;
+    @include vars.from('md') {
+      max-width: 200px;
+    }
+
+    &:hover:not([disabled]) {
+      color: vars.$cl-white;
+      background-color: vars.$cl-light-dark;
+      box-shadow: vars.$btn-shadow;
+    }
+
+    &:disabled {
+      color: vars.$cl-grey;
+      border-color: vars.$cl-light-grey;
+      background-color: vars.$cl-light-grey;
+      cursor: auto;
     }
   }
   &__submit {

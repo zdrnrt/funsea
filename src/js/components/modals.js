@@ -21,6 +21,21 @@ Fancybox.bind(".js-auth-trigger", {
   }
 });
 
+// кастомная модалка для мобильного фильтра в каталоге
+Fancybox.bind(".js-filter-trigger", {
+  ...fancyBoxSettings,
+  closeButton: false,
+  closeExisting: true,
+  dragToClose: false,
+  
+  mainStyle: {
+    "--f-toolbar-padding": "0",
+    "--f-html-padding": "0",
+    "--f-html-bg": "transparent",
+    ...fancyBoxStyle
+  }
+});
+
 // кастомная галерея для превью
 Fancybox.bind('.js-detail-gallery', {
   ...fancyBoxSettings,

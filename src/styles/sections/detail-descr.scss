@@ -255,7 +255,7 @@ $detail-gap: 28px;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-
+  gap: 10px;
   @include vars.from('md') {
     gap: 20px;
   }
