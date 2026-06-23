@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/fav.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск | Moре развлечений</title>
+</head>
+
+<body>
+  <include src="src/html/header.html"></include>
+  <main class="main search-page">
+    <div class="container search-page__form">
+      <form class="search-form" action="#">
+        <input id="search" name="search" class="search-form__input" type="text" placeholder="Поиск" value="Джипинг">
+      </form>
+    </div>
+    <section class="search-page__content container">
+      <div class="search-content">
+        <header class="search-content__header">
+          <h1 class="search-content__title">Результаты поиска</h1>
+          <div class="search-content__request">
+            <span class="search-content__request--value">Запрос: Джипинг</span>
+          </div>
+        </header>
+        <div class="search-content__list">
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="src/assets/images/trips/1.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Небуг</span>
+              </div>
+              <h3 class="card__title">Аквапарк дельфин</h3>
+              <p class="card__text">Предлагает водные развлечения для всех возрастов, включая 12 горок для взрослых,
+                детский бассейн глуб.....</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">14 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">В группе</span>
+              <img src="src/assets/images/trips/2.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе · Ольгинка</span>
+              </div>
+              <h3 class="card__title">Панорамная прогулка верхом на лошади</h3>
+              <p class="card__text">Маршрут проходит по лесу с выходом на панораму села Тенгинка и горные поляны.
+                Подходит для всадников любого уровня</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">3 500 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--blue">Групповая</span>
+              <img src="src/assets/images/trips/3.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">Туапсе  · Небуг</span>
+              </div>
+              <h3 class="card__title">К Полковничьим водопадам на квадроциклах</h3>
+              <p class="card__text">Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски,
+                подъемы стены и непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться
+                квадро прогулкой сполна, а вернее на полный максимум.</p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">2 часа</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На автобусе</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/family.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">Семейный план</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">16 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__preview">
+              <span class="card__tag card__tag--green">
+                Группа от 2 человек
+              </span>
+              <img src="src/assets/images/trips/4.jpg" alt="" class="card__pic">
+            </div>
+            <div class="card__descr">
+              <div class="card__position card-position">
+                <img src="src/assets/images/icons/map-marker.svg" alt="" class="card-position__icon">
+                <span class="card-position__name">
+                  Туапсе · Джубга
+                </span>
+              </div>
+              <h3 class="card__title">
+                Развлечение на квадроцкле «Сафари по лесам Джубги»
+              </h3>
+              <p class="card__text">
+                Маршрут предусматривает движение по лесной дороге и горной реке, крутые спуски, подъемы стены и
+                непроходимых лесов. Маршрут протяжённый, предназначен для тех, кто готов насладиться квадро прогулкой
+                сполна, а вернее на полный максимум.
+              </p>
+              <div class="card__info card-info">
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/time.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">1 час</span>
+                </div>
+                <div class="card-info__item card__info-item">
+                  <img src="src/assets/images/icons/car.svg" alt="" class="card-info__icon" />
+                  <span class="card-info__name">На квадроцикле</span>
+                </div>
+              </div>
+              <footer class="card__footer">
+                <div class="card__price card-price">
+                  <span class="card-price__actuall">4 000 ₽</span>
+                  <span class="card-price__info">/ за человека</span>
+                </div>
+                <a href="#" class="card__btn">Подробнее</a>
+              </footer>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="search-page__articles container">
+      <div class="search-articles">
+        <h2 class="search-articles__title">Другое</h2>
+        <div class="articles-list__list js-articles-section-slider">
+          <div class="swiper-wrapper">
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+            <div class="articles-list__item swiper-slide">
+              <article class="article-item">
+                <a href="#" class="article-item__link"></a>
+                <h4 class="article-item__title">Новый сервис для пользователей!</h4>
+                <p class="article-item__text">Вот вам яркий пример современных тенденций - укрепление и развитие
+                  внутренней структуры позволяет выполнить важные задания по разработке направлений прогрессивного
+                  развития.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <include src="src/html/footer.html"></include>
+  <include src="src/html/modal.html"></include>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

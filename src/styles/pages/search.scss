@@ -1,0 +1,120 @@
+@use '../vars.scss';
+
+.search-page {
+  &__form {
+    margin-bottom: 24px;
+
+    @include vars.from('md') {
+      margin-bottom: 30px;
+    }
+  }
+  &__content{
+    margin-bottom: 32px;
+  }
+  &__articles{
+    @include vars.from('md') {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+.search-form {
+  &__input {
+    display: block;
+    width: 100%;
+    padding-block: 13px;
+    padding-left: 46px;
+    padding-right: 13px;
+    border-radius: 40px;
+    background-color: vars.$cl-light-grey;
+    border: 1px solid vars.$cl-light-grey;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: vars.$cl-light-dark;
+    outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5 15H14.71L14.43 14.73C15.41 13.59 16 12.11 16 10.5C16 6.91 13.09 4 9.5 4C5.91 4 3 6.91 3 10.5C3 14.09 5.91 17 9.5 17C11.11 17 12.59 16.41 13.73 15.43L14 15.71V16.5L16.5 19L17.99 17.51L15.5 15ZM9.5 15C7.01 15 5 12.99 5 10.5C5 8.01 7.01 6 9.5 6C11.99 6 14 8.01 14 10.5C14 12.99 11.99 15 9.5 15Z' fill='currentColor'/%3E%3C/svg%3E%0A");
+    background-size: 24px;
+    background-position: 16px 50%;
+    background-repeat: no-repeat;
+
+    &::placeholder {
+      color: vars.$cl-grey;
+    }
+
+    &:focus-visible {
+      border-color: vars.$cl-blue;
+    }
+
+    @include vars.from('md') {
+      padding-block: 22px;
+      padding-right: 22px;
+      padding-left: 54px;
+    }
+  }
+}
+
+.search-content {
+  &__header {
+    margin-bottom: 16px;
+
+    @include vars.from('md') {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 28px;
+    color: vars.$cl-light-dark;
+
+    @include vars.from('md') {
+      margin-bottom: 6px;
+      font-size: 48px;
+    }
+  }
+
+  &__request {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    color: vars.$cl-grey;
+
+    @include vars.from('md') {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: vars.$list-gap-m;
+
+    @include vars.from('sm') {
+      grid-template-columns: repeat(2, 1fr);
+      gap: vars.$list-gap;
+    }
+    
+    @include vars.from('md') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.search-articles {
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 100%;
+    color: vars.$cl-light-dark;
+
+    @include vars.from('md') {
+      margin-bottom: 30px;
+      font-size: 40px;
+    }
+  }
+}
